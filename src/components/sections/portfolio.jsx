@@ -1,38 +1,57 @@
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import northspireProjectImage from "@/assets/projects/project-northspire.png";
+import lamoreProjectImage from "@/assets/projects/project-lamore.png";
+import invoizaProjectImage from "@/assets/projects/project-invoiza.png";
+import shwomensProjectImage from "@/assets/projects/project-shwomens.png";
+import luxoraProjectImage from "@/assets/projects/project-luxora.png";
 import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
 
 export const projects = [
   {
-    name: "Aura Payments",
-    category: "Fintech · Web Platform",
-    year: "2024",
-    href: "https://example.com",
+    name: "Northspire Education",
+    category: "LMS · Web Platform",
+    year: "2025",
+    href: "https://northspireedu.com/",
     tag: "Websites",
+    image: northspireProjectImage,
     gradient: "from-amber-500/40 via-orange-600/30 to-rose-700/30",
   },
   {
-    name: "Lume Archive",
+    name: "Lamore Fashion",
     category: "E-Commerce · Luxury",
-    year: "2024",
-    href: "https://example.com",
+    year: "2025",
+    href: "https://lamore.bcircuit.com/",
     tag: "E-Commerce",
+    image: lamoreProjectImage,
     gradient: "from-emerald-500/30 via-teal-700/30 to-indigo-800/40",
   },
   {
-    name: "Helios ERP",
-    category: "Enterprise · ERP",
-    year: "2023",
-    href: "https://example.com",
-    tag: "ERP",
+    name: "Invoiza",
+    category: "SaaS · Software",
+    year: "2025",
+    href: "https://invoiza.bcircuit.com/dashboard",
+    tag: "Software",
+    image: invoizaProjectImage,
     gradient: "from-sky-500/30 via-blue-700/40 to-indigo-900/40",
   },
   {
-    name: "Nova POS",
-    category: "Hospitality · POS",
-    year: "2023",
+    name: "SH Womens",
+    category: "E-Commerce · Fashion",
+    year: "2026",
     href: "https://example.com",
-    tag: "POS",
+    tag: "E-Commerce",
+    image: shwomensProjectImage,
+    gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
+  },
+  {
+    name: "Luxora Fashion",
+    category: "E-Commerce · Luxury",
+    year: "2026",
+    href: "https://luxorafashion.bcircuit.com/",
+    tag: "E-Commerce",
+    image: luxoraProjectImage,
     gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
   },
   {
@@ -91,25 +110,42 @@ export function ProjectCard({ project, offset = false }) {
     <Reveal delay={offset ? 0.1 : 0} y={50}>
       <a href={project.href} target="_blank" rel="noopener noreferrer" className={`group block ${offset ? "md:mt-24" : ""}`}>
         <div className="relative overflow-hidden rounded-3xl">
-          <div
-            className={`relative aspect-[4/3] w-full bg-gradient-to-br ${project.gradient} transition-transform duration-700 group-hover:scale-105`}
-          >
-            <div className="absolute inset-6 rounded-2xl border border-white/10 bg-navy-deep/70 p-6 backdrop-blur-md">
-              <div className="flex items-center gap-1.5">
-                <div className="size-2.5 rounded-full bg-red-500/50" />
-                <div className="size-2.5 rounded-full bg-yellow-500/50" />
-                <div className="size-2.5 rounded-full bg-green-500/50" />
-              </div>
-              <div className="mt-6 space-y-3">
-                <div className="h-2 w-3/5 rounded bg-white/15" />
-                <div className="h-2 w-2/5 rounded bg-white/10" />
-                <div className="mt-6 grid grid-cols-3 gap-3">
-                  <div className="aspect-square rounded bg-white/5" />
-                  <div className="aspect-square rounded bg-white/8" />
-                  <div className="aspect-square rounded bg-white/5" />
+          <div className="relative aspect-[4/3] w-full overflow-hidden">
+            {project.image ? (
+              <>
+                <div className="absolute inset-1 overflow-hidden rounded-2xl border border-white/10 bg-navy-deep/0 backdrop-blur-md">
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/55 via-transparent to-transparent" />
+                </div>
+              </>
+            ) : (
+              <div
+                className={`relative h-full w-full bg-gradient-to-br ${project.gradient} transition-transform duration-700 group-hover:scale-105`}
+              >
+                <div className="absolute inset-6 rounded-2xl border border-white/10 bg-navy-deep/70 p-6 backdrop-blur-md">
+                  <div className="flex items-center gap-1.5">
+                    <div className="size-2.5 rounded-full bg-red-500/50" />
+                    <div className="size-2.5 rounded-full bg-yellow-500/50" />
+                    <div className="size-2.5 rounded-full bg-green-500/50" />
+                  </div>
+                  <div className="mt-6 space-y-3">
+                    <div className="h-2 w-3/5 rounded bg-white/15" />
+                    <div className="h-2 w-2/5 rounded bg-white/10" />
+                    <div className="mt-6 grid grid-cols-3 gap-3">
+                      <div className="aspect-square rounded bg-white/5" />
+                      <div className="aspect-square rounded bg-white/8" />
+                      <div className="aspect-square rounded bg-white/5" />
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
             <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/15 to-transparent transition-transform duration-1000 group-hover:translate-x-full" />
           </div>
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-navy-deep/40 opacity-0 transition-opacity duration-500 group-hover:opacity-100">

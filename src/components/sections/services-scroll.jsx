@@ -54,12 +54,20 @@ const services = [
     stat: "6 wk",
     statLabel: "to MVP",
   },
+  {
+    icon: Database,
+    title: "Mobile App Development",
+    desc: "Native and cross-platform mobile apps with seamless performance and stunning UI.",
+    tag: "iOS · Android · React Native",
+    stat: "6 wk",
+    statLabel: "to MVP",
+  },
 ];
 
 export function ServicesScroll() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-160%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-200%"]);
 
   return (
     <section ref={ref} className="relative bg-navy-deep" style={{ height: "440vh" }}>

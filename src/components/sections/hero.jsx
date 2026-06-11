@@ -45,7 +45,7 @@ export function Hero() {
           className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 glass px-4 py-2 text-[10px] font-mono uppercase tracking-[0.25em]"
         >
           <Sparkles className="size-3 text-ember" />
-          Premium Software Studio - Est. 2017
+          Premium Software Studio - Est. 2025
         </motion.div>
 
         <SplitHeading
