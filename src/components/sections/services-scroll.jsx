@@ -103,7 +103,7 @@ export function ServicesScroll() {
               <div>
                 <h3 className="font-display text-3xl font-bold tracking-tight md:text-4xl">{service.title}</h3>
                 <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground md:text-base">{service.desc}</p>
-                <p className="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-ember/80">{service.tag}</p>
+                {/* <p className="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-ember/80">{service.tag}</p> */}
                 <div className="mt-8 flex items-end justify-between border-t border-white/10 pt-6">
                   <div>
                     <div className="font-display text-3xl font-bold text-foreground">{service.stat}</div>

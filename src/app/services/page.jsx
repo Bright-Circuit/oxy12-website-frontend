@@ -103,8 +103,8 @@ export default function ServicesPage() {
                   <h2 className="mt-6 font-display text-3xl font-extrabold tracking-tight md:text-4xl">{service.title}</h2>
                   <p className="mt-4 text-muted-foreground">{service.desc}</p>
                   <div className="mt-8 border-t border-white/10 pt-6">
-                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Starting at</div>
-                    <div className="mt-1 font-display text-3xl font-extrabold text-ember">{service.starting}</div>
+                    {/* <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Starting at</div> */}
+                    {/* <div className="mt-1 font-display text-3xl font-extrabold text-ember">{service.starting}</div> */}
                   </div>
                 </div>
                 <div className="md:col-span-4">
@@ -119,14 +119,14 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ol>
-                  <h3 className="mt-8 font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Tech</h3>
-                  <div className="mt-3 flex flex-wrap gap-2">
+                  {/* <h3 className="mt-8 font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Tech</h3> */}
+                  {/* <div className="mt-3 flex flex-wrap gap-2">
                     {service.tech.map((item) => (
                       <span key={item} className="rounded-full border border-white/10 px-3 py-1 text-xs">
                         {item}
                       </span>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
                 <div className="md:col-span-4">
                   <h3 className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">FAQs</h3>
