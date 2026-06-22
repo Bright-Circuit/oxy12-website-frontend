@@ -68,12 +68,11 @@ export function ServicesScroll() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-200%"]);
-  const totalServices = String(services.length).padStart(2, "0");
 
   return (
-    <section ref={ref} className="relative overflow-hidden bg-navy-deep" style={{ height: "440vh" }}>
-      <div className="sticky top-0 flex min-h-screen flex-col overflow-hidden pb-8">
-        <div className="mx-auto flex w-full max-w-7xl shrink-0 items-end justify-between px-6 pb-8 pt-24 md:pb-10 md:pt-28">
+    <section ref={ref} className="relative bg-navy-deep" style={{ height: "440vh" }}>
+      <div className="sticky top-0 flex h-screen flex-col overflow-hidden">
+        <div className="mx-auto flex w-full max-w-7xl items-end justify-between px-6 pb-10 pt-28">
           <div>
             <SectionLabel index="02" label="Capabilities" />
             <h2 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tighter md:text-6xl">
@@ -86,11 +85,11 @@ export function ServicesScroll() {
           </p>
         </div>
 
-        <motion.div style={{ x }} className="flex flex-1 items-stretch gap-6 px-6 pb-6 will-change-transform md:gap-8 md:pb-10">
+        <motion.div style={{ x }} className="flex gap-8 px-6 will-change-transform">
           {services.map((service, index) => (
             <article
               key={service.title}
-              className="group relative flex min-h-[420px] w-[78vw] shrink-0 flex-col justify-between overflow-hidden rounded-3xl glass p-8 transition-transform duration-500 hover:scale-[1.01] md:min-h-[56vh] md:w-[40vw] md:p-12"
+              className="group relative flex h-[64vh] w-[78vw] shrink-0 flex-col justify-between overflow-hidden rounded-3xl glass p-8 transition-transform duration-500 hover:scale-[1.01] md:w-[40vw] md:p-12"
             >
               <div className="pointer-events-none absolute -right-20 -top-20 size-72 rounded-full bg-ember/10 opacity-60 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
               <div className="flex items-start justify-between">
@@ -98,7 +97,7 @@ export function ServicesScroll() {
                   <service.icon className="size-6" />
                 </div>
                 <span className="font-mono text-xs uppercase tracking-[0.25em] text-muted-foreground">
-                  {String(index + 1).padStart(2, "0")} / {totalServices}
+                  0{index + 1} / 06
                 </span>
               </div>
               <div>
