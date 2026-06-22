@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUp, Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import { ArrowUp, FacebookIcon, Instagram } from "lucide-react";
 import { Logo } from "./logo.jsx";
 
 const linkSections = [
@@ -27,23 +27,56 @@ const linkSections = [
   },
 ];
 
+const socialLinks = [
+  {
+    href: "https://www.facebook.com/profile.php?id=61579526365449",
+    label: "Facebook",
+    Icon: FacebookIcon,
+  },
+  {
+    href: "https://www.instagram.com/oxy2welve",
+    label: "Instagram",
+    Icon: Instagram,
+  },
+  {
+    href: "https://www.tiktok.com/@oxy2welve?_r=1&_t=ZS-977LedCvcWN",
+    label: "TikTok",
+    Icon: TikTokIcon,
+  },
+];
+
+const marqueeItems = ["Engineered in Sri Lanka", "Building Digital Advantages", "Since 2025"];
+
+function TikTokIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.12v12.18a2.64 2.64 0 1 1-2.64-2.64c.22 0 .43.02.64.08V8.44a5.76 5.76 0 0 0-.64-.04A5.77 5.77 0 1 0 15.82 14V7.73a7.9 7.9 0 0 0 4.63 1.49V6.11c-.3 0-.59-.03-.86-.09Z" />
+    </svg>
+  );
+}
+
+function MarqueeSet({ hidden = false }) {
+  return (
+    <div aria-hidden={hidden} className="flex shrink-0 items-center gap-12 pr-12">
+      {marqueeItems.map((item) => (
+        <div key={`${hidden ? "copy" : "main"}-${item}`} className="flex shrink-0 items-center gap-12">
+          <span className={item === "Building Digital Advantages" ? "text-foreground/40" : "text-foreground/90"}>{item}</span>
+          <span className="text-ember">✦</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function Footer() {
   return (
     <footer className="relative mt-16 overflow-hidden border-t border-white/5 bg-navy-deep">
       <div className="pointer-events-none absolute inset-x-0 -top-40 h-80 mesh-bg opacity-60" />
 
-      <div className="border-y border-white/5 py-6">
-        <div className="flex animate-marquee gap-12 whitespace-nowrap font-display text-5xl font-bold uppercase tracking-tighter md:text-7xl">
-          {Array.from({ length: 2 }).map((_, index) => (
-            <div key={index} className="flex shrink-0 gap-12">
-              <span className="text-foreground/90">Engineered in Sri Lanka</span>
-              <span className="text-ember">✦</span>
-              <span className="text-foreground/40">Building Digital Advantages</span>
-              <span className="text-ember">✦</span>
-              <span className="text-foreground/90">Since 2017</span>
-              <span className="text-ember">✦</span>
-            </div>
-          ))}
+      <div className="overflow-hidden border-y border-white/5 py-6">
+        <div className="flex min-w-max animate-marquee whitespace-nowrap font-display text-5xl font-bold uppercase tracking-tighter will-change-transform md:text-7xl">
+          <MarqueeSet />
+          <MarqueeSet hidden />
         </div>
       </div>
 
@@ -83,14 +116,16 @@ export function Footer() {
           <div className="md:col-span-1">
             <h6 className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">Social</h6>
             <div className="flex flex-wrap gap-3">
-              {[Twitter, Linkedin, Github, Instagram].map((Icon, index) => (
+              {socialLinks.map((social) => (
                 <a
-                  key={index}
-                  href="#"
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="grid size-10 place-items-center rounded-full border border-white/10 transition-all hover:border-ember hover:bg-ember/10 hover:text-ember"
-                  aria-label="Social"
+                  aria-label={social.label}
                 >
-                  <Icon className="size-4" />
+                  <social.Icon className="size-4" />
                 </a>
               ))}
             </div>
@@ -99,7 +134,7 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-start justify-between gap-6 border-t border-white/5 pt-8 md:flex-row md:items-center">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-            © {new Date().getFullYear()} OXY12 - All Rights Reserved
+            Copyright {new Date().getFullYear()} OXY12 - All Rights Reserved
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowUpRight, Code2, Cpu, Database, Palette, ScanLine, ShoppingBag } from "lucide-react";
+import { ArrowUpRight, Code2, Cpu, Database, Palette, ScanLine, ShoppingBag, Smartphone } from "lucide-react";
 import { SectionLabel } from "@/components/site/section-label.jsx";
 
 const services = [
@@ -55,7 +55,7 @@ const services = [
     statLabel: "to MVP",
   },
   {
-    icon: Database,
+    icon: Smartphone,
     title: "Mobile App Development",
     desc: "Native and cross-platform mobile apps with seamless performance and stunning UI.",
     tag: "iOS · Android · React Native",

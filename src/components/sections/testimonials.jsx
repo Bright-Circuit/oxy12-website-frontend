@@ -8,22 +8,22 @@ import { SectionLabel } from "@/components/site/section-label.jsx";
 
 const testimonials = [
   {
-    name: "Maya Fernandez",
-    role: "CTO, Aura Payments",
-    initials: "MF",
+    name: "Mr. Kevin Kumara",
+    role: "Founder, Northspire Education",
+    initials: "KK",
     quote:
-      "OXY12 shipped what felt impossible - a fintech platform that is faster and more elegant than anything in our category.",
+      "A smooth development process and an outstanding final product. Thank you for bringing our vision to life.",
   },
   {
-    name: "Daniel Cho",
-    role: "Founder, Lume",
-    initials: "DC",
+    name: "Ms. Shaira Hussein",
+    role: "Owner, SH Womens",
+    initials: "SH",
     quote: "Every interaction feels intentional. They do not just build software, they sculpt experiences.",
   },
   {
-    name: "Aisha Rahman",
-    role: "Head of Product, Helios",
-    initials: "AR",
+    name: "Mr.Sujith Senevirathna",
+    role: "Chairman, Global Star Importers (Pvt) Ltd",
+    initials: "SS",
     quote: "Engineering rigor with design taste. Rare combination. We extended the engagement twice.",
   },
   {

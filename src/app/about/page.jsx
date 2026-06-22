@@ -6,7 +6,7 @@ import { SectionLabel } from "@/components/site/section-label.jsx";
 export const metadata = {
   title: "About - OXY12",
   description:
-    "Meet OXY12: a premium software studio of engineers and designers building digital advantages since 2017.",
+    "Meet OXY12: a premium software studio of engineers and designers building digital advantages since 2025.",
 };
 
 const values = [

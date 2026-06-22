@@ -167,4 +167,4 @@
 
 @utility animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
 @utility animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
-@utility animate-marquee { animation: marquee 40s linear infinite; }
+@utility animate-marquee { animation: marquee 25s linear infinite; }

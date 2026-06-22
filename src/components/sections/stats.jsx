@@ -2,10 +2,10 @@ import { Counter } from "@/components/site/counter.jsx";
 import { Reveal } from "@/components/site/reveal.jsx";
 
 const stats = [
-  { n: 150, suffix: "+", label: "Projects Completed" },
+  { n: 50, suffix: "+", label: "Projects Completed" },
   { n: 50, suffix: "+", label: "Global Clients" },
-  { n: 8, suffix: "+", label: "Years Excellence" },
-  { n: 99, suffix: "%", label: "Client Satisfaction" },
+  { n: 2, suffix: "+", label: "Years Excellence" },
+  { n: 100, suffix: "%", label: "Client Satisfaction" },
 ];
 
 export function Stats() {

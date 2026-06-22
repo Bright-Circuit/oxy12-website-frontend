@@ -32,13 +32,13 @@ export function WhyChoose() {
             <div className="grid grid-cols-2 gap-8 self-end">
               <div>
                 <div className="font-display text-5xl font-extrabold text-ember">
-                  <Counter to={150} suffix="+" />
+                  <Counter to={50} suffix="+" />
                 </div>
                 <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Projects shipped</div>
               </div>
               <div>
                 <div className="font-display text-5xl font-extrabold text-ember">
-                  <Counter to={99} suffix="%" />
+                  <Counter to={100} suffix="%" />
                 </div>
                 <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Client satisfaction</div>
               </div>

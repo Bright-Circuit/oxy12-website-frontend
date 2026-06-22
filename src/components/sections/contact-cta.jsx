@@ -53,7 +53,7 @@ export function ContactCta() {
               <div className="mt-12 space-y-5">
                 <ContactItem icon={Phone} label="Direct line" value="+94 71 195 0429" href="tel:+94711950429" />
                 <ContactItem icon={Mail} label="General inquiry" value="info@oxy12.com" href="mailto:info@oxy12.com" />
-                <ContactItem icon={MapPin} label="Studio" value="Colombo, Sri Lanka" />
+                {/* <ContactItem icon={MapPin} label="Studio" value="Colombo, Sri Lanka" /> */}
               </div>
             </Reveal>
           </div>

@@ -32,7 +32,7 @@ export default function ContactPage() {
           {[
             { icon: Phone, label: "Phone", value: "+94 71 195 0429", href: "tel:+94711950429" },
             { icon: Mail, label: "Email", value: "info@oxy12.com", href: "mailto:info@oxy12.com" },
-            { icon: MapPin, label: "Studio", value: "Colombo, Sri Lanka" },
+            // { icon: MapPin, label: "Studio", value: "Colombo, Sri Lanka" },
             { icon: Clock, label: "Hours", value: "Mon-Fri · 9am-6pm" },
           ].map((item, index) => (
             <Reveal key={item.label} delay={index * 0.05}>
