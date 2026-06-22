@@ -17,7 +17,7 @@ const values = [
 ];
 
 const timeline = [
-  { y: "2017", t: "OXY12 founded in Colombo." },
+  { y: "2025", t: "OXY12 founded." },
   { y: "2019", t: "First enterprise ERP shipped across 12 countries." },
   { y: "2021", t: "Studio expanded to a multidisciplinary 25-person team." },
   { y: "2023", t: "Crossed 100 projects and launched our design language v3." },
@@ -25,12 +25,12 @@ const timeline = [
 ];
 
 const team = [
-  { name: "Ravindu Perera", role: "Founder · Director", initials: "RP" },
-  { name: "Nayana Silva", role: "Head of Design", initials: "NS" },
-  { name: "Kasun de Alwis", role: "Principal Engineer", initials: "KD" },
-  { name: "Imali Jayawardena", role: "Head of Product", initials: "IJ" },
-  { name: "Tharindu Bandara", role: "Lead UX Architect", initials: "TB" },
-  { name: "Sahan Wickrama", role: "Engineering Manager", initials: "SW" },
+  { name: "Akindu Ramsith", role: "Cofounder . Software Engineer", initials: "AR" },
+  { name: "Chamudi Fernando", role: "Cofounder . Software Engineer", initials: "CF" },
+  { name: "Dinnada Adithya", role: "Customer Care Manager . Business Analyst", initials: "AD" },
+  // { name: "Imali Jayawardena", role: "", initials: "IJ" },
+  // { name: "Tharindu Bandara", role: "Lead UX Architect", initials: "TB" },
+  // { name: "Sahan Wickrama", role: "Engineering Manager", initials: "SW" },
 ];
 
 export default function AboutPage() {
@@ -99,7 +99,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="px-6 py-24">
+      {/* <section className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <SectionLabel index="03" label="Timeline" />
@@ -120,8 +120,8 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
-
+      </section> */}
+{/* 
       <section className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <Reveal>
@@ -148,7 +148,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Stats />
       <ContactCta />
