@@ -7,6 +7,7 @@ import shwomensProjectImage from "@/assets/projects/project-shwomens.png";
 import luxoraProjectImage from "@/assets/projects/project-luxora.png";
 import globalstarProjectImage from "@/assets/projects/project-global-star.png";
 import AHDeliveryProjectImage from "@/assets/projects/project-AHDelivery.png";
+import BlueFinAquaProjectImage from "@/assets/projects/project-bluefinaqua.png";
 import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
 
@@ -74,22 +75,15 @@ export const projects = [
     image: AHDeliveryProjectImage,
     gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
   },
-  // {
-  //   name: "Forge Studio",
-  //   category: "Agency · Website",
-  //   year: "2024",
-  //   href: "https://example.com",
-  //   tag: "Websites",
-  //   gradient: "from-orange-500/40 via-red-600/30 to-rose-900/40",
-  // },
-  // {
-  //   name: "Atlas Logistics",
-  //   category: "SaaS · Software",
-  //   year: "2022",
-  //   href: "https://example.com",
-  //   tag: "Software",
-  //   gradient: "from-cyan-500/30 via-teal-700/30 to-slate-900/40",
-  // },
+  {
+    name: "Blue Fin Aqua",
+    category: "E-Commerce · Aquarium",
+    year: "2026",
+    href: "https://bluefinaqua.lk/",
+    tag: "E-Commerce",
+    image: BlueFinAquaProjectImage,
+    gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
+  },
 ];
 
 export function Portfolio() {
