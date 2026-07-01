@@ -21,6 +21,24 @@ export const projects = [
     image: northspireProjectImage,
     gradient: "from-amber-500/40 via-orange-600/30 to-rose-700/30",
   },
+    {
+    name: "Blue Fin Aqua",
+    category: "E-Commerce · Aquarium",
+    year: "2026",
+    href: "https://bluefinaqua.lk/",
+    tag: "E-Commerce",
+    image: BlueFinAquaProjectImage,
+    gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
+  },
+    {
+    name: "SH Womens",
+    category: "E-Commerce · Fashion",
+    year: "2026",
+    href: "https://shwomens.com/",
+    tag: "E-Commerce",
+    image: shwomensProjectImage,
+    gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
+  },
   {
     name: "Lamore Fashion",
     category: "E-Commerce · Luxury",
@@ -49,15 +67,6 @@ export const projects = [
     gradient: "from-sky-500/30 via-blue-700/40 to-indigo-900/40",
   },
   {
-    name: "SH Womens",
-    category: "E-Commerce · Fashion",
-    year: "2026",
-    href: "https://shwomens.com/",
-    tag: "E-Commerce",
-    image: shwomensProjectImage,
-    gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
-  },
-  {
     name: "Luxora Fashion",
     category: "E-Commerce · Luxury",
     year: "2026",
@@ -75,15 +84,7 @@ export const projects = [
     image: AHDeliveryProjectImage,
     gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
   },
-  {
-    name: "Blue Fin Aqua",
-    category: "E-Commerce · Aquarium",
-    year: "2026",
-    href: "https://bluefinaqua.lk/",
-    tag: "E-Commerce",
-    image: BlueFinAquaProjectImage,
-    gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
-  },
+
 ];
 
 export function Portfolio() {
