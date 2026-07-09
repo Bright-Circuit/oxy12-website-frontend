@@ -8,20 +8,21 @@ import luxoraProjectImage from "@/assets/projects/project-luxora.png";
 import globalstarProjectImage from "@/assets/projects/project-global-star.png";
 import AHDeliveryProjectImage from "@/assets/projects/project-AHDelivery.png";
 import BlueFinAquaProjectImage from "@/assets/projects/project-bluefinaqua.png";
+import AkinduPlumbingProjectImage from "@/assets/projects/project-akindu-plumbing.png";
 import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
 
 export const projects = [
   {
-    name: "Northspire Education",
-    category: "LMS · Web Platform",
-    year: "2025",
-    href: "https://northspireedu.com/",
+    name: "Akindu Plumbing & Construction",
+    category: "Website · Company",
+    year: "2026",
+    href: "https://plumbing.bcircuit.com/",
     tag: "Websites",
-    image: northspireProjectImage,
+    image: AkinduPlumbingProjectImage,
     gradient: "from-amber-500/40 via-orange-600/30 to-rose-700/30",
   },
-    {
+  {
     name: "Blue Fin Aqua",
     category: "E-Commerce · Aquarium",
     year: "2026",
@@ -29,24 +30,6 @@ export const projects = [
     tag: "E-Commerce",
     image: BlueFinAquaProjectImage,
     gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
-  },
-    {
-    name: "SH Womens",
-    category: "E-Commerce · Fashion",
-    year: "2026",
-    href: "https://shwomens.com/",
-    tag: "E-Commerce",
-    image: shwomensProjectImage,
-    gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
-  },
-  {
-    name: "Lamore Fashion",
-    category: "E-Commerce · Luxury",
-    year: "2025",
-    href: "https://lamore.bcircuit.com/",
-    tag: "E-Commerce",
-    image: lamoreProjectImage,
-    gradient: "from-emerald-500/30 via-teal-700/30 to-indigo-800/40",
   },
   {
     name: "Global Star Importers",
@@ -58,21 +41,12 @@ export const projects = [
     gradient: "from-emerald-500/30 via-teal-700/30 to-indigo-800/40",
   },
   {
-    name: "Invoiza",
-    category: "SaaS · Software",
-    year: "2025",
-    href: "https://invoiza.bcircuit.com/dashboard",
-    tag: "Software",
-    image: invoizaProjectImage,
-    gradient: "from-sky-500/30 via-blue-700/40 to-indigo-900/40",
-  },
-  {
-    name: "Luxora Fashion",
-    category: "E-Commerce · Luxury",
+    name: "SH Womens",
+    category: "E-Commerce · Fashion",
     year: "2026",
-    href: "https://luxorafashion.bcircuit.com/",
+    href: "https://shwomens.com/",
     tag: "E-Commerce",
-    image: luxoraProjectImage,
+    image: shwomensProjectImage,
     gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
   },
   {
@@ -84,7 +58,42 @@ export const projects = [
     image: AHDeliveryProjectImage,
     gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
   },
-
+  {
+    name: "Northspire Education",
+    category: "LMS · Web Platform",
+    year: "2025",
+    href: "https://northspireedu.com/",
+    tag: "Websites",
+    image: northspireProjectImage,
+    gradient: "from-amber-500/40 via-orange-600/30 to-rose-700/30",
+  },
+  {
+    name: "Lamore Fashion",
+    category: "E-Commerce · Luxury",
+    year: "2025",
+    href: "https://lamore.bcircuit.com/",
+    tag: "E-Commerce",
+    image: lamoreProjectImage,
+    gradient: "from-emerald-500/30 via-teal-700/30 to-indigo-800/40",
+  },
+  {
+    name: "Luxora Fashion",
+    category: "E-Commerce · Luxury",
+    year: "2025",
+    href: "https://luxorafashion.bcircuit.com/",
+    tag: "E-Commerce",
+    image: luxoraProjectImage,
+    gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
+  },
+  {
+    name: "Invoiza",
+    category: "SaaS · Software",
+    year: "2025",
+    href: "https://invoiza.bcircuit.com/dashboard",
+    tag: "Software",
+    image: invoizaProjectImage,
+    gradient: "from-sky-500/30 via-blue-700/40 to-indigo-900/40",
+  },
 ];
 
 export function Portfolio() {
@@ -105,14 +114,19 @@ export function Portfolio() {
           </div>
           <Reveal delay={0.2}>
             <p className="max-w-sm text-sm leading-relaxed text-muted-foreground md:text-base">
-              A curated selection of digital transformations and award-winning products we have shipped for partners worldwide.
+              A curated selection of digital transformations and award-winning
+              products we have shipped for partners worldwide.
             </p>
           </Reveal>
         </div>
 
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           {projects.slice(0, 4).map((project, index) => (
-            <ProjectCard key={project.name} project={project} offset={index % 2 === 1} />
+            <ProjectCard
+              key={project.name}
+              project={project}
+              offset={index % 2 === 1}
+            />
           ))}
         </div>
       </div>
@@ -123,7 +137,12 @@ export function Portfolio() {
 export function ProjectCard({ project, offset = false }) {
   return (
     <Reveal delay={offset ? 0.1 : 0} y={50}>
-      <a href={project.href} target="_blank" rel="noopener noreferrer" className={`group block ${offset ? "md:mt-24" : ""}`}>
+      <a
+        href={project.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`group block ${offset ? "md:mt-24" : ""}`}
+      >
         <div className="relative overflow-hidden rounded-3xl">
           <div className="relative aspect-[4/3] w-full overflow-hidden">
             {project.image ? (
@@ -175,9 +194,13 @@ export function ProjectCard({ project, offset = false }) {
             <h3 className="font-display text-2xl font-bold tracking-tight transition-colors group-hover:text-ember md:text-3xl">
               {project.name}
             </h3>
-            <p className="mt-1 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">{project.category}</p>
+            <p className="mt-1 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              {project.category}
+            </p>
           </div>
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-ember">{project.year}</span>
+          <span className="font-mono text-xs uppercase tracking-[0.2em] text-ember">
+            {project.year}
+          </span>
         </div>
       </a>
     </Reveal>
