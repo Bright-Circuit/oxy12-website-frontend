@@ -32,10 +32,10 @@ export const projects = [
     gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
   },
   {
-    name: "Global Star Importers",
+    name: "Natural Fruit Product",
     category: "Website · Company",
     year: "2026",
-    href: "https://globalstarimporters.lk/",
+    href: "https://naturalfruitproduct.lk/",
     tag: "Websites",
     image: globalstarProjectImage,
     gradient: "from-emerald-500/30 via-teal-700/30 to-indigo-800/40",
