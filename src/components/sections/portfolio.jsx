@@ -9,10 +9,20 @@ import globalstarProjectImage from "@/assets/projects/project-global-star.png";
 import AHDeliveryProjectImage from "@/assets/projects/project-AHDelivery.png";
 import BlueFinAquaProjectImage from "@/assets/projects/project-bluefinaqua.png";
 import AkinduPlumbingProjectImage from "@/assets/projects/project-akindu-plumbing.png";
+import MeetTheMeatzzzProjectImage from "@/assets/projects/project-meet-the-meatzzz.png";
 import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
 
 export const projects = [
+  {
+    name: "Meet the Meatzzz",
+    category: "E-Commerce · Food",
+    year: "2026",
+    href: "https://meetthemeatzzz.com/",
+    tag: "E-Commerce",
+    image: MeetTheMeatzzzProjectImage,
+    gradient: "from-amber-500/40 via-orange-600/30 to-rose-700/30",
+  },
   {
     name: "Akindu Plumbing & Construction",
     category: "Website · Company",
