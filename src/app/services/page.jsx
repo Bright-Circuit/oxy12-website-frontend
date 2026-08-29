@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Code2, Cpu, Database, Palette, ScanLine, ShoppingBag } from "lucide-react";
+import { ArrowUpRight, Code2, Cpu, Database, Palette, ScanLine, ShoppingBag, Smartphone } from "lucide-react";
 import { ContactCta } from "@/components/sections/contact-cta.jsx";
 import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
@@ -7,7 +7,7 @@ import { SectionLabel } from "@/components/site/section-label.jsx";
 export const metadata = {
   title: "Services - OXY12",
   description:
-    "Websites, custom software, UI/UX, e-commerce, POS and ERP solutions engineered by OXY12.",
+    "Websites, mobile apps, custom software, UI/UX, e-commerce, POS and ERP solutions engineered by OXY12.",
 };
 
 const services = [
@@ -71,6 +71,18 @@ const services = [
     process: ["Workshop", "Map", "Build", "Migrate", "Train"],
     faqs: [{ q: "Can you migrate from legacy ERP?", a: "Yes - we run dual-write migrations with zero downtime." }],
   },
+  {
+    icon: Smartphone,
+    title: "Mobile Application Development",
+    desc: "High-performance native and cross-platform apps built for iOS and Android.",
+    tech: ["React Native", "Flutter", "iOS", "Android"],
+    starting: "$12k",
+    process: ["Discovery", "UX Design", "Development", "Testing", "Store Launch"],
+    faqs: [
+      { q: "Do you build for both iOS and Android?", a: "Yes - we build native or cross-platform apps based on your product goals, timeline, and budget." },
+      { q: "Can you publish the app to the stores?", a: "Yes - we handle App Store and Google Play preparation, submission, and launch support." },
+    ],
+  },
 ];
 
 export default function ServicesPage() {
@@ -84,7 +96,7 @@ export default function ServicesPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <h1 className="text-balance font-display text-5xl font-extrabold leading-[0.95] tracking-tighter md:text-8xl">
-              Six disciplines. <br />
+              Seven disciplines. <br />
               <span className="italic text-ember">One studio.</span>
             </h1>
           </Reveal>

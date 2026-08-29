@@ -13,6 +13,7 @@ const services = [
   "E-Commerce",
   "POS Systems",
   "ERP Systems",
+  "Mobile Application Development",
 ];
 
 export function ContactCta() {

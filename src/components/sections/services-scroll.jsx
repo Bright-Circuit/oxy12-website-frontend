@@ -81,7 +81,7 @@ export function ServicesScroll() {
             </h2>
           </div>
           <p className="hidden max-w-xs text-sm leading-relaxed text-muted-foreground md:block">
-            Six disciplines, one studio. Each capability is delivered by senior specialists with skin in the game.
+            Seven disciplines, one studio. Each capability is delivered by senior specialists with skin in the game.
           </p>
         </div>
 

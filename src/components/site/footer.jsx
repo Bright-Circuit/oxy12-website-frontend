@@ -23,6 +23,7 @@ const linkSections = [
       { href: "/services", label: "E-Commerce" },
       { href: "/services", label: "POS Systems" },
       { href: "/services", label: "ERP Systems" },
+      { href: "/services", label: "Mobile Apps" },
     ],
   },
 ];
