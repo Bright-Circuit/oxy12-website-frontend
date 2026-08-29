@@ -10,10 +10,21 @@ import AHDeliveryProjectImage from "@/assets/projects/project-AHDelivery.png";
 import BlueFinAquaProjectImage from "@/assets/projects/project-bluefinaqua.png";
 import AkinduPlumbingProjectImage from "@/assets/projects/project-akindu-plumbing.png";
 import MeetTheMeatzzzProjectImage from "@/assets/projects/project-meet-the-meatzzz.png";
+import KCIEduProjectImage from "@/assets/projects/project-KCI-education.png";
 import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
 
 export const projects = [
+  {
+    name: "KCI Education Lanka",
+    category: "Website · Education",
+    year: "2026",
+    href: "https://kciedulanka.com/",
+    tag: "Websites",
+    image: KCIEduProjectImage,
+    gradient: "from-amber-500/40 via-orange-600/30 to-rose-700/30",
+    status: "Ongoing",
+  },
   {
     name: "Meet the Meatzzz",
     category: "E-Commerce · Food",
@@ -22,6 +33,7 @@ export const projects = [
     tag: "E-Commerce",
     image: MeetTheMeatzzzProjectImage,
     gradient: "from-amber-500/40 via-orange-600/30 to-rose-700/30",
+    status: "Completed",
   },
   {
     name: "Akindu Plumbing & Construction",
@@ -31,6 +43,7 @@ export const projects = [
     tag: "Websites",
     image: AkinduPlumbingProjectImage,
     gradient: "from-amber-500/40 via-orange-600/30 to-rose-700/30",
+    status: "Ongoing",
   },
   {
     name: "Blue Fin Aqua",
@@ -40,6 +53,7 @@ export const projects = [
     tag: "E-Commerce",
     image: BlueFinAquaProjectImage,
     gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
+    status: "Completed",
   },
   {
     name: "Natural Fruit Product",
@@ -49,6 +63,7 @@ export const projects = [
     tag: "Websites",
     image: globalstarProjectImage,
     gradient: "from-emerald-500/30 via-teal-700/30 to-indigo-800/40",
+    status: "Completed",
   },
   {
     name: "SH Womens",
@@ -58,6 +73,7 @@ export const projects = [
     tag: "E-Commerce",
     image: shwomensProjectImage,
     gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
+    status: "Completed",
   },
   {
     name: "AH Delivery",
@@ -67,6 +83,7 @@ export const projects = [
     tag: "E-Commerce",
     image: AHDeliveryProjectImage,
     gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
+    status: "Completed",
   },
   {
     name: "Northspire Education",
@@ -76,6 +93,7 @@ export const projects = [
     tag: "Websites",
     image: northspireProjectImage,
     gradient: "from-amber-500/40 via-orange-600/30 to-rose-700/30",
+    status: "Completed",
   },
   {
     name: "Lamore Fashion",
@@ -85,6 +103,7 @@ export const projects = [
     tag: "E-Commerce",
     image: lamoreProjectImage,
     gradient: "from-emerald-500/30 via-teal-700/30 to-indigo-800/40",
+    status: "Completed",
   },
   {
     name: "Luxora Fashion",
@@ -94,6 +113,7 @@ export const projects = [
     tag: "E-Commerce",
     image: luxoraProjectImage,
     gradient: "from-fuchsia-500/30 via-purple-700/30 to-violet-900/40",
+    status: "Completed",
   },
   {
     name: "Invoiza",
@@ -103,8 +123,35 @@ export const projects = [
     tag: "Software",
     image: invoizaProjectImage,
     gradient: "from-sky-500/30 via-blue-700/40 to-indigo-900/40",
+    status: "Completed",
   },
 ];
+
+function ProjectStatus({ status }) {
+  const isOngoing = status === "Ongoing";
+
+  return (
+    <span
+      className={`inline-flex items-center gap-2 rounded-full border px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] ${
+        isOngoing
+          ? "border-red-500/30 bg-red-500/10 text-red-300"
+          : "border-emerald-500/30 bg-emerald-500/10 text-emerald-300"
+      }`}
+    >
+      <span className="relative flex size-2.5">
+        {isOngoing ? (
+          <>
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
+            <span className="relative inline-flex size-2.5 rounded-full bg-red-500" />
+          </>
+        ) : (
+          <span className="inline-flex size-2.5 rounded-full bg-emerald-400" />
+        )}
+      </span>
+      {status}
+    </span>
+  );
+}
 
 export function Portfolio() {
   return (
@@ -207,6 +254,9 @@ export function ProjectCard({ project, offset = false }) {
             <p className="mt-1 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
               {project.category}
             </p>
+            <div className="mt-3">
+              <ProjectStatus status={project.status} />
+            </div>
           </div>
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-ember">
             {project.year}
