@@ -19,13 +19,45 @@ const services = [
 export function ContactCta() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handle = async (event) => {
     event.preventDefault();
+    setError("");
     setLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 900));
-    setLoading(false);
-    setSubmitted(true);
+
+    try {
+      const formData = new FormData(event.currentTarget);
+      const response = await fetch(
+        "https://formsubmit.co/ajax/info@oxy12.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            ...Object.fromEntries(formData),
+            _replyto: formData.get("email"),
+            _subject: "New OXY12 Website Inquiry",
+            _template: "table",
+          }),
+        },
+      );
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error("Unable to send message");
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError(
+        "Your message could not be sent. Please try again or email us at info@oxy12.com.",
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -41,19 +73,32 @@ export function ContactCta() {
             </Reveal>
             <Reveal delay={0.1}>
               <h2 className="text-balance font-display text-5xl font-extrabold leading-[0.95] tracking-tighter md:text-7xl">
-                Let&apos;s build something <span className="italic text-ember">amazing.</span>
+                Let&apos;s build something{" "}
+                <span className="italic text-ember">amazing.</span>
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
               <p className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground md:text-lg">
-                Whether it&apos;s a website, a custom platform, or an idea you cannot yet describe - start the conversation. We reply within 24 hours.
+                Whether it&apos;s a website, a custom platform, or an idea you
+                cannot yet describe - start the conversation. We reply within 24
+                hours.
               </p>
             </Reveal>
 
             <Reveal delay={0.3}>
               <div className="mt-12 space-y-5">
-                <ContactItem icon={Phone} label="Direct line" value="+94 71 195 0429" href="tel:+94711950429" />
-                <ContactItem icon={Mail} label="General inquiry" value="info@oxy12.com" href="mailto:info@oxy12.com" />
+                <ContactItem
+                  icon={Phone}
+                  label="Direct line"
+                  value="+94 71 195 0429"
+                  href="tel:+94711950429"
+                />
+                <ContactItem
+                  icon={Mail}
+                  label="General inquiry"
+                  value="info@oxy12.com"
+                  href="mailto:info@oxy12.com"
+                />
                 {/* <ContactItem icon={MapPin} label="Studio" value="Colombo, Sri Lanka" /> */}
               </div>
             </Reveal>
@@ -66,20 +111,33 @@ export function ContactCta() {
                   <div className="ember-glow grid size-20 place-items-center rounded-full bg-ember/20 text-ember">
                     <Check className="size-10" />
                   </div>
-                  <h3 className="mt-8 font-display text-3xl font-bold tracking-tight">Message received.</h3>
+                  <h3 className="mt-8 font-display text-3xl font-bold tracking-tight">
+                    Message received.
+                  </h3>
                   <p className="mt-3 max-w-sm text-sm text-muted-foreground">
-                    Thanks for reaching out. A senior strategist will be in touch within 24 hours to set up a discovery call.
+                    Thanks for reaching out. A senior strategist will be in
+                    touch within 24 hours to set up a discovery call.
                   </p>
                 </div>
               ) : (
                 <form className="space-y-5" onSubmit={handle}>
+                  <input
+                    name="_honey"
+                    type="text"
+                    tabIndex="-1"
+                    autoComplete="off"
+                    className="hidden"
+                    aria-hidden="true"
+                  />
                   <div className="grid gap-5 md:grid-cols-2">
                     <Field label="Name" name="name" required />
                     <Field label="Email" name="email" type="email" required />
                   </div>
                   <Field label="Company" name="company" />
                   <div className="space-y-2">
-                    <label className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Service</label>
+                    <label className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                      Service
+                    </label>
                     <select
                       name="service"
                       defaultValue=""
@@ -96,7 +154,9 @@ export function ContactCta() {
                     </select>
                   </div>
                   <div className="space-y-2">
-                    <label className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Message</label>
+                    <label className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                      Message
+                    </label>
                     <textarea
                       name="message"
                       rows={5}
@@ -104,7 +164,17 @@ export function ContactCta() {
                       className="w-full resize-none rounded-xl border border-white/10 bg-navy-deep/60 px-4 py-3.5 text-sm transition-colors focus:border-ember focus:outline-none"
                     />
                   </div>
-                  <MagneticButton type="submit" variant="primary" className="w-full">
+                  {error && (
+                    <p className="text-sm text-red-300" role="alert">
+                      {error}
+                    </p>
+                  )}
+                  <MagneticButton
+                    type="submit"
+                    variant="primary"
+                    className="w-full disabled:cursor-not-allowed disabled:opacity-60"
+                    disabled={loading}
+                  >
                     {loading ? "Sending..." : "Send Inquiry"}
                   </MagneticButton>
                 </form>
@@ -120,7 +190,9 @@ export function ContactCta() {
 function Field({ label, name, type = "text", required = false }) {
   return (
     <div className="space-y-2">
-      <label className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{label}</label>
+      <label className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+        {label}
+      </label>
       <input
         name={name}
         type={type}
@@ -138,7 +210,9 @@ function ContactItem({ icon: Icon, label, value, href }) {
         <Icon className="size-5" />
       </div>
       <div>
-        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{label}</div>
+        <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+          {label}
+        </div>
         <div className="mt-0.5 font-display text-lg font-medium">{value}</div>
       </div>
     </div>
