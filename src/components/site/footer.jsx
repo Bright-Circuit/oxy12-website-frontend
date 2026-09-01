@@ -12,6 +12,8 @@ const linkSections = [
       { href: "/services", label: "Services" },
       { href: "/portfolio", label: "Portfolio" },
       { href: "/contact", label: "Contact" },
+      { href: "/privacy-policy", label: "Privacy Policy" },
+      { href: "/terms-conditions", label: "Terms & Conditions" },
     ],
   },
   {

@@ -23,7 +23,7 @@ export const projects = [
     tag: "Websites",
     image: KCIEduProjectImage,
     gradient: "from-amber-500/40 via-orange-600/30 to-rose-700/30",
-    status: "Ongoing",
+    status: "Completed",
   },
   {
     name: "Meet the Meatzzz",
