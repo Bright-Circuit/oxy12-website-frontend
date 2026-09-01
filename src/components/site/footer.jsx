@@ -12,6 +12,7 @@ const linkSections = [
       { href: "/services", label: "Services" },
       { href: "/portfolio", label: "Portfolio" },
       { href: "/contact", label: "Contact" },
+      { href: "https://learn.oxy12.com", label: "Blog", external: true },
       { href: "/privacy-policy", label: "Privacy Policy" },
       { href: "/terms-conditions", label: "Terms & Conditions" },
     ],
@@ -107,9 +108,20 @@ export function Footer() {
               <ul className="space-y-3 text-sm">
                 {section.links.map((link) => (
                   <li key={`${section.heading}-${link.label}`}>
-                    <Link href={link.href} className="text-foreground/80 transition-colors hover:text-ember">
-                      {link.label}
-                    </Link>
+                    {link.external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground/80 transition-colors hover:text-ember"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link href={link.href} className="text-foreground/80 transition-colors hover:text-ember">
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

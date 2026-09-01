@@ -5,6 +5,7 @@ import { Navbar } from "@/components/site/navbar.jsx";
 import { Footer } from "@/components/site/footer.jsx";
 import { SmoothScroll } from "@/components/site/smooth-scroll.jsx";
 import { Cursor } from "@/components/site/cursor.jsx";
+import oxy12Logo from "@/assets/oxy12-logo.png";
 
 export const metadata = {
   title: "OXY12 - Building Digital Experiences That Feel Like The Future",
@@ -20,6 +21,9 @@ export const metadata = {
   twitter: {
     card: "summary",
     site: "@OXY12",
+  },
+  icons: {
+    icon: oxy12Logo.src,
   },
 };
 
