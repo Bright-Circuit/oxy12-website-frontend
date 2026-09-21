@@ -4,13 +4,41 @@ import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
 
 const features = [
-  { icon: Cpu, title: "Modern Technologies", desc: "Latest frameworks and battle-tested infrastructure." },
-  { icon: LayoutGrid, title: "Scalable Solutions", desc: "Architected to grow from MVP to enterprise scale." },
-  { icon: Zap, title: "Fast Delivery", desc: "Weekly vertical slices - momentum from week one." },
-  { icon: Sparkles, title: "Premium Design", desc: "Award-worthy interfaces backed by design systems." },
-  { icon: Search, title: "SEO Optimized", desc: "Core Web Vitals, schema, perf - out of the box." },
-  { icon: Shield, title: "Secure Architecture", desc: "OWASP-ready, audited, encrypted at every layer." },
-  { icon: Headphones, title: "Dedicated Support", desc: "Always-on support with proactive monitoring." },
+  {
+    icon: Cpu,
+    title: "Modern Technologies",
+    desc: "Stable, actively maintained frameworks and proven cloud infrastructure chosen for long-term reliability.",
+  },
+  {
+    icon: LayoutGrid,
+    title: "Scalable Solutions",
+    desc: "Modular architecture and cloud-ready deployment help each product grow without costly rebuilds.",
+  },
+  {
+    icon: Zap,
+    title: "Fast Delivery",
+    desc: "Clear milestones, weekly working releases, and continuous feedback keep delivery visible and reduce risk.",
+  },
+  {
+    icon: Sparkles,
+    title: "Premium Design",
+    desc: "Research-led interfaces and reusable design systems create accessible, consistent experiences on every screen.",
+  },
+  {
+    icon: Search,
+    title: "SEO Optimized",
+    desc: "Semantic markup, structured data, fast loading, and mobile-first delivery build a strong search foundation.",
+  },
+  {
+    icon: Shield,
+    title: "Secure Architecture",
+    desc: "Secure defaults, validated inputs, encrypted data, and dependency reviews protect every application layer.",
+  },
+  {
+    icon: Headphones,
+    title: "Dedicated Support",
+    desc: "Proactive monitoring, documented handovers, and responsive maintenance keep products reliable after launch.",
+  },
 ];
 
 export function WhyChoose() {
@@ -32,7 +60,7 @@ export function WhyChoose() {
             <div className="grid grid-cols-2 gap-8 self-end">
               <div>
                 <div className="font-display text-5xl font-extrabold text-ember">
-                  <Counter to={50} suffix="+" />
+                  <Counter to={7} suffix="K+" />
                 </div>
                 <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Projects shipped</div>
               </div>

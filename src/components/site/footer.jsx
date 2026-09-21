@@ -13,10 +13,10 @@ const linkSections = [
       { href: "/portfolio", label: "Portfolio" },
       { href: "/contact", label: "Contact" },
       { href: "https://learn.oxy12.com", label: "Blog", external: true },
-      { href: "/privacy-policy", label: "Privacy Policy" },
-      { href: "/terms-conditions", label: "Terms & Conditions" },
     ],
   },
+  // Services links are temporarily hidden. Restore this section when needed.
+  /*
   {
     heading: "Services",
     links: [
@@ -27,6 +27,14 @@ const linkSections = [
       { href: "/services", label: "POS Systems" },
       { href: "/services", label: "ERP Systems" },
       { href: "/services", label: "Mobile Apps" },
+    ],
+  },
+  */
+  {
+    heading: "Legal",
+    links: [
+      { href: "/privacy-policy", label: "Privacy Policy" },
+      { href: "/terms-conditions", label: "Terms & Conditions" },
     ],
   },
 ];
@@ -74,19 +82,20 @@ function MarqueeSet({ hidden = false }) {
 
 export function Footer() {
   return (
-    <footer className="relative mt-16 overflow-hidden border-t border-white/5 bg-navy-deep">
+    <footer className="relative overflow-hidden border-t border-white/5 bg-navy-deep">
       <div className="pointer-events-none absolute inset-x-0 -top-40 h-80 mesh-bg opacity-60" />
 
-      <div className="overflow-hidden border-y border-white/5 py-6">
+      {/* Temporarily hidden. Uncomment this block to restore the footer marquee. */}
+      {/* <div className="overflow-hidden border-y border-white/5 py-6">
         <div className="flex min-w-max animate-marquee whitespace-nowrap font-display text-5xl font-bold uppercase tracking-tighter will-change-transform md:text-7xl">
           <MarqueeSet />
           <MarqueeSet hidden />
         </div>
-      </div>
+      </div> */}
 
       <div className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid grid-cols-1 gap-16 md:grid-cols-12">
-          <div className="md:col-span-5">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-12 md:gap-16">
+          <div className="col-span-2 md:col-span-5">
             <Logo />
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
               OXY12 is a premium software studio designing digital products and platforms for visionary brands and enterprises.
@@ -103,7 +112,7 @@ export function Footer() {
           </div>
 
           {linkSections.map((section) => (
-            <div key={section.heading} className="md:col-span-3">
+            <div key={section.heading} className="col-span-1 md:col-span-3">
               <h6 className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">{section.heading}</h6>
               <ul className="space-y-3 text-sm">
                 {section.links.map((link) => (
@@ -128,7 +137,7 @@ export function Footer() {
             </div>
           ))}
 
-          <div className="md:col-span-1">
+          <div className="col-span-2 md:col-span-1">
             <h6 className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">Social</h6>
             <div className="flex flex-wrap gap-3">
               {socialLinks.map((social) => (

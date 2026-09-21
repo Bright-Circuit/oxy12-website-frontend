@@ -97,7 +97,7 @@ export function ServicesScroll() {
                   <service.icon className="size-6" />
                 </div>
                 <span className="font-mono text-xs uppercase tracking-[0.25em] text-muted-foreground">
-                  0{index + 1} / 06
+                  {String(index + 1).padStart(2, "0")} / {String(services.length).padStart(2, "0")}
                 </span>
               </div>
               <div>

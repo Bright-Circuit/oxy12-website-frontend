@@ -18,7 +18,8 @@ const testimonials = [
     name: "Ms. Shaira Hussein",
     role: "Owner, SH Womens",
     initials: "SH",
-    quote: "Every interaction feels intentional. They do not just build software, they sculpt experiences.",
+    quote:
+      "I had a great experience working with Oxy12 on the development of my website, www.shwomens.com. From the very beginning, their customer service was outstanding. The team was always friendly, professional, and extremely responsive, answering all my questions promptly and keeping me updated throughout the process. They delivered the project much faster than I expected without compromising on quality. Their pricing was also very reasonable, offering excellent value for the level of service provided. I’m very happy with the final result. I would highly recommend Oxy12 to anyone looking for a reliable and efficient web development company.",
   },
   {
     name: "Mr.Sujith Senevirathna",
@@ -27,10 +28,30 @@ const testimonials = [
     quote: "Engineering rigor with design taste. Rare combination. We extended the engagement twice.",
   },
   {
-    name: "Lucas Pereira",
-    role: "COO, Nova Group",
-    initials: "LP",
-    quote: "Our POS rollout across 40 outlets was flawless. Zero downtime, full team buy-in.",
+    name: "Meet the Meatz",
+    role: "Facebook Recommendation",
+    initials: "MM",
+    quote:
+      "Oxy12 team is a great team. They did our website, and it is absolutely amazing and a very professional site. I highly recommend Oxy12. Keep up the great work.",
+  },
+  {
+    name: "Bigtify",
+    role: "Facebook Recommendation",
+    initials: "BI",
+    quote:
+      "Thank you, Oxy12, for the excellent work and support. We’re very happy with the result and highly recommend your services. Looking forward to working with you again!",
+  },
+  {
+    name: "AH Deliveryah",
+    role: "Facebook Recommendation",
+    initials: "AH",
+    quote: "Well service and 100% customer support.",
+  },
+  {
+    name: "Blue Fin Aqua",
+    role: "Facebook Recommendation",
+    initials: "BF",
+    quote: "Best service ever. Recommended service and friendly service.",
   },
 ];
 
@@ -39,8 +60,8 @@ export function Testimonials() {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const y1 = useTransform(scrollYProgress, [0, 1], [80, -120]);
   const y2 = useTransform(scrollYProgress, [0, 1], [-40, 80]);
-  const left = [testimonials[0], testimonials[2]];
-  const right = [testimonials[1], testimonials[3]];
+  const left = testimonials.filter((_, index) => index % 2 === 0);
+  const right = testimonials.filter((_, index) => index % 2 !== 0);
 
   return (
     <section ref={ref} className="relative overflow-hidden bg-navy-deep px-6 py-32 md:py-48">
