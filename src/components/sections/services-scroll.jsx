@@ -2,65 +2,65 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowUpRight, Code2, Cpu, Database, Palette, ScanLine, ShoppingBag, Smartphone } from "lucide-react";
+import { Code2, Cpu, Database, Palette, ScanLine, ShoppingBag, Smartphone } from "lucide-react";
 import { SectionLabel } from "@/components/site/section-label.jsx";
 
 const services = [
   {
     icon: Code2,
     title: "Website Development",
-    desc: "Award-worthy marketing sites and web platforms built on bleeding-edge stacks.",
+    desc: "Responsive company websites, landing pages, and customer portals with editable content, contact forms, analytics, and technical SEO foundations.",
     tag: "Next.js · TanStack · Astro",
-    stat: "120ms",
-    statLabel: "avg. LCP",
+    stat: "Responsive",
+    statLabel: "desktop, tablet & mobile",
   },
   {
     icon: Cpu,
     title: "Custom Software",
-    desc: "Bespoke enterprise systems engineered to solve complex business problems.",
+    desc: "Software shaped around your workflow, including dashboards, user roles, approvals, reports, third-party integrations, and task automation.",
     tag: "Node · Go · Rust",
-    stat: "99.99%",
-    statLabel: "uptime SLO",
+    stat: "Role-based",
+    statLabel: "users, access & approvals",
   },
   {
     icon: Palette,
     title: "UI / UX Design",
-    desc: "Human-centric design systems that combine beauty with effortless usability.",
+    desc: "User flows, wireframes, interactive prototypes, responsive screen designs, and reusable components created for clear and consistent use.",
     tag: "Figma · Motion · Tokens",
-    stat: "4.9 / 5",
-    statLabel: "user rating",
+    stat: "Accessible",
+    statLabel: "clear, usable interfaces",
   },
   {
     icon: ShoppingBag,
     title: "E-Commerce",
-    desc: "Conversion-tuned storefronts with deep integrations and headless commerce.",
+    desc: "Online stores with product catalogues, secure checkout, payment gateways, inventory updates, order management, and customer notifications.",
     tag: "Shopify · Stripe · Medusa",
-    stat: "+38%",
-    statLabel: "conversion lift",
+    stat: "Connected",
+    statLabel: "payments, stock & orders",
   },
   {
     icon: ScanLine,
     title: "POS Systems",
-    desc: "Modern point-of-sale built for hospitality, retail, and multi-branch operations.",
+    desc: "Point-of-sale systems for retail and hospitality with billing, receipts, stock updates, staff access, and multi-branch sales reporting.",
     tag: "Offline-first · Sync",
-    stat: "<300ms",
-    statLabel: "ticket time",
+    stat: "Offline-ready",
+    statLabel: "sales & branch syncing",
   },
   {
     icon: Database,
     title: "ERP Systems",
-    desc: "End-to-end ERP suites unifying finance, ops, inventory and people.",
+    desc: "Connected modules for finance, purchasing, inventory, operations, and staff so teams can manage records from one consistent system.",
     tag: "Modular · Multi-tenant",
-    stat: "6 wk",
-    statLabel: "to MVP",
+    stat: "Centralized",
+    statLabel: "operations & reporting",
   },
   {
     icon: Smartphone,
     title: "Mobile App Development",
-    desc: "Native and cross-platform mobile apps with seamless performance and stunning UI.",
+    desc: "Mobile apps for iOS and Android covering interface design, API integration, device testing, store preparation, and post-launch maintenance.",
     tag: "iOS · Android · React Native",
-    stat: "6 wk",
-    statLabel: "to MVP",
+    stat: "Cross-platform",
+    statLabel: "iOS & Android delivery",
   },
 ];
 
@@ -76,12 +76,13 @@ export function ServicesScroll() {
           <div>
             <SectionLabel index="02" label="Capabilities" />
             <h2 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tighter md:text-6xl">
-              Premium services <br />
-              <span className="text-ember">engineered for scale.</span>
+              Digital services for <br />
+              <span className="text-ember">everyday business needs.</span>
             </h2>
           </div>
           <p className="hidden max-w-xs text-sm leading-relaxed text-muted-foreground md:block">
-            Seven disciplines, one studio. Each capability is delivered by senior specialists with skin in the game.
+            Explore what each service includes, from customer-facing websites and mobile apps to software that supports
+            sales, inventory, reporting, and daily operations.
           </p>
         </div>
 
@@ -111,9 +112,10 @@ export function ServicesScroll() {
                       {service.statLabel}
                     </div>
                   </div>
-                  <div className="grid size-12 place-items-center rounded-full border border-white/10 transition-all group-hover:bg-ember group-hover:text-primary-foreground">
+                  {/* Temporarily hidden. Uncomment this block and restore the ArrowUpRight import to show the card arrow. */}
+                  {/* <div className="grid size-12 place-items-center rounded-full border border-white/10 transition-all group-hover:bg-ember group-hover:text-primary-foreground">
                     <ArrowUpRight className="size-5" />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </article>

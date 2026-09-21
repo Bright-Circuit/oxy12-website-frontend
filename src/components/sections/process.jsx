@@ -6,12 +6,36 @@ import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
 
 const steps = [
-  { n: "01", t: "Discovery", d: "We unpack the problem space, audit existing systems, and align on outcomes." },
-  { n: "02", t: "Planning", d: "Architecture decisions, scope, milestones, and a sharp roadmap to ship." },
-  { n: "03", t: "Design", d: "Wireframes, prototypes, motion direction and a tight feedback loop." },
-  { n: "04", t: "Development", d: "Engineers ship vertical slices weekly - production-quality from day one." },
-  { n: "05", t: "Testing", d: "Automation, QA passes, perf budgets, and security audits before launch." },
-  { n: "06", t: "Launch", d: "Coordinated rollout with monitoring, growth instrumentation, and support." },
+  {
+    n: "01",
+    t: "Discovery",
+    d: "We meet stakeholders, map users and daily workflows, review existing tools and content, and record the goals, pain points, constraints, and success criteria in a shared requirements brief.",
+  },
+  {
+    n: "02",
+    t: "Planning",
+    d: "We turn the findings into a prioritized feature list covering user roles, integrations, data, content, milestones, responsibilities, and delivery stages so the scope is clear before design begins.",
+  },
+  {
+    n: "03",
+    t: "Design",
+    d: "We create the site structure or user flows, wireframes, responsive screens, and a clickable prototype, then review key journeys before development starts.",
+  },
+  {
+    n: "04",
+    t: "Development",
+    d: "We build the approved interface, backend, database, and integrations in testable stages, sharing working progress regularly so feedback can be addressed early.",
+  },
+  {
+    n: "05",
+    t: "Testing",
+    d: "We verify key workflows, forms, permissions, mobile layouts, browser compatibility, accessibility basics, performance, security checks, and data handling before release.",
+  },
+  {
+    n: "06",
+    t: "Launch",
+    d: "We deploy the product, configure domains, analytics, and backups where required, confirm live workflows, provide handover guidance, and agree on maintenance and support needs.",
+  },
 ];
 
 export function Process() {
@@ -23,7 +47,7 @@ export function Process() {
         </Reveal>
         <Reveal delay={0.1}>
           <h2 className="text-balance max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tighter md:text-6xl">
-            Six disciplined steps from <span className="text-ember">first call to launch day.</span>
+            How we take a project from <span className="text-ember">requirements to launch.</span>
           </h2>
         </Reveal>
 

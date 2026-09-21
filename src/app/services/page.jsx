@@ -1,104 +1,281 @@
 import Link from "next/link";
 import { ArrowUpRight, Code2, Cpu, Database, Palette, ScanLine, ShoppingBag, Smartphone } from "lucide-react";
-import { ContactCta } from "@/components/sections/contact-cta.jsx";
+// import { ContactCta } from "@/components/sections/contact-cta.jsx";
 import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
 
 export const metadata = {
-  title: "Services - OXY12",
+  title: "Web, Software, E-Commerce, POS, ERP & Mobile App Services | OXY12",
   description:
-    "Websites, mobile apps, custom software, UI/UX, e-commerce, POS and ERP solutions engineered by OXY12.",
+    "Explore OXY12 website development, custom software, UI/UX design, e-commerce, POS, ERP, and Flutter mobile app services, including features, technologies, process, deliverables, and FAQs.",
 };
 
 const services = [
   {
+    id: "website-development",
     icon: Code2,
     title: "Website Development",
-    desc: "Award-winning marketing sites and web platforms built on bleeding-edge stacks.",
-    tech: ["Next.js", "TanStack", "Astro", "Vercel"],
-    starting: "$8k",
-    process: ["Discovery", "Design", "Build", "Launch"],
+    desc: "We create responsive business websites that explain your services clearly, make it easy for customers to contact you, and give your team a practical way to manage content.",
+    whoFor:
+      "Businesses, professional services, educational organizations, and growing brands that need a new website or want to replace a site that is slow, outdated, difficult to update, or unclear on mobile devices.",
+    included: [
+      "Requirements and content-structure planning",
+      "Responsive page design for desktop, tablet, and mobile",
+      "Content management and administrator access where required",
+      "Contact forms, analytics setup, and technical SEO foundations",
+      "Testing, deployment, and basic handover guidance",
+    ],
+    features: ["Service and product pages", "Blog or news publishing", "Inquiry and contact workflows", "Editable page content"],
+    tech: ["WordPress", "Next.js", "Spring Boot", "REST APIs"],
+    process: ["Discovery", "Content structure", "UI design", "Development", "Testing and launch"],
+    deliverables: ["Production-ready website", "Responsive page templates", "CMS or admin setup", "Deployment and handover notes"],
     faqs: [
-      { q: "How long does a typical site take?", a: "Marketing sites: 4-8 weeks. Web platforms: 8-16 weeks." },
-      { q: "Do you handle hosting?", a: "Yes - we deploy to globally distributed edge networks and manage uptime." },
+      {
+        q: "Should we use WordPress or Next.js?",
+        a: "WordPress is often suitable when frequent content editing is the priority. Next.js is useful for highly customized interfaces, integrations, and application-like experiences. We recommend an option after reviewing your content, features, budget, and maintenance needs.",
+      },
+      {
+        q: "How is the website timeline decided?",
+        a: "The schedule depends on the number of pages, content readiness, design complexity, integrations, and review time. We confirm the stages and expected timeline after the initial scope is agreed.",
+      },
     ],
   },
   {
+    id: "custom-software-development",
     icon: Cpu,
     title: "Custom Software Development",
-    desc: "Bespoke enterprise systems engineered to solve complex business problems.",
-    tech: ["Node", "Go", "Rust", "Postgres"],
-    starting: "$25k",
-    process: ["Requirements", "Architecture", "Build", "Test", "Deploy"],
+    desc: "We develop browser-based software around the way your organization actually works, replacing repetitive manual tasks and disconnected spreadsheets with structured workflows and reliable records.",
+    whoFor:
+      "Teams that have outgrown generic software or need a system for approvals, customer records, staff access, reporting, document handling, scheduling, inventory, or another organization-specific workflow.",
+    included: [
+      "Workflow mapping and functional requirements",
+      "User roles, permissions, and secure authentication",
+      "Responsive dashboards and task-focused interfaces",
+      "Database design, APIs, reports, and third-party integrations",
+      "Testing, deployment planning, documentation, and support",
+    ],
+    features: ["Role-based dashboards", "Approval workflows", "Searchable business records", "Reports and data exports"],
+    tech: ["Next.js", "Spring Boot", "PostgreSQL", "REST APIs"],
+    process: ["Requirements", "System design", "Prototype", "Development", "Testing and deployment"],
+    deliverables: ["Working web application", "Configured user roles", "Database and integrations", "Technical handover information"],
     faqs: [
-      { q: "Do you sign NDAs?", a: "Absolutely - and we work behind mutual NDA from the first call." },
-      { q: "Do we own the source code?", a: "Yes. You own 100% of the IP. Full handover at the end." },
+      {
+        q: "Can custom software connect to our existing tools?",
+        a: "It can when those tools provide a suitable API, data export, or supported integration method. We review documentation, access requirements, data ownership, and limitations before confirming an integration.",
+      },
+      {
+        q: "Can the system grow after the first release?",
+        a: "Yes. We can plan the first release around the highest-priority workflows and organize the system so approved modules and integrations can be added in later stages.",
+      },
     ],
   },
   {
+    id: "ui-ux-design",
     icon: Palette,
     title: "UI/UX Design",
-    desc: "Human-centric design systems that combine beauty with effortless usability.",
-    tech: ["Figma", "Motion", "Tokens", "Storybook"],
-    starting: "$6k",
-    process: ["Audit", "Strategy", "Wireframe", "Visual", "System"],
-    faqs: [{ q: "Do you build the design system too?", a: "Yes - handover-ready Figma libraries with code tokens." }],
+    desc: "We organize screens, navigation, forms, and interactions so users can understand a digital product and complete important tasks without unnecessary confusion.",
+    whoFor:
+      "Businesses planning a new website or application, and teams that need to improve an existing product with clearer navigation, more consistent screens, better mobile behavior, or a reusable design system.",
+    included: [
+      "Existing-product review or new-product discovery",
+      "Information architecture and user-flow planning",
+      "Wireframes for key pages and workflows",
+      "Responsive interface design and clickable prototypes",
+      "Reusable components and developer handover specifications",
+    ],
+    features: ["User flows", "Responsive wireframes", "Interactive prototypes", "Reusable interface components"],
+    tech: ["Figma", "Design systems", "Component specifications", "Accessibility review"],
+    process: ["Research", "User flows", "Wireframes", "Visual design", "Prototype and handover"],
+    deliverables: ["Approved screen designs", "Clickable prototype", "Component library", "Design notes for development"],
+    faqs: [
+      {
+        q: "Do you design before development begins?",
+        a: "Yes. Reviewing user flows, wireframes, and key screens before development reduces ambiguity and makes it easier to identify missing states or confusing interactions early.",
+      },
+      {
+        q: "Can you improve an existing interface?",
+        a: "Yes. We can review the current structure and important workflows, identify usability and consistency issues, and redesign selected screens or the full product depending on the agreed scope.",
+      },
+    ],
   },
   {
+    id: "ecommerce-development",
     icon: ShoppingBag,
-    title: "E-Commerce Solutions",
-    desc: "Conversion-tuned storefronts with deep integrations and headless commerce.",
-    tech: ["Shopify", "Medusa", "Stripe", "Algolia"],
-    starting: "$12k",
-    process: ["Audit", "Strategy", "Design", "Build", "Optimize"],
-    faqs: [{ q: "Headless or Shopify themes?", a: "Both - we recommend based on scale, budget and product velocity." }],
+    title: "E-Commerce Development",
+    desc: "We build online stores that help customers find products, understand prices and options, complete checkout, and receive clear order information while giving staff practical order-management tools.",
+    whoFor:
+      "Retailers, product brands, wholesalers, and service providers that need to sell online, replace a limited store, or connect product, payment, inventory, and order workflows.",
+    included: [
+      "Store structure, product catalogue, and customer-flow planning",
+      "Responsive storefront and product-page design",
+      "Cart, checkout, payment-gateway, and order setup",
+      "Inventory, customer notifications, and administrator workflows",
+      "Testing, launch support, and store-management guidance",
+    ],
+    features: ["Products and variations", "Cart and secure checkout", "Payment gateway integration", "Orders and stock management"],
+    tech: ["WordPress", "WooCommerce", "Next.js", "Spring Boot"],
+    process: ["Store discovery", "Catalogue planning", "Design", "Development and integration", "Testing and launch"],
+    deliverables: ["Customer storefront", "Store administration setup", "Payment and order workflow", "Launch and handover guidance"],
+    faqs: [
+      {
+        q: "When is WooCommerce suitable?",
+        a: "WooCommerce is often suitable for stores that need WordPress content management and established commerce features. A custom Next.js and Spring Boot solution may fit more specialized workflows or integrations.",
+      },
+      {
+        q: "Can you connect a local payment gateway?",
+        a: "We can integrate a gateway when the provider supports the selected platform and supplies the required account access and technical documentation. Compatibility is checked during planning.",
+      },
+    ],
   },
   {
+    id: "pos-systems",
     icon: ScanLine,
     title: "POS Systems",
-    desc: "Modern point-of-sale built for hospitality, retail, and multi-branch operations.",
-    tech: ["Offline-first", "Sync", "Hardware integration"],
-    starting: "$18k",
-    process: ["Discovery", "Hardware spec", "Build", "Pilot", "Rollout"],
-    faqs: [{ q: "Do you support existing hardware?", a: "Yes - most receipt printers, cash drawers, and card terminals." }],
+    desc: "We develop point-of-sale software that records transactions, supports day-to-day billing, and connects sales information with products, stock, staff access, and management reporting.",
+    whoFor:
+      "Retail shops, restaurants, service counters, and multi-branch operations that need a POS workflow adapted to their products, staff roles, reporting requirements, or existing business system.",
+    included: [
+      "Sales workflow and hardware-requirement review",
+      "Product, price, tax, discount, and receipt configuration",
+      "Staff accounts, permissions, shifts, and activity records",
+      "Inventory updates, branch data, and management reports",
+      "Pilot testing, rollout planning, and user guidance",
+    ],
+    features: ["Fast billing workflow", "Receipts and transaction history", "Stock updates", "Branch and staff reports"],
+    tech: ["Next.js", "Spring Boot", "PostgreSQL", "Offline synchronization"],
+    process: ["Workflow review", "System design", "Development", "Pilot testing", "Branch rollout"],
+    deliverables: ["POS application", "Configured products and roles", "Reporting workflows", "Deployment and operating guidance"],
+    faqs: [
+      {
+        q: "Can the POS continue during an internet interruption?",
+        a: "Offline operation can be designed for selected sales workflows. The exact behavior, local storage, conflict handling, and later synchronization must be planned around the business rules and deployment environment.",
+      },
+      {
+        q: "Will it work with our existing hardware?",
+        a: "Compatibility depends on the device model, operating system, connection method, and available drivers or APIs. We review printers, scanners, cash drawers, and other devices before confirming support.",
+      },
+    ],
   },
   {
+    id: "erp-systems",
     icon: Database,
     title: "ERP Systems",
-    desc: "End-to-end ERP suites unifying finance, ops, inventory and people.",
-    tech: ["Modular", "Multi-tenant", "Audit-ready"],
-    starting: "$35k",
-    process: ["Workshop", "Map", "Build", "Migrate", "Train"],
-    faqs: [{ q: "Can you migrate from legacy ERP?", a: "Yes - we run dual-write migrations with zero downtime." }],
+    desc: "We develop modular ERP software that brings important operational records into one controlled system, reducing duplicate data entry and improving visibility across departments.",
+    whoFor:
+      "Organizations that need connected workflows for purchasing, suppliers, stock, sales, finance-related records, staff activity, approvals, reporting, or multiple branches.",
+    included: [
+      "Department and workflow analysis",
+      "Module, role, permission, and approval design",
+      "Shared records, dashboards, reports, and audit history",
+      "Data-import and integration planning",
+      "Phased testing, training support, rollout, and maintenance planning",
+    ],
+    features: ["Purchasing and suppliers", "Inventory and stock movements", "Approvals and audit records", "Operational reports"],
+    tech: ["Next.js", "Spring Boot", "PostgreSQL", "REST APIs"],
+    process: ["Operational workshop", "Module mapping", "Phased development", "Data and user testing", "Rollout and training"],
+    deliverables: ["Configured ERP modules", "Roles and approval paths", "Reports and shared records", "Deployment and handover documentation"],
+    faqs: [
+      {
+        q: "Does every ERP module need to launch at once?",
+        a: "No. A phased rollout can reduce risk by starting with the most important workflows, validating them with users, and adding approved modules after the foundation is stable.",
+      },
+      {
+        q: "Can existing data be migrated?",
+        a: "Migration depends on the quality, format, ownership, and volume of the available data. We first review sample records, define mappings, identify cleanup needs, and agree on validation before import.",
+      },
+    ],
   },
   {
+    id: "mobile-app-development",
     icon: Smartphone,
     title: "Mobile Application Development",
-    desc: "High-performance native and cross-platform apps built for iOS and Android.",
-    tech: ["React Native", "Flutter", "iOS", "Android"],
-    starting: "$12k",
-    process: ["Discovery", "UX Design", "Development", "Testing", "Store Launch"],
+    desc: "We build Flutter applications for iOS and Android with a shared codebase, consistent interfaces, and secure connections to the APIs and business systems the app needs.",
+    whoFor:
+      "Organizations that need a customer app, staff tool, field-service application, booking experience, delivery workflow, or mobile access to an existing web platform.",
+    included: [
+      "Mobile requirements and user-flow planning",
+      "Responsive Flutter interface development",
+      "Authentication, API integration, and device permissions",
+      "Testing on supported Android and iOS devices",
+      "Store preparation, release support, and maintenance planning",
+    ],
+    features: ["User accounts and profiles", "API-connected data", "Notifications where required", "Device and offline capabilities"],
+    tech: ["Flutter", "Dart", "REST APIs", "Android and iOS"],
+    process: ["Discovery", "Mobile UX design", "Flutter development", "Device testing", "Store release"],
+    deliverables: ["Flutter application", "Integrated API workflows", "Tested release builds", "Store and technical handover assets"],
     faqs: [
-      { q: "Do you build for both iOS and Android?", a: "Yes - we build native or cross-platform apps based on your product goals, timeline, and budget." },
-      { q: "Can you publish the app to the stores?", a: "Yes - we handle App Store and Google Play preparation, submission, and launch support." },
+      {
+        q: "Can one Flutter app support iOS and Android?",
+        a: "Yes. Flutter supports a shared codebase for both platforms, while platform-specific permissions, testing, signing, and store requirements are handled separately where necessary.",
+      },
+      {
+        q: "Do you help with app-store submission?",
+        a: "Yes. We can prepare release builds and assist with the technical submission process. The client provides and owns the required Apple and Google developer accounts, legal details, and store content.",
+      },
     ],
   },
 ];
 
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "OXY12 Web and Software Development Services",
+  itemListElement: services.map((service, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    url: `https://oxy12.com/services#${service.id}`,
+    name: service.title,
+    description: service.desc,
+  })),
+};
+
+function BulletList({ items }) {
+  return (
+    <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
+      {items.map((item) => (
+        <li key={item} className="flex gap-3">
+          <span className="mt-2 size-1.5 shrink-0 rounded-full bg-ember" />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function Tags({ items }) {
+  return (
+    <div className="mt-4 flex flex-wrap gap-2">
+      {items.map((item) => (
+        <span key={item} className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-foreground/80">
+          {item}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export default function ServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
+
       <section className="relative px-6 pb-16 pt-40 md:pt-48">
         <div className="pointer-events-none absolute inset-0 mesh-bg opacity-50" />
         <div className="relative mx-auto max-w-7xl">
           <Reveal>
-            <SectionLabel index="" label="Capabilities" />
+            <SectionLabel index="01" label="Services" />
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="text-balance font-display text-5xl font-extrabold leading-[0.95] tracking-tighter md:text-8xl">
-              Seven disciplines. <br />
-              <span className="italic text-ember">One studio.</span>
+            <h1 className="text-balance max-w-5xl font-display text-5xl font-extrabold leading-[0.95] tracking-tighter md:text-8xl">
+              Web and software services for <span className="italic text-ember">real business workflows.</span>
             </h1>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="mt-10 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
+              OXY12 plans, designs, develops, tests, and supports digital products for businesses in Sri Lanka and beyond.
+              The sections below explain who each service is for, what can be included, the technologies we use, how delivery
+              is handled, and what clients typically receive.
+            </p>
           </Reveal>
         </div>
       </section>
@@ -106,60 +283,62 @@ export default function ServicesPage() {
       <section className="px-6 py-16">
         <div className="mx-auto max-w-7xl space-y-10">
           {services.map((service, index) => (
-            <Reveal key={service.title} delay={index * 0.04}>
-              <article className="group grid gap-10 rounded-3xl glass p-8 md:grid-cols-12 md:p-12">
-                <div className="md:col-span-4">
-                  <div className="grid size-14 place-items-center rounded-2xl bg-ember/15 text-ember">
-                    <service.icon className="size-6" />
+            <Reveal key={service.id} delay={index * 0.04}>
+              <article id={service.id} className="scroll-mt-32 rounded-3xl glass p-8 md:p-12">
+                <div className="grid gap-10 md:grid-cols-12">
+                  <div className="md:col-span-4">
+                    <div className="grid size-14 place-items-center rounded-2xl bg-ember/15 text-ember">
+                      <service.icon className="size-6" />
+                    </div>
+                    <h2 className="mt-6 font-display text-3xl font-extrabold tracking-tight md:text-4xl">{service.title}</h2>
+                    <p className="mt-4 leading-relaxed text-muted-foreground">{service.desc}</p>
+
+                    <div className="mt-8 border-t border-white/10 pt-6">
+                      <h3 className="font-mono text-[10px] uppercase tracking-[0.25em] text-ember">Who this is for</h3>
+                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{service.whoFor}</p>
+                    </div>
                   </div>
-                  <h2 className="mt-6 font-display text-3xl font-extrabold tracking-tight md:text-4xl">{service.title}</h2>
-                  <p className="mt-4 text-muted-foreground">{service.desc}</p>
-                  <div className="mt-8 border-t border-white/10 pt-6">
-                    {/* <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Starting at</div> */}
-                    {/* <div className="mt-1 font-display text-3xl font-extrabold text-ember">{service.starting}</div> */}
+
+                  <div className="md:col-span-4">
+                    <h3 className="font-mono text-[10px] uppercase tracking-[0.25em] text-ember">What is included</h3>
+                    <BulletList items={service.included} />
+
+                    <h3 className="mt-8 font-mono text-[10px] uppercase tracking-[0.25em] text-ember">Technologies</h3>
+                    <Tags items={service.tech} />
+
+                    <h3 className="mt-8 font-mono text-[10px] uppercase tracking-[0.25em] text-ember">Delivery process</h3>
+                    <ol className="mt-4 space-y-3">
+                      {service.process.map((step, stepIndex) => (
+                        <li key={step} className="flex items-center gap-3 text-sm">
+                          <span className="grid size-7 shrink-0 place-items-center rounded-full bg-ember/15 font-mono text-[10px] text-ember">
+                            {String(stepIndex + 1).padStart(2, "0")}
+                          </span>
+                          {step}
+                        </li>
+                      ))}
+                    </ol>
                   </div>
-                </div>
-                <div className="md:col-span-4">
-                  <h3 className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Process</h3>
-                  <ol className="mt-4 space-y-3">
-                    {service.process.map((step, stepIndex) => (
-                      <li key={step} className="flex items-center gap-3 text-sm">
-                        <span className="grid size-7 place-items-center rounded-full bg-ember/15 font-mono text-[10px] text-ember">
-                          {String(stepIndex + 1).padStart(2, "0")}
-                        </span>
-                        {step}
-                      </li>
-                    ))}
-                  </ol>
-                  {/* <h3 className="mt-8 font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Tech</h3> */}
-                  {/* <div className="mt-3 flex flex-wrap gap-2">
-                    {service.tech.map((item) => (
-                      <span key={item} className="rounded-full border border-white/10 px-3 py-1 text-xs">
-                        {item}
-                      </span>
-                    ))}
-                  </div> */}
-                </div>
-                <div className="md:col-span-4">
-                  <h3 className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">FAQs</h3>
-                  <div className="mt-4 space-y-4">
-                    {service.faqs.map((faq) => (
-                      <details key={faq.q} className="group/d border-b border-white/10 pb-3">
-                        <summary className="flex cursor-pointer items-center justify-between text-sm font-medium">
-                          {faq.q}
-                          <span className="ml-3 text-ember transition-transform group-open/d:rotate-45">+</span>
-                        </summary>
-                        <p className="mt-2 text-sm text-muted-foreground">{faq.a}</p>
-                      </details>
-                    ))}
+
+                  <div className="md:col-span-4">
+                    <h3 className="font-mono text-[10px] uppercase tracking-[0.25em] text-ember">Example features</h3>
+                    <BulletList items={service.features} />
+
+                    <h3 className="mt-8 font-mono text-[10px] uppercase tracking-[0.25em] text-ember">Typical deliverables</h3>
+                    <BulletList items={service.deliverables} />
+
+                    <h3 className="mt-8 font-mono text-[10px] uppercase tracking-[0.25em] text-ember">Frequently asked questions</h3>
+                    <div className="mt-4 space-y-4">
+                      {service.faqs.map((faq) => (
+                        <details key={faq.q} className="group/d border-b border-white/10 pb-3">
+                          <summary className="flex cursor-pointer items-center justify-between text-sm font-medium">
+                            {faq.q}
+                            <span className="ml-3 text-ember transition-transform group-open/d:rotate-45">+</span>
+                          </summary>
+                          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{faq.a}</p>
+                        </details>
+                      ))}
+                    </div>
                   </div>
-                  <Link
-                    href="/contact"
-                    className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-ember transition-transform hover:translate-x-1"
-                  >
-                    Discuss this service
-                    <ArrowUpRight className="size-4" />
-                  </Link>
                 </div>
               </article>
             </Reveal>
@@ -167,7 +346,32 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <ContactCta />
+      {/* The full ContactCta form is temporarily hidden on this page. */}
+      {/* <ContactCta /> */}
+
+      <section className="px-6 py-24 md:py-32">
+        <Reveal>
+          <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 rounded-3xl glass p-8 md:flex-row md:items-center md:p-12">
+            <div>
+              <SectionLabel index="02" label="Project Inquiry" />
+              <h2 className="mt-6 max-w-3xl font-display text-3xl font-extrabold tracking-tight md:text-5xl">
+                Not sure which service fits your project?
+              </h2>
+              <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">
+                Tell us about your users, current workflow, main problem, and the result you need. We will help identify a
+                practical starting point before discussing scope and delivery.
+              </p>
+            </div>
+            <Link
+              href="/contact"
+              className="ember-glow inline-flex shrink-0 items-center gap-3 rounded-full bg-ember px-8 py-4 text-sm font-semibold tracking-wide text-primary-foreground transition-all hover:bg-ember-glow"
+            >
+              Contact OXY12
+              <ArrowUpRight className="size-4" />
+            </Link>
+          </div>
+        </Reveal>
+      </section>
     </>
   );
 }

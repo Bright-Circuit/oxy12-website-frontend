@@ -1,5 +1,5 @@
 import { Cpu, Headphones, LayoutGrid, Search, Shield, Sparkles, Zap } from "lucide-react";
-import { Counter } from "@/components/site/counter.jsx";
+// import { Counter } from "@/components/site/counter.jsx";
 import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
 
@@ -60,13 +60,15 @@ export function WhyChoose() {
             <div className="grid grid-cols-2 gap-8 self-end">
               <div>
                 <div className="font-display text-5xl font-extrabold text-ember">
-                  <Counter to={7} suffix="K+" />
+                  {/* <Counter to={7} suffix="K+" /> */}
+                  7K+
                 </div>
                 <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Projects shipped</div>
               </div>
               <div>
                 <div className="font-display text-5xl font-extrabold text-ember">
-                  <Counter to={100} suffix="%" />
+                  {/* <Counter to={100} suffix="%" /> */}
+                  100%
                 </div>
                 <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Client satisfaction</div>
               </div>

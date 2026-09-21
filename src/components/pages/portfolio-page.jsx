@@ -6,7 +6,7 @@ import { ProjectCard, projects } from "@/components/sections/portfolio.jsx";
 import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
 
-const filters = ["All", "Websites", "Software", "E-Commerce", "UI/UX", "ERP", "POS"];
+const filters = ["All", "Websites", "E-Commerce"];
 
 export function PortfolioPageView() {
   const [active, setActive] = useState("All");
@@ -18,13 +18,19 @@ export function PortfolioPageView() {
         <div className="pointer-events-none absolute inset-0 mesh-bg opacity-50" />
         <div className="relative mx-auto max-w-7xl">
           <Reveal>
-            <SectionLabel index="" label="Archive" />
+            <SectionLabel index="01" label="Selected Client Work" />
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="text-balance font-display text-5xl font-extrabold leading-[0.95] tracking-tighter md:text-8xl">
-              Work that <br />
-              <span className="text-ember">made it real.</span>
+            <h1 className="text-balance max-w-5xl font-display text-5xl font-extrabold leading-[0.95] tracking-tighter md:text-8xl">
+              Websites and software built for <span className="text-ember">real organizations.</span>
             </h1>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="mt-10 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
+              Explore completed OXY12 projects across education, food retail, aquariums, fashion, beverages, and local
+              delivery. Each case summary explains the client need, what we built, the main features, the known technology,
+              and the practical outcome. Select a project to open its live website in a new tab.
+            </p>
           </Reveal>
         </div>
       </section>
@@ -52,7 +58,7 @@ export function PortfolioPageView() {
           ) : (
             <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
               {filtered.map((project, index) => (
-                <ProjectCard key={project.name} project={project} offset={index % 2 === 1} />
+                <ProjectCard key={project.name} project={project} offset={index % 2 === 1} detailed />
               ))}
             </div>
           )}
