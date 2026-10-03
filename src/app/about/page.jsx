@@ -1,13 +1,43 @@
 import Image from "next/image";
+import Link from "next/link";
 // import { Stats } from "@/components/sections/stats.jsx";
 // import { ContactCta } from "@/components/sections/contact-cta.jsx";
 import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
+import { JsonLd } from "@/components/site/json-ld.jsx";
+import {
+  createBreadcrumbEntity,
+  createSchemaGraph,
+  createWebPageEntity,
+  founderEntity,
+  organizationEntity,
+  websiteEntity,
+} from "@/lib/structured-data.js";
 
 export const metadata = {
-  title: "About OXY12 | Sri Lankan Web & Software Development Studio",
+  title: {
+    absolute: "About OXY12 | Sri Lankan Web & Software Studio",
+  },
   description:
-    "Learn about OXY12, a Sri Lankan web and software development studio founded in 2025, our services, project approach, technical capabilities, and founder.",
+    "Learn about OXY12, a Sri Lankan web and software studio founded in 2025, including its founder, capabilities, industries, technologies, and project approach.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About OXY12 | Sri Lankan Web & Software Studio",
+    description:
+      "Learn about OXY12, a Sri Lankan web and software studio founded in 2025, including its founder, capabilities, industries, technologies, and project approach.",
+    url: "https://oxy12.com/about",
+    siteName: "OXY12",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: "About OXY12 | Sri Lankan Web & Software Studio",
+    description:
+      "Learn about OXY12, a Sri Lankan web and software studio founded in 2025, including its founder, capabilities, industries, technologies, and project approach.",
+  },
 };
 
 const values = [
@@ -36,6 +66,8 @@ const expertise = [
       "Our work includes business websites, e-commerce stores, custom web software, UI/UX design, point-of-sale systems, ERP modules, and mobile applications for iOS and Android.",
     details:
       "Depending on the project, delivery may cover research, requirements, interface design, development, integrations, testing, deployment, documentation, and ongoing maintenance.",
+    href: "/services",
+    linkLabel: "Explore OXY12 services",
   },
   {
     title: "Industries",
@@ -43,6 +75,8 @@ const expertise = [
       "Our current portfolio includes work connected to education, retail, e-commerce, food and hospitality, fashion, delivery services, construction, and other service-based businesses.",
     details:
       "We do not assume that two organizations work in the same way. Each project begins by reviewing its users, daily operations, existing tools, data, and practical constraints.",
+    href: "/portfolio",
+    linkLabel: "See completed client projects",
   },
   {
     title: "Technology",
@@ -53,27 +87,33 @@ const expertise = [
   },
 ];
 
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "OXY12",
-  url: "https://oxy12.com",
-  foundingDate: "2025",
-  foundingLocation: {
-    "@type": "Country",
-    name: "Sri Lanka",
-  },
-  founder: {
-    "@type": "Person",
-    name: "Akindu Ramsith",
-    jobTitle: "Founder and Software Engineer",
-  },
-};
+const aboutPageId = "https://oxy12.com/about#webpage";
+const aboutSchema = createSchemaGraph(
+  organizationEntity,
+  websiteEntity,
+  createWebPageEntity({
+    type: "AboutPage",
+    id: aboutPageId,
+    url: "https://oxy12.com/about",
+    name: "About OXY12 | Sri Lankan Web & Software Studio",
+    description:
+      "Learn about OXY12, a Sri Lankan web and software studio founded in 2025, including its founder, capabilities, industries, technologies, and project approach.",
+    mainEntity: {
+      "@id": "https://oxy12.com/#organization",
+    },
+  }),
+  founderEntity,
+  createBreadcrumbEntity({
+    id: "https://oxy12.com/about#breadcrumb",
+    pageName: "About",
+    pageUrl: "https://oxy12.com/about",
+  }),
+);
 
 export default function AboutPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <JsonLd data={aboutSchema} />
 
       <section className="relative px-6 pb-16 pt-40 md:pt-48">
         <div className="pointer-events-none absolute inset-0 mesh-bg opacity-50" />
@@ -100,7 +140,7 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl gap-16 md:grid-cols-2">
           <Reveal className="h-full">
             <div className="h-full rounded-3xl glass p-10">
-              <h3 className="font-mono text-xs uppercase tracking-[0.25em] text-ember">Company Overview</h3>
+              <h2 className="font-mono text-xs uppercase tracking-[0.25em] text-ember">Company Overview</h2>
               <p className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl">
                 OXY12 is a web and software development studio established in 2025 and based in Sri Lanka.
               </p>
@@ -112,7 +152,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.1} className="h-full">
             <div className="h-full rounded-3xl glass p-10">
-              <h3 className="font-mono text-xs uppercase tracking-[0.25em] text-ember">What Clients Can Expect</h3>
+              <h2 className="font-mono text-xs uppercase tracking-[0.25em] text-ember">What Clients Can Expect</h2>
               <p className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl">
                 A defined scope, reviewed designs, staged development, testing, deployment support, and a clear handover.
               </p>
@@ -167,10 +207,34 @@ export default function AboutPage() {
                   <p className="mt-4 border-t border-white/10 pt-4 text-sm leading-relaxed text-muted-foreground">
                     {item.details}
                   </p>
+                  {item.href && (
+                    <Link
+                      href={item.href}
+                      className="mt-6 inline-flex font-mono text-xs uppercase tracking-[0.18em] text-ember transition-colors hover:text-foreground"
+                    >
+                      {item.linkLabel}
+                    </Link>
+                  )}
                 </div>
               </Reveal>
             ))}
           </div>
+          <Reveal delay={0.2}>
+            <div className="mt-8 max-w-3xl rounded-3xl glass p-8">
+              <p className="leading-relaxed text-muted-foreground">
+                OXY12 Learn publishes practical guides on business software, websites, AI tools, hosting, and related
+                technology decisions.
+              </p>
+              <a
+                href="https://learn.oxy12.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex font-mono text-xs uppercase tracking-[0.18em] text-ember transition-colors hover:text-foreground"
+              >
+                Explore practical guides on OXY12 Learn
+              </a>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -193,7 +257,7 @@ export default function AboutPage() {
                   alt="Mr. Akindu Ramsith, Founder and Software Engineer at OXY12"
                   fill
                   className="object-cover"
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  sizes="(min-width: 1280px) 640px, (min-width: 1024px) 50vw, calc(100vw - 48px)"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/65 via-transparent to-transparent" />
               </div>

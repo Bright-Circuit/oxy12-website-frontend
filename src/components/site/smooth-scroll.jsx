@@ -17,14 +17,30 @@ export function SmoothScroll() {
     let raf = 0;
 
     const tick = (time) => {
+      raf = 0;
       lenis.raf(time);
-      raf = requestAnimationFrame(tick);
+      if (!document.hidden) raf = requestAnimationFrame(tick);
     };
 
-    raf = requestAnimationFrame(tick);
+    const start = () => {
+      if (!raf && !document.hidden) raf = requestAnimationFrame(tick);
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        cancelAnimationFrame(raf);
+        raf = 0;
+      } else {
+        start();
+      }
+    };
+
+    start();
+    document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
       cancelAnimationFrame(raf);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
       lenis.destroy();
     };
   }, []);

@@ -3,11 +3,39 @@ import { ArrowUpRight, Code2, Cpu, Database, Palette, ScanLine, ShoppingBag, Sma
 // import { ContactCta } from "@/components/sections/contact-cta.jsx";
 import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
+import { JsonLd } from "@/components/site/json-ld.jsx";
+import {
+  createBreadcrumbEntity,
+  createSchemaGraph,
+  createWebPageEntity,
+  organizationEntity,
+  websiteEntity,
+} from "@/lib/structured-data.js";
 
 export const metadata = {
-  title: "Web, Software, E-Commerce, POS, ERP & Mobile App Services | OXY12",
+  title: {
+    absolute: "Web & Software Development Services Sri Lanka | OXY12",
+  },
   description:
-    "Explore OXY12 website development, custom software, UI/UX design, e-commerce, POS, ERP, and Flutter mobile app services, including features, technologies, process, deliverables, and FAQs.",
+    "Explore OXY12 website, custom software, UI/UX, e-commerce, POS, ERP, and Flutter app development services for businesses in Sri Lanka and beyond.",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Web & Software Development Services Sri Lanka | OXY12",
+    description:
+      "Explore OXY12 website, custom software, UI/UX, e-commerce, POS, ERP, and Flutter app development services for businesses in Sri Lanka and beyond.",
+    url: "https://oxy12.com/services",
+    siteName: "OXY12",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: "Web & Software Development Services Sri Lanka | OXY12",
+    description:
+      "Explore OXY12 website, custom software, UI/UX, e-commerce, POS, ERP, and Flutter app development services for businesses in Sri Lanka and beyond.",
+  },
 };
 
 const services = [
@@ -15,7 +43,7 @@ const services = [
     id: "website-development",
     icon: Code2,
     title: "Website Development",
-    desc: "We create responsive business websites that explain your services clearly, make it easy for customers to contact you, and give your team a practical way to manage content.",
+    desc: "We create responsive business websites with WordPress or custom Next.js development, clear service content, contact forms, content management, integrations, and practical deployment support.",
     whoFor:
       "Businesses, professional services, educational organizations, and growing brands that need a new website or want to replace a site that is slow, outdated, difficult to update, or unclear on mobile devices.",
     included: [
@@ -29,6 +57,10 @@ const services = [
     tech: ["WordPress", "Next.js", "Spring Boot", "REST APIs"],
     process: ["Discovery", "Content structure", "UI design", "Development", "Testing and launch"],
     deliverables: ["Production-ready website", "Responsive page templates", "CMS or admin setup", "Deployment and handover notes"],
+    relatedLinks: [
+      { href: "/portfolio#kci-education-lanka", label: "KCI Education Lanka" },
+      { href: "/portfolio#natural-fruit-product", label: "Natural Fruit Product" },
+    ],
     faqs: [
       {
         q: "Should we use WordPress or Next.js?",
@@ -58,6 +90,7 @@ const services = [
     tech: ["Next.js", "Spring Boot", "PostgreSQL", "REST APIs"],
     process: ["Requirements", "System design", "Prototype", "Development", "Testing and deployment"],
     deliverables: ["Working web application", "Configured user roles", "Database and integrations", "Technical handover information"],
+    relatedLinks: [{ href: "/portfolio#northspire-education", label: "Northspire Education" }],
     faqs: [
       {
         q: "Can custom software connect to our existing tools?",
@@ -87,6 +120,7 @@ const services = [
     tech: ["Figma", "Design systems", "Component specifications", "Accessibility review"],
     process: ["Research", "User flows", "Wireframes", "Visual design", "Prototype and handover"],
     deliverables: ["Approved screen designs", "Clickable prototype", "Component library", "Design notes for development"],
+    relatedLinks: [{ href: "/portfolio", label: "See OXY12 project examples" }],
     faqs: [
       {
         q: "Do you design before development begins?",
@@ -116,6 +150,12 @@ const services = [
     tech: ["WordPress", "WooCommerce", "Next.js", "Spring Boot"],
     process: ["Store discovery", "Catalogue planning", "Design", "Development and integration", "Testing and launch"],
     deliverables: ["Customer storefront", "Store administration setup", "Payment and order workflow", "Launch and handover guidance"],
+    relatedLinks: [
+      { href: "/portfolio#meet-the-meatzzz", label: "Meet the Meatzzz" },
+      { href: "/portfolio#blue-fin-aqua", label: "Blue Fin Aqua" },
+      { href: "/portfolio#sh-womens", label: "SH Womens" },
+      { href: "/portfolio#ah-delivery", label: "AH Delivery" },
+    ],
     faqs: [
       {
         q: "When is WooCommerce suitable?",
@@ -145,6 +185,7 @@ const services = [
     tech: ["Next.js", "Spring Boot", "PostgreSQL", "Offline synchronization"],
     process: ["Workflow review", "System design", "Development", "Pilot testing", "Branch rollout"],
     deliverables: ["POS application", "Configured products and roles", "Reporting workflows", "Deployment and operating guidance"],
+    relatedLinks: [{ href: "/portfolio", label: "See OXY12 project examples" }],
     faqs: [
       {
         q: "Can the POS continue during an internet interruption?",
@@ -174,6 +215,7 @@ const services = [
     tech: ["Next.js", "Spring Boot", "PostgreSQL", "REST APIs"],
     process: ["Operational workshop", "Module mapping", "Phased development", "Data and user testing", "Rollout and training"],
     deliverables: ["Configured ERP modules", "Roles and approval paths", "Reports and shared records", "Deployment and handover documentation"],
+    relatedLinks: [{ href: "/portfolio", label: "See OXY12 project examples" }],
     faqs: [
       {
         q: "Does every ERP module need to launch at once?",
@@ -203,6 +245,7 @@ const services = [
     tech: ["Flutter", "Dart", "REST APIs", "Android and iOS"],
     process: ["Discovery", "Mobile UX design", "Flutter development", "Device testing", "Store release"],
     deliverables: ["Flutter application", "Integrated API workflows", "Tested release builds", "Store and technical handover assets"],
+    relatedLinks: [{ href: "/contact", label: "Discuss a mobile application project" }],
     faqs: [
       {
         q: "Can one Flutter app support iOS and Android?",
@@ -216,18 +259,79 @@ const services = [
   },
 ];
 
-const servicesSchema = {
-  "@context": "https://schema.org",
+const servicesPageId = "https://oxy12.com/services#webpage";
+const serviceSchemaIds = {
+  "mobile-app-development": "mobile-application-development",
+};
+const serviceEntities = services.map((service) => ({
+  "@type": "Service",
+  "@id": `https://oxy12.com/services#${serviceSchemaIds[service.id] ?? service.id}`,
+  name: service.title,
+  description: service.desc,
+  serviceType: service.title,
+  provider: {
+    "@id": "https://oxy12.com/#organization",
+  },
+}));
+const servicesListEntity = {
   "@type": "ItemList",
+  "@id": "https://oxy12.com/services#service-list",
   name: "OXY12 Web and Software Development Services",
-  itemListElement: services.map((service, index) => ({
+  numberOfItems: serviceEntities.length,
+  itemListElement: serviceEntities.map((service, index) => ({
     "@type": "ListItem",
     position: index + 1,
-    url: `https://oxy12.com/services#${service.id}`,
-    name: service.title,
-    description: service.desc,
+    item: {
+      "@id": service["@id"],
+    },
   })),
 };
+const servicesFaqEntity = {
+  "@type": "FAQPage",
+  "@id": "https://oxy12.com/services#faqs",
+  url: "https://oxy12.com/services",
+  name: "OXY12 Services FAQs",
+  isPartOf: {
+    "@id": servicesPageId,
+  },
+  about: {
+    "@id": "https://oxy12.com/#organization",
+  },
+  mainEntity: services.flatMap((service) =>
+    service.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  ),
+  inLanguage: "en",
+};
+const servicesSchema = createSchemaGraph(
+  organizationEntity,
+  websiteEntity,
+  createWebPageEntity({
+    type: "CollectionPage",
+    id: servicesPageId,
+    url: "https://oxy12.com/services",
+    name: "Web & Software Development Services Sri Lanka | OXY12",
+    description:
+      "Explore OXY12 website, custom software, UI/UX, e-commerce, POS, ERP, and Flutter app development services for businesses in Sri Lanka and beyond.",
+    mainEntity: {
+      "@id": servicesListEntity["@id"],
+    },
+  }),
+  servicesListEntity,
+  ...serviceEntities,
+  servicesFaqEntity,
+  createBreadcrumbEntity({
+    id: "https://oxy12.com/services#breadcrumb",
+    pageName: "Services",
+    pageUrl: "https://oxy12.com/services",
+  }),
+);
 
 function BulletList({ items }) {
   return (
@@ -257,7 +361,7 @@ function Tags({ items }) {
 export default function ServicesPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
+      <JsonLd data={servicesSchema} />
 
       <section className="relative px-6 pb-16 pt-40 md:pt-48">
         <div className="pointer-events-none absolute inset-0 mesh-bg opacity-50" />
@@ -272,9 +376,10 @@ export default function ServicesPage() {
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-10 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              OXY12 plans, designs, develops, tests, and supports digital products for businesses in Sri Lanka and beyond.
-              The sections below explain who each service is for, what can be included, the technologies we use, how delivery
-              is handled, and what clients typically receive.
+              OXY12 provides web and software development services for businesses in Sri Lanka and beyond. We plan, design,
+              develop, test, and support digital products around real requirements and workflows. The sections below explain
+              who each service is for, what can be included, the technologies we use, how delivery is handled, and what
+              clients typically receive.
             </p>
           </Reveal>
         </div>
@@ -296,6 +401,20 @@ export default function ServicesPage() {
                     <div className="mt-8 border-t border-white/10 pt-6">
                       <h3 className="font-mono text-[10px] uppercase tracking-[0.25em] text-ember">Who this is for</h3>
                       <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{service.whoFor}</p>
+                    </div>
+                    <div className="mt-8 border-t border-white/10 pt-6">
+                      <h3 className="font-mono text-[10px] uppercase tracking-[0.25em] text-ember">Related work</h3>
+                      <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+                        {service.relatedLinks.map((link) => (
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            className="text-sm font-medium text-foreground underline decoration-white/20 underline-offset-4 transition-colors hover:text-ember"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
 
@@ -366,7 +485,7 @@ export default function ServicesPage() {
               href="/contact"
               className="ember-glow inline-flex shrink-0 items-center gap-3 rounded-full bg-ember px-8 py-4 text-sm font-semibold tracking-wide text-primary-foreground transition-all hover:bg-ember-glow"
             >
-              Contact OXY12
+              Discuss your project with OXY12
               <ArrowUpRight className="size-4" />
             </Link>
           </div>

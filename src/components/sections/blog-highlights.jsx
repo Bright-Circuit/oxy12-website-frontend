@@ -39,7 +39,7 @@ export function BlogHighlights() {
         <div className="mb-16 flex flex-col items-start justify-between gap-8 md:mb-20 md:flex-row md:items-end">
           <div>
             <Reveal>
-              <SectionLabel index="04" label="OXY12 Learn" />
+              <SectionLabel index="04" label="OXY12 Learn — Practical Technology Guides" />
             </Reveal>
             <Reveal delay={0.1}>
               <h2 className="font-display text-4xl font-extrabold leading-[0.95] tracking-tighter md:text-7xl">
@@ -72,7 +72,7 @@ export function BlogHighlights() {
                     alt={article.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    sizes="(min-width: 1280px) 405px, (min-width: 1024px) calc(33vw - 24px), (min-width: 768px) calc(50vw - 30px), calc(100vw - 48px)"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/70 via-transparent to-transparent" />
                 </div>
@@ -100,7 +100,7 @@ export function BlogHighlights() {
             rel="noopener noreferrer"
             className="ember-glow inline-flex items-center gap-3 rounded-full bg-ember px-8 py-4 text-sm font-semibold tracking-wide text-primary-foreground transition-all hover:bg-ember-glow"
           >
-            View More Articles
+            Explore OXY12 Learn
             <ArrowUpRight className="size-4" />
           </a>
         </Reveal>

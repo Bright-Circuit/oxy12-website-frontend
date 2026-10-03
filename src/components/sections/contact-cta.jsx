@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Check, Mail, MapPin, Phone } from "lucide-react";
 import { MagneticButton } from "@/components/site/magnetic-button.jsx";
@@ -79,9 +80,8 @@ export function ContactCta() {
             </Reveal>
             <Reveal delay={0.2}>
               <p className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground md:text-lg">
-                Whether it&apos;s a website, a custom platform, or an idea you
-                cannot yet describe - start the conversation. We reply within 24
-                hours.
+                Whether you need a business website, e-commerce store, custom software platform, or mobile application,
+                share your requirements to start the conversation. We reply within 24 hours.
               </p>
             </Reveal>
 
@@ -109,7 +109,7 @@ export function ContactCta() {
               {submitted ? (
                 <div className="flex min-h-[480px] flex-col items-center justify-center text-center">
                   <div className="ember-glow grid size-20 place-items-center rounded-full bg-ember/20 text-ember">
-                    <Check className="size-10" />
+                    <Check className="size-10" aria-hidden="true" />
                   </div>
                   <h3 className="mt-8 font-display text-3xl font-bold tracking-tight">
                     Message received.
@@ -130,15 +130,19 @@ export function ContactCta() {
                     aria-hidden="true"
                   />
                   <div className="grid gap-5 md:grid-cols-2">
-                    <Field label="Name" name="name" required />
-                    <Field label="Email" name="email" type="email" required />
+                    <Field id="contact-name" label="Name" name="name" autoComplete="name" required />
+                    <Field id="contact-email" label="Email" name="email" type="email" autoComplete="email" required />
                   </div>
-                  <Field label="Company" name="company" />
+                  <Field id="contact-company" label="Company" name="company" autoComplete="organization" />
                   <div className="space-y-2">
-                    <label className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                    <label
+                      htmlFor="contact-service"
+                      className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground"
+                    >
                       Service
                     </label>
                     <select
+                      id="contact-service"
                       name="service"
                       defaultValue=""
                       className="w-full rounded-xl border border-white/10 bg-navy-deep/60 px-4 py-3.5 text-sm transition-colors focus:border-ember focus:outline-none"
@@ -154,10 +158,14 @@ export function ContactCta() {
                     </select>
                   </div>
                   <div className="space-y-2">
-                    <label className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                    <label
+                      htmlFor="contact-message"
+                      className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground"
+                    >
                       Message
                     </label>
                     <textarea
+                      id="contact-message"
                       name="message"
                       rows={5}
                       required
@@ -169,6 +177,13 @@ export function ContactCta() {
                       {error}
                     </p>
                   )}
+                  <p className="text-xs leading-relaxed text-muted-foreground">
+                    Please review our{" "}
+                    <Link href="/privacy-policy" className="underline underline-offset-4 transition-colors hover:text-ember">
+                      Privacy Policy
+                    </Link>
+                    .
+                  </p>
                   <MagneticButton
                     type="submit"
                     variant="primary"
@@ -187,15 +202,17 @@ export function ContactCta() {
   );
 }
 
-function Field({ label, name, type = "text", required = false }) {
+function Field({ id, label, name, type = "text", autoComplete, required = false }) {
   return (
     <div className="space-y-2">
-      <label className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+      <label htmlFor={id} className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
         {label}
       </label>
       <input
+        id={id}
         name={name}
         type={type}
+        autoComplete={autoComplete}
         required={required}
         className="w-full rounded-xl border border-white/10 bg-navy-deep/60 px-4 py-3.5 text-sm transition-colors focus:border-ember focus:outline-none"
       />
@@ -207,7 +224,7 @@ function ContactItem({ icon: Icon, label, value, href }) {
   const inner = (
     <div className="flex items-center gap-4">
       <div className="grid size-12 place-items-center rounded-full glass text-ember">
-        <Icon className="size-5" />
+        <Icon className="size-5" aria-hidden="true" />
       </div>
       <div>
         <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">

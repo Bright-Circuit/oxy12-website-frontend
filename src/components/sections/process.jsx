@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
@@ -63,28 +63,29 @@ export function Process() {
 
 function Step({ step, index }) {
   const ref = useRef(null);
+  const reduceMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 80%", "end 30%"] });
   const x = useTransform(scrollYProgress, [0, 1], [-50, 0]);
 
   return (
     <Reveal delay={index * 0.04}>
-      <motion.div
+      <m.div
         ref={ref}
         className="group relative grid grid-cols-[auto_1fr] items-center gap-6 overflow-hidden border-b border-white/5 py-8 md:grid-cols-[1fr_2fr_auto] md:py-12"
       >
-        <motion.div
-          style={{ x }}
+        <m.div
+          style={{ x: reduceMotion ? 0 : x }}
           className="pointer-events-none absolute -bottom-6 -left-4 select-none font-display text-[10rem] font-extrabold leading-none tracking-tighter text-white/[0.04] md:text-[14rem]"
           aria-hidden
         >
           {step.n}
-        </motion.div>
+        </m.div>
         <div className="relative font-mono text-xs uppercase tracking-[0.3em] text-ember">{step.n}</div>
         <h3 className="relative font-display text-3xl font-bold tracking-tight transition-colors group-hover:text-ember md:text-5xl">
           {step.t}
         </h3>
         <p className="relative max-w-md text-sm leading-relaxed text-muted-foreground md:text-right md:text-base">{step.d}</p>
-      </motion.div>
+      </m.div>
     </Reveal>
   );
 }

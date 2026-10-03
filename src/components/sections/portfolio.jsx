@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import northspireProjectImage from "@/assets/projects/project-northspire.png";
 // import lamoreProjectImage from "@/assets/projects/project-lamore.png";
@@ -16,7 +17,10 @@ import { SectionLabel } from "@/components/site/section-label.jsx";
 
 export const projects = [
   {
+    id: "kci-education-lanka",
     name: "KCI Education Lanka",
+    serviceHref: "/services#website-development",
+    serviceLabel: "Website development services",
     category: "Website · Education",
     year: "2026",
     href: "https://kciedulanka.com/",
@@ -36,7 +40,10 @@ export const projects = [
       "KCI Education Lanka now has a dedicated public website that brings its Malaysia-focused education services and programme information together in one accessible location.",
   },
   {
+    id: "meet-the-meatzzz",
     name: "Meet the Meatzzz",
+    serviceHref: "/services#ecommerce-development",
+    serviceLabel: "E-commerce development services",
     category: "E-Commerce · Food",
     year: "2026",
     href: "https://meetthemeatzzz.com/",
@@ -69,7 +76,10 @@ export const projects = [
   },
   */
   {
+    id: "blue-fin-aqua",
     name: "Blue Fin Aqua",
+    serviceHref: "/services#ecommerce-development",
+    serviceLabel: "E-commerce development services",
     category: "E-Commerce · Aquarium",
     year: "2026",
     href: "https://bluefinaqua.lk/",
@@ -89,7 +99,10 @@ export const projects = [
       "Blue Fin Aqua now has a dedicated e-commerce channel where aquarium customers can explore the product range and place orders through a structured online process.",
   },
   {
+    id: "natural-fruit-product",
     name: "Natural Fruit Product",
+    serviceHref: "/services#website-development",
+    serviceLabel: "Website development services",
     category: "Website · Company",
     year: "2026",
     href: "https://naturalfruitproduct.lk/",
@@ -109,7 +122,10 @@ export const projects = [
       "The finished website gives Natural Fruit Product a central digital presence for presenting both its beverage-production activity and its broader imported-product portfolio.",
   },
   {
+    id: "sh-womens",
     name: "SH Womens",
+    serviceHref: "/services#ecommerce-development",
+    serviceLabel: "E-commerce development services",
     category: "E-Commerce · Fashion",
     year: "2026",
     href: "https://shwomens.com/",
@@ -129,7 +145,10 @@ export const projects = [
       "SH Womens now has an owned e-commerce platform where customers can browse its different collections and purchase products through a consistent branded experience.",
   },
   {
+    id: "ah-delivery",
     name: "AH Delivery",
+    serviceHref: "/services#ecommerce-development",
+    serviceLabel: "E-commerce development services",
     category: "E-Commerce · Delivery",
     year: "2026",
     href: "https://ahdeliveryservices.lk/",
@@ -149,7 +168,10 @@ export const projects = [
       "The website gives AH Delivery a central ordering channel for connecting Pulmoddai-area customers with products from participating local businesses and completing the final delivery.",
   },
   {
+    id: "northspire-education",
     name: "Northspire Education",
+    serviceHref: "/services#custom-software-development",
+    serviceLabel: "Custom software development services",
     category: "LMS · Web Platform",
     year: "2025",
     href: "https://northspireedu.com/",
@@ -272,12 +294,14 @@ export function ProjectCard({ project, offset = false, detailed = false }) {
 
   return (
     <Reveal delay={offset ? 0.1 : 0} y={50}>
-      <a
-        href={project.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`group block ${offset ? "md:mt-24" : ""}`}
-      >
+      <article id={project.id} className="scroll-mt-32">
+        <a
+          href={project.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${project.name} live website (opens in a new tab)`}
+          className={`group block ${offset ? "md:mt-24" : ""}`}
+        >
         <div className="relative overflow-hidden rounded-3xl">
           <div className="relative aspect-[4/3] w-full overflow-hidden">
             {project.image ? (
@@ -288,7 +312,7 @@ export function ProjectCard({ project, offset = false, detailed = false }) {
                     alt={project.name}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(min-width: 768px) 50vw, 100vw"
+                    sizes="(min-width: 1280px) 608px, (min-width: 768px) calc(50vw - 36px), calc(100vw - 48px)"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/55 via-transparent to-transparent" />
                 </div>
@@ -320,7 +344,7 @@ export function ProjectCard({ project, offset = false, detailed = false }) {
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-navy-deep/40 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
             <span className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 font-mono text-xs uppercase tracking-[0.2em] text-background">
               View Project
-              <ArrowUpRight className="size-3.5" />
+              <ArrowUpRight className="size-3.5" aria-hidden="true" />
             </span>
           </div>
         </div>
@@ -385,11 +409,20 @@ export function ProjectCard({ project, offset = false, detailed = false }) {
 
             <span className="inline-flex items-center gap-2 rounded-full border border-white/10 px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] transition-colors group-hover:border-ember group-hover:text-ember">
               Visit live website
-              <ArrowUpRight className="size-4" />
+              <ArrowUpRight className="size-4" aria-hidden="true" />
             </span>
           </div>
         )}
-      </a>
+        </a>
+        {detailed && project.serviceHref && (
+          <Link
+            href={project.serviceHref}
+            className="mt-5 inline-flex font-mono text-xs uppercase tracking-[0.18em] text-ember transition-colors hover:text-foreground"
+          >
+            {project.serviceLabel}
+          </Link>
+        )}
+      </article>
     </Reveal>
   );
 }

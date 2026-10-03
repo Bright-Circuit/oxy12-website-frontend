@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { LazyMotion, domAnimation, m, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
 import { useRef } from "react";
 import { Code2, Cpu, Database, Palette, ScanLine, ShoppingBag, Smartphone } from "lucide-react";
 import { SectionLabel } from "@/components/site/section-label.jsx";
@@ -70,7 +71,8 @@ export function ServicesScroll() {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-200%"]);
 
   return (
-    <section ref={ref} className="relative bg-navy-deep" style={{ height: "440vh" }}>
+    <LazyMotion features={domAnimation} strict>
+      <section ref={ref} className="relative bg-navy-deep" style={{ height: "440vh" }}>
       <div className="sticky top-0 flex h-screen flex-col overflow-hidden">
         <div className="mx-auto flex w-full max-w-7xl items-end justify-between px-6 pb-10 pt-28">
           <div>
@@ -79,6 +81,12 @@ export function ServicesScroll() {
               Digital services for <br />
               <span className="text-ember">everyday business needs.</span>
             </h2>
+            <Link
+              href="/services"
+              className="mt-5 inline-flex font-mono text-xs uppercase tracking-[0.18em] text-ember transition-colors hover:text-foreground"
+            >
+              Explore our web and software services
+            </Link>
           </div>
           <p className="hidden max-w-xs text-sm leading-relaxed text-muted-foreground md:block">
             Explore what each service includes, from customer-facing websites and mobile apps to software that supports
@@ -86,7 +94,7 @@ export function ServicesScroll() {
           </p>
         </div>
 
-        <motion.div style={{ x }} className="flex gap-8 px-6 will-change-transform">
+        <m.div style={{ x }} className="flex gap-8 px-6 will-change-transform">
           {services.map((service, index) => (
             <article
               key={service.title}
@@ -120,8 +128,9 @@ export function ServicesScroll() {
               </div>
             </article>
           ))}
-        </motion.div>
+        </m.div>
       </div>
-    </section>
+      </section>
+    </LazyMotion>
   );
 }

@@ -48,9 +48,9 @@
   --color-ember-glow: var(--ember-glow);
   --color-navy: var(--navy);
   --color-navy-deep: var(--navy-deep);
-  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 }
 
 :root {
@@ -114,6 +114,24 @@
   @media (pointer: coarse) {
     html, body { cursor: auto; }
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    html, body { cursor: auto; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 2px solid var(--ember);
+  outline-offset: 3px;
 }
 
 @utility text-balance { text-wrap: balance; }

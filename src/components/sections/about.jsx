@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
 
@@ -72,11 +73,19 @@ export function About() {
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground md:text-lg">
-              OXY12 plans, designs, develops, and supports websites and software for businesses. We begin by understanding
-              how people work, then turn those requirements into tested interfaces, systems, integrations, and launch-ready
-              documentation.
-            </p>
+            <div className="mt-8 max-w-md">
+              <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
+                OXY12 plans, designs, develops, and supports websites and software for businesses. We begin by understanding
+                how people work, then turn those requirements into tested interfaces, systems, integrations, and launch-ready
+                documentation.
+              </p>
+              <Link
+                href="/about"
+                className="mt-5 inline-flex font-mono text-xs uppercase tracking-[0.18em] text-ember transition-colors hover:text-foreground"
+              >
+                Learn more about OXY12
+              </Link>
+            </div>
           </Reveal>
         </div>
 
@@ -84,15 +93,15 @@ export function About() {
           <div className="absolute left-6 top-2 h-[calc(100%-2rem)] w-px bg-gradient-to-b from-ember via-white/10 to-transparent" />
           <ol className="space-y-10">
             {aboutDetails.map((phase, index) => (
-              <Reveal key={phase.n} delay={index * 0.08}>
-                <li className="relative pl-20">
+              <li key={phase.n}>
+                <Reveal className="relative pl-20" delay={index * 0.08}>
                   <div className="absolute left-0 top-0 grid size-12 place-items-center rounded-full glass font-mono text-xs text-ember">
                     {phase.n}
                   </div>
                   <h3 className="font-display text-2xl font-bold tracking-tight md:text-3xl">{phase.title}</h3>
                   <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted-foreground md:text-base">{phase.desc}</p>
-                </li>
-              </Reveal>
+                </Reveal>
+              </li>
             ))}
           </ol>
         </div>

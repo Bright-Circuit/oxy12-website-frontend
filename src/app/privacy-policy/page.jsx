@@ -1,9 +1,20 @@
+import { JsonLd } from "@/components/site/json-ld.jsx";
+import {
+  createBreadcrumbEntity,
+  createSchemaGraph,
+  createWebPageEntity,
+  organizationEntity,
+  websiteEntity,
+} from "@/lib/structured-data.js";
+
 const lastUpdated = "September 1, 2026";
 
 const sections = [
   {
     title: "1. Information We May Collect",
-    paragraphs: ["We may collect information that you voluntarily provide to us, including:"],
+    paragraphs: [
+      "We may collect information that you voluntarily provide to us, including:",
+    ],
     items: [
       "Name",
       "Email address",
@@ -89,7 +100,9 @@ const sections = [
   },
   {
     title: "8. Data Retention",
-    paragraphs: ["We retain information only for as long as reasonably necessary for:"],
+    paragraphs: [
+      "We retain information only for as long as reasonably necessary for:",
+    ],
     items: [
       "Providing requested services",
       "Maintaining project and business records",
@@ -97,7 +110,8 @@ const sections = [
       "Meeting legal obligations",
       "Protecting our legitimate business interests",
     ],
-    closing: "Information that is no longer reasonably required may be deleted, anonymised, or securely archived.",
+    closing:
+      "Information that is no longer reasonably required may be deleted, anonymised, or securely archived.",
   },
   {
     title: "9. Data Security",
@@ -123,9 +137,19 @@ const sections = [
   },
   {
     title: "12. Your Privacy Rights",
-    paragraphs: ["Depending on applicable law and your location, you may have rights relating to your personal information, including requesting:"],
-    items: ["Access", "Correction", "Updating", "Deletion", "Restriction of certain processing", "Information about how your information is used"],
-    closing: "Requests may be subject to identity verification and applicable legal limitations.",
+    paragraphs: [
+      "Depending on applicable law and your location, you may have rights relating to your personal information, including requesting:",
+    ],
+    items: [
+      "Access",
+      "Correction",
+      "Updating",
+      "Deletion",
+      "Restriction of certain processing",
+      "Information about how your information is used",
+    ],
+    closing:
+      "Requests may be subject to identity verification and applicable legal limitations.",
   },
   {
     title: "13. Changes to This Privacy Policy",
@@ -142,50 +166,108 @@ const sections = [
 ];
 
 export const metadata = {
-  title: "Privacy Policy | OXY12",
-  description: "Read the OXY12 privacy policy for oxy12.com and learn.oxy12.com.",
+  title: {
+    absolute: "Privacy Policy | OXY12",
+  },
+  description:
+    "Read how OXY12 handles information across oxy12.com and learn.oxy12.com, including enquiries, cookies, analytics, advertising, and third-party services.",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy | OXY12",
+    description:
+      "Read how OXY12 handles information across oxy12.com and learn.oxy12.com, including enquiries, cookies, analytics, advertising, and third-party services.",
+    url: "https://oxy12.com/privacy-policy",
+    siteName: "OXY12",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy | OXY12",
+    description:
+      "Read how OXY12 handles information across oxy12.com and learn.oxy12.com, including enquiries, cookies, analytics, advertising, and third-party services.",
+  },
 };
+
+const privacySchema = createSchemaGraph(
+  organizationEntity,
+  websiteEntity,
+  createWebPageEntity({
+    id: "https://oxy12.com/privacy-policy#webpage",
+    url: "https://oxy12.com/privacy-policy",
+    name: "Privacy Policy | OXY12",
+    description:
+      "Read how OXY12 handles information across oxy12.com and learn.oxy12.com, including enquiries, cookies, analytics, advertising, and third-party services.",
+  }),
+  createBreadcrumbEntity({
+    id: "https://oxy12.com/privacy-policy#breadcrumb",
+    pageName: "Privacy Policy",
+    pageUrl: "https://oxy12.com/privacy-policy",
+  }),
+);
 
 export default function PrivacyPolicyPage() {
   return (
-    <section className="relative overflow-hidden bg-navy-deep px-6 pb-24 pt-36 text-foreground md:px-10">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-80 mesh-bg opacity-50" />
-      <div className="relative mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/20 backdrop-blur md:p-12">
-        <p className="font-mono text-xs uppercase tracking-[0.25em] text-ember">Legal</p>
-        <h1 className="mt-4 font-display text-4xl font-bold tracking-tight md:text-6xl">Privacy Policy</h1>
-        <p className="mt-4 text-sm uppercase tracking-[0.2em] text-muted-foreground">Last Updated: {lastUpdated}</p>
-        <p className="mt-8 text-base leading-8 text-foreground/80">
-          Welcome to Oxy12 ("Oxy12", "we", "us", or "our"). This Privacy Policy explains how we collect, use, store,
-          and protect information when you visit oxy12.com, learn.oxy12.com, or interact with our services.
-        </p>
-        <p className="mt-4 text-base leading-8 text-foreground/80">
-          By using our websites or submitting information to us, you acknowledge the practices described in this
-          Privacy Policy.
-        </p>
+    <>
+      <JsonLd data={privacySchema} />
+      <section className="relative overflow-hidden bg-navy-deep px-6 pb-24 pt-36 text-foreground md:px-10">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-80 mesh-bg opacity-50" />
+        <div className="relative mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/20 backdrop-blur md:p-12">
+          <p className="font-mono text-xs uppercase tracking-[0.25em] text-ember">
+            Legal
+          </p>
+          <h1 className="mt-4 font-display text-4xl font-bold tracking-tight md:text-6xl">
+            Privacy Policy
+          </h1>
+          <p className="mt-4 text-sm uppercase tracking-[0.2em] text-muted-foreground">
+            Last Updated: {lastUpdated}
+          </p>
+          <p className="mt-8 text-base leading-8 text-foreground/80">
+            Welcome to Oxy12 (&quot;Oxy12&quot;, &quot;we&quot;, &quot;us&quot;,
+            or &quot;our&quot;). This Privacy Policy explains how we collect,
+            use, store, and protect information when you visit oxy12.com,
+            learn.oxy12.com, or interact with our services.
+          </p>
+          <p className="mt-4 text-base leading-8 text-foreground/80">
+            By using our websites or submitting information to us, you
+            acknowledge the practices described in this Privacy Policy.
+          </p>
 
-        <div className="mt-12 space-y-10">
-          {sections.map((section) => (
-            <article key={section.title} className="space-y-4">
-              <h2 className="font-display text-2xl font-semibold tracking-tight">{section.title}</h2>
-              {section.paragraphs?.map((paragraph) => (
-                <p key={paragraph} className="text-base leading-8 text-foreground/80">
-                  {paragraph}
-                </p>
-              ))}
-              {section.items?.length ? (
-                <ul className="space-y-2 pl-5 text-base leading-8 text-foreground/80">
-                  {section.items.map((item) => (
-                    <li key={item} className="list-disc">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-              {section.closing ? <p className="text-base leading-8 text-foreground/80">{section.closing}</p> : null}
-            </article>
-          ))}
+          <div className="mt-12 space-y-10">
+            {sections.map((section) => (
+              <article key={section.title} className="space-y-4">
+                <h2 className="font-display text-2xl font-semibold tracking-tight">
+                  {section.title}
+                </h2>
+                {section.paragraphs?.map((paragraph) => (
+                  <p
+                    key={paragraph}
+                    className="text-base leading-8 text-foreground/80"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+                {section.items?.length ? (
+                  <ul className="space-y-2 pl-5 text-base leading-8 text-foreground/80">
+                    {section.items.map((item) => (
+                      <li key={item} className="list-disc">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+                {section.closing ? (
+                  <p className="text-base leading-8 text-foreground/80">
+                    {section.closing}
+                  </p>
+                ) : null}
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

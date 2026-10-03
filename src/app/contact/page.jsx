@@ -2,15 +2,66 @@ import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { ContactCta } from "@/components/sections/contact-cta.jsx";
 import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
+import { JsonLd } from "@/components/site/json-ld.jsx";
+import {
+  createBreadcrumbEntity,
+  createSchemaGraph,
+  createWebPageEntity,
+  organizationEntity,
+  websiteEntity,
+} from "@/lib/structured-data.js";
 
 export const metadata = {
-  title: "Contact - OXY12",
-  description: "Start your project with OXY12. We reply within 24 hours.",
+  title: {
+    absolute: "Contact OXY12 | Start a Web or Software Project",
+  },
+  description:
+    "Contact OXY12 to discuss a website, e-commerce, mobile app, or custom software project. Call, email, or send your requirements through the enquiry form.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact OXY12 | Start a Web or Software Project",
+    description:
+      "Contact OXY12 to discuss a website, e-commerce, mobile app, or custom software project. Call, email, or send your requirements through the enquiry form.",
+    url: "https://oxy12.com/contact",
+    siteName: "OXY12",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: "Contact OXY12 | Start a Web or Software Project",
+    description:
+      "Contact OXY12 to discuss a website, e-commerce, mobile app, or custom software project. Call, email, or send your requirements through the enquiry form.",
+  },
 };
+
+const contactSchema = createSchemaGraph(
+  organizationEntity,
+  websiteEntity,
+  createWebPageEntity({
+    type: "ContactPage",
+    id: "https://oxy12.com/contact#webpage",
+    url: "https://oxy12.com/contact",
+    name: "Contact OXY12 | Start a Web or Software Project",
+    description:
+      "Contact OXY12 to discuss a website, e-commerce, mobile app, or custom software project. Call, email, or send your requirements through the enquiry form.",
+    mainEntity: {
+      "@id": "https://oxy12.com/#organization",
+    },
+  }),
+  createBreadcrumbEntity({
+    id: "https://oxy12.com/contact#breadcrumb",
+    pageName: "Contact",
+    pageUrl: "https://oxy12.com/contact",
+  }),
+);
 
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={contactSchema} />
       <section className="relative px-6 pb-16 pt-40 md:pt-48">
         <div className="pointer-events-none absolute inset-0 mesh-bg opacity-50" />
         <div className="relative mx-auto max-w-7xl">

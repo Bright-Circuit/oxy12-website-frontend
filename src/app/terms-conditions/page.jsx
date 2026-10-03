@@ -1,3 +1,12 @@
+import { JsonLd } from "@/components/site/json-ld.jsx";
+import {
+  createBreadcrumbEntity,
+  createSchemaGraph,
+  createWebPageEntity,
+  organizationEntity,
+  websiteEntity,
+} from "@/lib/structured-data.js";
+
 const lastUpdated = "September 1, 2026";
 
 const sections = [
@@ -221,13 +230,53 @@ const sections = [
 ];
 
 export const metadata = {
-  title: "Terms & Conditions | OXY12",
-  description: "Read the OXY12 terms and conditions for websites, projects, and client services.",
+  title: {
+    absolute: "Terms & Conditions | OXY12",
+  },
+  description:
+    "Read the OXY12 terms covering website and software projects, payments, client responsibilities, intellectual property, support, and use of OXY12 websites.",
+  alternates: {
+    canonical: "/terms-conditions",
+  },
+  openGraph: {
+    title: "Terms & Conditions | OXY12",
+    description:
+      "Read the OXY12 terms covering website and software projects, payments, client responsibilities, intellectual property, support, and use of OXY12 websites.",
+    url: "https://oxy12.com/terms-conditions",
+    siteName: "OXY12",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: "Terms & Conditions | OXY12",
+    description:
+      "Read the OXY12 terms covering website and software projects, payments, client responsibilities, intellectual property, support, and use of OXY12 websites.",
+  },
 };
+
+const termsSchema = createSchemaGraph(
+  organizationEntity,
+  websiteEntity,
+  createWebPageEntity({
+    id: "https://oxy12.com/terms-conditions#webpage",
+    url: "https://oxy12.com/terms-conditions",
+    name: "Terms & Conditions | OXY12",
+    description:
+      "Read the OXY12 terms covering website and software projects, payments, client responsibilities, intellectual property, support, and use of OXY12 websites.",
+  }),
+  createBreadcrumbEntity({
+    id: "https://oxy12.com/terms-conditions#breadcrumb",
+    pageName: "Terms & Conditions",
+    pageUrl: "https://oxy12.com/terms-conditions",
+  }),
+);
 
 export default function TermsConditionsPage() {
   return (
-    <section className="relative overflow-hidden bg-navy-deep px-6 pb-24 pt-36 text-foreground md:px-10">
+    <>
+      <JsonLd data={termsSchema} />
+      <section className="relative overflow-hidden bg-navy-deep px-6 pb-24 pt-36 text-foreground md:px-10">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-80 mesh-bg opacity-50" />
       <div className="relative mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/20 backdrop-blur md:p-12">
         <p className="font-mono text-xs uppercase tracking-[0.25em] text-ember">Legal</p>
@@ -265,6 +314,7 @@ export default function TermsConditionsPage() {
           ))}
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }

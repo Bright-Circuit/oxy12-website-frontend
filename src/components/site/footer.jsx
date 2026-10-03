@@ -12,7 +12,7 @@ const linkSections = [
       { href: "/services", label: "Services" },
       { href: "/portfolio", label: "Portfolio" },
       { href: "/contact", label: "Contact" },
-      { href: "https://learn.oxy12.com", label: "Blog", external: true },
+      { href: "https://learn.oxy12.com", label: "OXY12 Learn", external: true },
     ],
   },
   // Services links are temporarily hidden. Restore this section when needed.
@@ -112,8 +112,8 @@ export function Footer() {
           </div>
 
           {linkSections.map((section) => (
-            <div key={section.heading} className="col-span-1 md:col-span-3">
-              <h6 className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">{section.heading}</h6>
+            <nav key={section.heading} aria-label={`${section.heading} footer navigation`} className="col-span-1 md:col-span-3">
+              <p className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">{section.heading}</p>
               <ul className="space-y-3 text-sm">
                 {section.links.map((link) => (
                   <li key={`${section.heading}-${link.label}`}>
@@ -122,6 +122,7 @@ export function Footer() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`${link.label} (opens in a new tab)`}
                         className="text-foreground/80 transition-colors hover:text-ember"
                       >
                         {link.label}
@@ -134,11 +135,11 @@ export function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </nav>
           ))}
 
-          <div className="col-span-2 md:col-span-1">
-            <h6 className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">Social</h6>
+          <nav aria-label="Social media" className="col-span-2 md:col-span-1">
+            <p className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">Social</p>
             <div className="flex flex-wrap gap-3">
               {socialLinks.map((social) => (
                 <a
@@ -147,13 +148,13 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="grid size-10 place-items-center rounded-full border border-white/10 transition-all hover:border-ember hover:bg-ember/10 hover:text-ember"
-                  aria-label={social.label}
+                  aria-label={`${social.label} (opens in a new tab)`}
                 >
                   <social.Icon className="size-4" />
                 </a>
               ))}
             </div>
-          </div>
+          </nav>
         </div>
 
         <div className="mt-16 flex flex-col items-start justify-between gap-6 border-t border-white/5 pt-8 md:flex-row md:items-center">

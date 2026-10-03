@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./logo.jsx";
 import { MagneticButton } from "./magnetic-button.jsx";
@@ -10,13 +10,17 @@ const items = [
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/portfolio", label: "Portfolio" },
-  { href: "https://learn.oxy12.com", label: "Blog", external: true },
+  { href: "https://learn.oxy12.com", label: "OXY12 Learn", external: true },
   { href: "/contact", label: "Contact Us" },
 ];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const menuTriggerRef = useRef(null);
+  const closeButtonRef = useRef(null);
+  const mobileMenuRef = useRef(null);
+  const wasOpenRef = useRef(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -32,6 +36,47 @@ export function Navbar() {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (open) {
+      closeButtonRef.current?.focus();
+    } else if (wasOpenRef.current) {
+      menuTriggerRef.current?.focus();
+    }
+    wasOpenRef.current = open;
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        return;
+      }
+
+      if (event.key === "Tab") {
+        const focusable = mobileMenuRef.current?.querySelectorAll(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        );
+        if (!focusable?.length) return;
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 md:px-6 md:pt-6">
@@ -40,8 +85,8 @@ export function Navbar() {
             scrolled ? "glass shadow-2xl shadow-black/30" : "bg-transparent"
           }`}
         >
-          <Logo />
-          <nav className="hidden items-center gap-10 md:flex">
+          <Logo preload />
+          <nav aria-label="Primary navigation" className="hidden items-center gap-10 md:flex">
             {items.map((item) => (
               item.external ? (
                 <a
@@ -49,6 +94,7 @@ export function Navbar() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`${item.label} (opens in a new tab)`}
                   className="group relative text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
                 >
                   <span>{item.label}</span>
@@ -67,24 +113,29 @@ export function Navbar() {
             ))}
           </nav>
           <div className="hidden md:block">
-            <Link href="/contact">
-              <MagneticButton variant="primary" className="px-6 py-3 text-xs uppercase tracking-widest">
-                Start Project
-              </MagneticButton>
-            </Link>
+            <MagneticButton href="/contact" variant="primary" className="px-6 py-3 text-xs uppercase tracking-widest">
+              Start Project
+            </MagneticButton>
           </div>
           <button
+            ref={menuTriggerRef}
             type="button"
             onClick={() => setOpen(true)}
             className="grid size-10 place-items-center rounded-full glass md:hidden"
             aria-label="Open menu"
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
           >
-            <Menu className="size-5" />
+            <Menu className="size-5" aria-hidden="true" />
           </button>
         </div>
       </header>
 
       <div
+        ref={mobileMenuRef}
+        id="mobile-navigation"
+        aria-hidden={!open}
+        inert={!open ? true : undefined}
         className={`fixed inset-0 z-[60] mesh-bg bg-navy-deep transition-opacity duration-500 md:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
@@ -92,15 +143,16 @@ export function Navbar() {
         <div className="flex items-center justify-between px-4 pt-4">
           <Logo />
           <button
+            ref={closeButtonRef}
             type="button"
             onClick={() => setOpen(false)}
             className="grid size-10 place-items-center rounded-full glass"
             aria-label="Close menu"
           >
-            <X className="size-5" />
+            <X className="size-5" aria-hidden="true" />
           </button>
         </div>
-        <nav className="flex h-[calc(100vh-80px)] flex-col items-start justify-center gap-6 px-8">
+        <nav aria-label="Mobile primary navigation" className="flex h-[calc(100vh-80px)] flex-col items-start justify-center gap-6 px-8">
           {items.map((item, index) => (
             item.external ? (
               <a
@@ -108,6 +160,7 @@ export function Navbar() {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`${item.label} (opens in a new tab)`}
                 onClick={() => setOpen(false)}
                 className="font-display text-5xl font-bold tracking-tight transition-colors hover:text-ember"
                 style={{

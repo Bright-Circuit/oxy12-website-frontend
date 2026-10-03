@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ContactCta } from "@/components/sections/contact-cta.jsx";
 import { ProjectCard, projects } from "@/components/sections/portfolio.jsx";
 import { Reveal } from "@/components/site/reveal.jsx";
@@ -26,11 +27,20 @@ export function PortfolioPageView() {
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-10 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              Explore completed OXY12 projects across education, food retail, aquariums, fashion, beverages, and local
-              delivery. Each case summary explains the client need, what we built, the main features, the known technology,
-              and the practical outcome. Select a project to open its live website in a new tab.
-            </p>
+            <div className="mt-10 max-w-3xl">
+              <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
+                Explore OXY12&apos;s web and software development portfolio of completed client projects in Sri Lanka across
+                education, food retail, aquariums, fashion, beverages, and local delivery. Each case summary explains the
+                client need, what we built, the main features, the known technology, and the practical outcome. Select a
+                project to open its live website in a new tab.
+              </p>
+              <Link
+                href="/contact"
+                className="mt-5 inline-flex font-mono text-xs uppercase tracking-[0.18em] text-ember transition-colors hover:text-foreground"
+              >
+                Discuss a similar project
+              </Link>
+            </div>
           </Reveal>
         </div>
       </section>
