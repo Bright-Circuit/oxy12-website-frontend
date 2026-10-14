@@ -10,7 +10,7 @@ const items = [
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/portfolio", label: "Portfolio" },
-  { href: "https://learn.oxy12.com", label: "OXY12 Learn", external: true },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact Us" },
 ];
 

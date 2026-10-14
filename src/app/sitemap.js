@@ -1,6 +1,10 @@
+import { getPublishedPosts } from "@/content/blog/posts.js";
+
 const siteUrl = "https://oxy12.com";
 
 export default function sitemap() {
+  const publishedPosts = getPublishedPosts();
+
   return [
     {
       url: `${siteUrl}/`,
@@ -27,6 +31,17 @@ export default function sitemap() {
       changeFrequency: "yearly",
       priority: 0.7,
     },
+    {
+      url: `${siteUrl}/blog`,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    ...publishedPosts.map((post) => ({
+      url: post.canonicalUrl,
+      lastModified: post.updatedDate,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    })),
     {
       url: `${siteUrl}/privacy-policy`,
       changeFrequency: "yearly",

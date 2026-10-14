@@ -12,7 +12,7 @@ const linkSections = [
       { href: "/services", label: "Services" },
       { href: "/portfolio", label: "Portfolio" },
       { href: "/contact", label: "Contact" },
-      { href: "https://learn.oxy12.com", label: "OXY12 Learn", external: true },
+      { href: "/blog", label: "Blog" },
     ],
   },
   // Services links are temporarily hidden. Restore this section when needed.

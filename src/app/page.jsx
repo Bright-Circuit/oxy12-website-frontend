@@ -2,7 +2,8 @@ import { Hero } from "@/components/sections/hero.jsx";
 import { About } from "@/components/sections/about.jsx";
 import { ServicesScroll } from "@/components/sections/services-scroll.jsx";
 import { Process } from "@/components/sections/process.jsx";
-import { BlogHighlights } from "@/components/sections/blog-highlights.jsx";
+// Temporarily hidden while the main-domain blog becomes the primary editorial destination.
+// import { BlogHighlights } from "@/components/sections/blog-highlights.jsx";
 import { WhyChoose } from "@/components/sections/why-choose.jsx";
 import { Testimonials } from "@/components/sections/testimonials.jsx";
 import { JsonLd } from "@/components/site/json-ld.jsx";
@@ -35,7 +36,8 @@ export default function HomePage() {
       <About />
       <ServicesScroll />
       <Process />
-      <BlogHighlights />
+      {/* Temporarily hidden. Uncomment the import above and this component to restore OXY12 Learn highlights. */}
+      {/* <BlogHighlights /> */}
       <WhyChoose />
       <Testimonials />
       {/* Temporarily hidden. Uncomment the imports above and components below to restore them. */}
