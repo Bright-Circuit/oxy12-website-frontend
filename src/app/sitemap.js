@@ -1,9 +1,18 @@
-import { getPublishedPosts } from "@/content/blog/posts.js";
+import { getBlogPageCount, getPublishedPosts } from "@/content/blog/posts.js";
 
 const siteUrl = "https://oxy12.com";
 
 export default function sitemap() {
   const publishedPosts = getPublishedPosts();
+  const pageCount = getBlogPageCount();
+  const paginationEntries = Array.from(
+    { length: Math.max(0, pageCount - 1) },
+    (_, index) => ({
+      url: `${siteUrl}/blog/page/${index + 2}`,
+      changeFrequency: "weekly",
+      priority: 0.6,
+    }),
+  );
 
   return [
     {
@@ -42,6 +51,7 @@ export default function sitemap() {
       changeFrequency: "monthly",
       priority: 0.7,
     })),
+    ...paginationEntries,
     {
       url: `${siteUrl}/privacy-policy`,
       changeFrequency: "yearly",

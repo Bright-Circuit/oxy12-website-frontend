@@ -177,7 +177,10 @@ export function BlogArticle({ post, relatedPosts }) {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-foreground/70">
-            <span className="font-medium text-foreground">{post.author}</span>
+            <span className="font-medium text-foreground">
+              {post.author}
+              {post.authorRole ? ` — ${post.authorRole}` : ""}
+            </span>
             <span className="inline-flex items-center gap-2">
               <CalendarDays aria-hidden="true" className="size-4 text-ember" />
               <time dateTime={post.publishedDate}>
@@ -188,6 +191,14 @@ export function BlogArticle({ post, relatedPosts }) {
               <Clock3 aria-hidden="true" className="size-4 text-ember" />
               {post.readingTime}
             </span>
+            {post.updatedDate !== post.publishedDate && (
+              <span>
+                Updated{" "}
+                <time dateTime={post.updatedDate}>
+                  {formatDate(post.updatedDate)}
+                </time>
+              </span>
+            )}
           </div>
         </div>
       </header>

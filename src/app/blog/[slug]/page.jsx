@@ -94,7 +94,17 @@ export default async function BlogPostPage({ params }) {
       image: `${siteUrl}${post.featuredImage.src}`,
       datePublished: post.publishedDate,
       dateModified: post.updatedDate,
-      author: { "@id": organizationId },
+      author:
+        post.authorType === "Person"
+          ? {
+              "@type": "Person",
+              "@id": `${siteUrl}/blog#author-${post.authorId}`,
+              name: post.author,
+              jobTitle: post.authorRole,
+              ...(post.authorUrl ? { url: `${siteUrl}${post.authorUrl}` } : {}),
+              worksFor: { "@id": organizationId },
+            }
+          : { "@id": organizationId },
       publisher: { "@id": organizationId },
       articleSection: post.category,
       keywords: [post.primaryKeyword, ...post.secondaryKeywords].join(", "),
