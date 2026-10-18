@@ -1,3 +1,5 @@
+import { article11 } from "./article-11.js";
+
 export const blogCategories = [
   "All",
   "Websites",
@@ -536,7 +538,7 @@ export const blogPosts = [
     relatedPosts: [
       "why-is-my-business-website-slow",
       "custom-website-vs-wordpress",
-      "website-development-cost-sri-lanka-2026",
+      "woocommerce-vs-custom-ecommerce",
     ],
     status: "published",
     sections: [
@@ -1031,8 +1033,8 @@ export const blogPosts = [
     },
     relatedPosts: [
       "ecommerce-website-cost-sri-lanka",
+      "woocommerce-vs-custom-ecommerce",
       "web-developer-vs-web-development-company",
-      "how-to-choose-web-development-company-sri-lanka",
     ],
     status: "published",
     sections: [
@@ -5541,9 +5543,9 @@ export const blogPosts = [
       label: "Discuss your e-commerce requirements",
     },
     relatedPosts: [
+      "woocommerce-vs-custom-ecommerce",
       "website-development-cost-sri-lanka-2026",
       "custom-website-vs-wordpress",
-      "how-to-choose-web-development-company-sri-lanka",
     ],
     status: "published",
     sections: [
@@ -5872,6 +5874,18 @@ export const blogPosts = [
               "Custom commerce fits requirements such as bespoke B2B pricing, marketplace logic, unusual subscriptions, multi-system synchronization, advanced dashboards, or specialized automation. It needs more discovery, architecture, development, testing, infrastructure, and ongoing engineering. There is no useful fixed ceiling; quote documented requirements.",
             ],
           },
+          {
+            type: "paragraph",
+            content: [
+              "For the architecture decision beyond price, read our ",
+              {
+                type: "link",
+                href: "/blog/woocommerce-vs-custom-ecommerce",
+                text: "WooCommerce vs custom e-commerce comparison",
+              },
+              ". It examines catalogue structure, checkout, integrations, administration, scalability, ownership, and long-term risk.",
+            ],
+          },
         ],
       },
       {
@@ -6167,6 +6181,7 @@ export const blogPosts = [
       },
     ],
   },
+  article11,
 ];
 
 export function getPublishedPosts() {

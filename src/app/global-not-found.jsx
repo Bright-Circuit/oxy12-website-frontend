@@ -1,27 +1,6 @@
 import "./globals.css";
 import Link from "next/link";
-import { Inter, JetBrains_Mono, Sora } from "next/font/google";
-
-const sora = Sora({
-  subsets: ["latin"],
-  weight: ["600", "700", "800"],
-  variable: "--font-sora",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-});
+import { inter, jetBrainsMono, sora } from "./fonts.js";
 
 const links = [
   { href: "/", label: "Home" },

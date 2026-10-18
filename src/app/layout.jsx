@@ -1,31 +1,10 @@
 import "./globals.css";
-import { Inter, JetBrains_Mono, Sora } from "next/font/google";
+import { inter, jetBrainsMono, sora } from "./fonts.js";
 import { Navbar } from "@/components/site/navbar.jsx";
 import { Footer } from "@/components/site/footer.jsx";
 import { SmoothScroll } from "@/components/site/smooth-scroll.jsx";
 import { Cursor } from "@/components/site/cursor.jsx";
 import oxy12Logo from "@/assets/oxy12-logo.png";
-
-const sora = Sora({
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700", "800"],
-  variable: "--font-sora",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-});
 
 export const metadata = {
   metadataBase: new URL("https://oxy12.com"),
