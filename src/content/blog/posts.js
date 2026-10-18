@@ -59,9 +59,9 @@ export const blogPosts = [
       label: "Explore website development services",
     },
     relatedPosts: [
-      "website-redesign-cost-redesign-vs-rebuild",
-      "professional-business-website-checklist-2026",
-      "how-long-does-it-take-to-build-a-business-website",
+      "ecommerce-website-cost-sri-lanka",
+      "web-developer-vs-web-development-company",
+      "how-to-choose-web-development-company-sri-lanka",
     ],
     status: "published",
     sections: [
@@ -284,6 +284,18 @@ export const blogPosts = [
                 text: "e-commerce development",
               },
               " quotation carefully, because a visually complete storefront is not necessarily a fully tested sales operation.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "For store-specific ranges, gateway responsibilities, recurring expenses, and quotation comparisons, use our detailed guide to ",
+              {
+                type: "link",
+                href: "/blog/ecommerce-website-cost-sri-lanka",
+                text: "e-commerce website cost in Sri Lanka",
+              },
+              ".",
             ],
           },
         ],
@@ -522,7 +534,7 @@ export const blogPosts = [
       label: "Explore website development services",
     },
     relatedPosts: [
-      "how-long-does-it-take-to-build-a-business-website",
+      "why-is-my-business-website-slow",
       "custom-website-vs-wordpress",
       "website-development-cost-sri-lanka-2026",
     ],
@@ -1018,9 +1030,9 @@ export const blogPosts = [
       label: "Explore website development services",
     },
     relatedPosts: [
-      "website-redesign-cost-redesign-vs-rebuild",
-      "professional-business-website-checklist-2026",
-      "wordpress-vs-nextjs-business-website-2026",
+      "ecommerce-website-cost-sri-lanka",
+      "web-developer-vs-web-development-company",
+      "how-to-choose-web-development-company-sri-lanka",
     ],
     status: "published",
     sections: [
@@ -1401,6 +1413,18 @@ export const blogPosts = [
                 text: "e-commerce development service",
               },
               " before assuming that either route is automatically simpler.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Our ",
+              {
+                type: "link",
+                href: "/blog/ecommerce-website-cost-sri-lanka",
+                text: "2026 e-commerce website cost guide",
+              },
+              " explains how catalogue size, payments, delivery, integrations, licensing, and support affect each route's budget.",
             ],
           },
         ],
@@ -2219,9 +2243,9 @@ export const blogPosts = [
       label: "Discuss your website requirements",
     },
     relatedPosts: [
-      "website-redesign-cost-redesign-vs-rebuild",
+      "how-to-choose-web-development-company-sri-lanka",
+      "why-is-my-business-website-slow",
       "website-development-cost-sri-lanka-2026",
-      "custom-website-vs-wordpress",
     ],
     status: "published",
     sections: [
@@ -2872,8 +2896,8 @@ export const blogPosts = [
       label: "Request a website review",
     },
     relatedPosts: [
+      "why-is-my-business-website-slow",
       "website-development-cost-sri-lanka-2026",
-      "custom-website-vs-wordpress",
       "professional-business-website-checklist-2026",
     ],
     status: "published",
@@ -3505,6 +3529,2638 @@ export const blogPosts = [
               ". If you are unsure which scope is justified, ",
               { type: "link", href: "/contact", text: "contact OXY12" },
               " for a review of the current platform, content, URLs, integrations, editing workflow, and new requirements before deciding between redesign, migration, and full rebuild.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Why Is My Business Website Slow? 10 Common Causes and Fixes",
+    slug: "why-is-my-business-website-slow",
+    excerpt:
+      "A practical diagnostic guide to the most common website speed problems, how to verify each one, and which fixes to prioritize first.",
+    description:
+      "Learn why a business website may load slowly, how to diagnose images, hosting, JavaScript, plugins, caching, backend, and mobile performance.",
+    category: "Websites",
+    tags: [
+      "Website Performance",
+      "Core Web Vitals",
+      "Technical SEO",
+      "WordPress",
+      "Next.js",
+    ],
+    author: "OXY12 Editorial Team",
+    authorType: "Organization",
+    publishedDate: "2026-10-13",
+    updatedDate: "2026-10-13",
+    publicationOrder: 1,
+    readingTime: "16 min read",
+    featuredImage: {
+      src: "/blog/why-is-my-business-website-slow/why-is-my-business-website-slow.webp",
+      width: 1680,
+      height: 945,
+      alt: "Website speed diagnostic guide showing ten common causes of a slow business website",
+    },
+    seoTitle: "Why Is My Website Slow? 10 Causes & Fixes | OXY12",
+    metaDescription:
+      "Find out why your business website is slow. Diagnose 10 common causes, choose practical fixes, and improve mobile speed without guessing or rebuilding.",
+    primaryKeyword: "why is my website slow",
+    secondaryKeywords: [
+      "slow business website",
+      "website speed optimization",
+      "website performance audit",
+      "slow WordPress website",
+      "Core Web Vitals",
+      "improve website loading speed",
+      "slow Next.js website",
+    ],
+    canonicalUrl: "https://oxy12.com/blog/why-is-my-business-website-slow",
+    relatedService: {
+      title: "Need evidence before changing your website?",
+      description:
+        "OXY12 can review the slow pages, assets, scripts, server behavior, and platform constraints before recommending focused improvements or a rebuild.",
+      href: "/contact",
+      label: "Discuss a website performance review",
+    },
+    relatedPosts: [
+      "professional-business-website-checklist-2026",
+      "website-redesign-cost-redesign-vs-rebuild",
+      "wordpress-vs-nextjs-business-website-2026",
+    ],
+    status: "published",
+    sections: [
+      {
+        id: "measure-before-changing",
+        title: "1. Measure the Slow Page Before Changing Anything",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A business website can feel slow because of one problem or several small problems combined. Common causes include oversized images, weak hosting, too much JavaScript, heavy plugins or page builders, missing caching, third-party scripts, inefficient fonts, slow database work, and no mobile or CDN strategy. Do not assume hosting is always the problem. Define the affected page and device, then measure before changing anything.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Lighthouse and PageSpeed Insights run controlled tests. Field data, when available, describes real user experiences over time. Lab results help diagnosis; field results show what visitors experienced. A low score is a warning, not the cause, and one run is not evidence for a rebuild.",
+            ],
+          },
+          {
+            type: "list",
+            items: [
+              "First Contentful Paint (FCP): when the first visible content appears.",
+              "Largest Contentful Paint (LCP): when the largest visible content element finishes rendering.",
+              "Total Blocking Time (TBT): lab evidence of main-thread work that can delay interaction.",
+              "Cumulative Layout Shift (CLS): unexpected movement while the page loads.",
+            ],
+          },
+          {
+            type: "callout",
+            content:
+              "Performance scores point to symptoms. Use the LCP element, network waterfall, main-thread timeline, and server response to find the actual bottleneck.",
+          },
+          {
+            type: "image",
+            src: "/blog/why-is-my-business-website-slow/where-does-website-loading-time-go.webp",
+            width: 1680,
+            height: 945,
+            alt: "Website loading timeline from browser request through server, CSS, images, JavaScript, rendering, and interaction",
+            caption:
+              "A simplified loading waterfall showing where delays can accumulate before a page becomes visible and interactive.",
+          },
+        ],
+      },
+      {
+        id: "oversized-images",
+        title: "2. Oversized or Poorly Delivered Images",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Symptom and likely cause: text appears before a hero, gallery, or portfolio image. The file may be much larger than its rendered size, poorly compressed, or one of several high-resolution images loaded too early.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "How to verify and fix: use the Network panel and Lighthouse image diagnostics. Compare bytes and intrinsic dimensions with the displayed size, and identify whether the hero is the LCP element. Resize sources, use WebP or AVIF where suitable, provide responsive variants, lazy-load later media, and prioritize the LCP image. A developer is needed when CMS sizes or the delivery pipeline must change.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "slow-hosting",
+        title: "3. Slow Hosting or Server Response",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Symptom and likely cause: even the document waits before content appears, especially during busy periods. Slow processing, overloaded hosting, distant infrastructure, cold starts, DNS, or missing edge delivery may be responsible—not the visual design.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "How to verify and fix: check document Time to First Byte, compare it with static requests, and repeat tests from a relevant location. If the document waits, investigate server work, caching, region, and capacity. A developer or hosting specialist is needed for logs, runtime profiling, database queries, or infrastructure changes. Moving hosts without evidence can move the same bottleneck.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "too-much-javascript",
+        title: "4. Too Much JavaScript on the Main Thread",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Symptom and likely cause: content is visible, but taps, menus, forms, or scrolling respond late. A large bundle, expensive initialization, repeated rendering, or page-wide delivery of feature-specific code may be blocking the main thread.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "How to verify and fix: review TBT, long tasks, bundle analysis, and the Performance panel while separating application code from extension and third-party noise. Remove unused dependencies, split code by route, defer optional widgets, and keep static content server-rendered. A developer is needed for hydration, state, or component-boundary changes. See our ",
+              {
+                type: "link",
+                href: "/blog/wordpress-vs-nextjs-business-website-2026",
+                text: "WordPress vs Next.js guide",
+              },
+              ".",
+            ],
+          },
+        ],
+      },
+      {
+        id: "heavy-plugins-theme",
+        title: "5. Heavy WordPress Plugins or Theme Features",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Symptom and likely cause: a simple WordPress page loads many styles, scripts, fonts, and requests. Overlapping plugins, unused theme features, page-builder output, or repeated database queries may be responsible.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "How to verify and fix: on staging, inventory plugins, inspect request names, and disable one suspected feature at a time with a rollback plan. Remove abandoned or duplicate-function tools and unused theme modules. Plugin count alone is not proof. A developer is needed when output must be profiled or removing a plugin could affect orders, forms, security, SEO, redirects, or stored content.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "missing-caching",
+        title: "6. Missing or Misconfigured Caching",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Symptom and likely cause: repeat visits download unchanged files, or every request repeats expensive server work. Browser, page, object, or CDN caching may be missing or prevented by an unsuitable invalidation policy.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "How to verify and fix: inspect Cache-Control headers and compare first and repeat loads. Versioned static assets can often be cached aggressively; carts, accounts, and personalized responses need careful exclusions. A CDN shortens delivery distance but cannot safely cache everything. Use a developer for authenticated behavior, invalidation, e-commerce, or API rules.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "third-party-scripts",
+        title: "7. Too Many Third-Party Scripts",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Symptom and likely cause: the core page is modest, yet requests continue to analytics, chat, maps, video, social embeds, consent tools, or marketing platforms. These scripts compete for bandwidth and main-thread time outside the site owner’s control.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "How to verify and fix: group requests by domain and test optional integrations on staging. Confirm an owner and purpose for each script, remove unused tags, defer optional tools, use click-to-load previews, and avoid duplicate analytics. A developer is needed for consent dependencies or business-critical integrations. Keep useful measurement; make its cost explicit.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "fonts-css",
+        title: "8. Fonts and CSS Delay Visible Content",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Symptom and likely cause: content stays blank, flashes unstyled, swaps typefaces late, or shifts when fonts arrive. Render-blocking CSS, excessive font variants, external requests, or unused global styles may delay rendering.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "How to verify and fix: inspect the critical request chain, confirm which weights are used, and check that text remains visible. Reduce variants, self-host permitted files, preload only critical fonts, choose a suitable font-display strategy, and split non-critical styles where supported. Use a developer for CSS extraction, framework configuration, or layout-shift prevention.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "database-backend",
+        title: "9. Slow Database Queries or Backend Work",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Symptom and likely cause: static pages are fast while search, filters, dashboards, or logged-in areas are slow. Repeated queries, missing indexes, large results, external APIs, or synchronous backend work may delay the response.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "How to verify and fix: compare routes, inspect server timing and logs, profile queries, and isolate upstream calls. Possible fixes include pagination, indexes, cached results, smaller payloads, and background jobs. This is developer-level work because correctness, permissions, and invalidation must remain reliable; a faster but stale inventory count is not a success.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "heavy-homepage",
+        title: "10. The Homepage Tries to Load Everything",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Symptom and likely cause: internal pages are acceptable, but a homepage with videos, sliders, galleries, embeds, reviews, feeds, and every service is slow. The initial experience may contain too many competing priorities.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "How to verify and fix: compare requests, bytes, DOM size, and main-thread work with a simpler page. Use video posters, limit initial slides, lazy-load later media, and link to details instead of embedding everything. A developer is needed when effects are coupled to structure. If purpose and trust are also unclear, use a ",
+              {
+                type: "link",
+                href: "/blog/professional-business-website-checklist-2026",
+                text: "professional website checklist",
+              },
+              ".",
+            ],
+          },
+        ],
+      },
+      {
+        id: "mobile-optimization",
+        title: "11. The Website Was Not Tested on Realistic Mobile Conditions",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Symptom and likely cause: the site feels quick on an office laptop but slow on a mid-range phone. Large downloads, excessive JavaScript, desktop-sized media, hidden assets, or extra responsive work may be responsible.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "How to verify and fix: use mobile Lighthouse, a real phone, and network or CPU throttling on the slowest important page. Deliver responsive images, smaller initial payloads, simpler above-the-fold behavior, and deferred optional features. A developer is needed when mobile rendering, hydration, or bundling differs from desktop. Test more than one device class.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "diagnostic-table",
+        title: "12. Slow Website Symptom-to-Cause Diagnostic Table",
+        blocks: [
+          {
+            type: "table",
+            caption:
+              "Use the visible symptom to choose the first area to inspect—not to assume a final diagnosis",
+            headers: ["Symptom", "Likely cause", "Inspect first"],
+            rows: [
+              [
+                "Blank page before content",
+                "Slow response or render-blocking CSS/fonts",
+                "Document TTFB and critical request chain",
+              ],
+              [
+                "Large hero appears late",
+                "Oversized or poorly prioritized image",
+                "LCP element, dimensions, bytes, loading priority",
+              ],
+              [
+                "Page visible but unresponsive",
+                "Long JavaScript tasks",
+                "TBT, Performance timeline, bundle composition",
+              ],
+              [
+                "Fast repeat load, slow first load",
+                "Large uncached transfer",
+                "Cache headers and first-load waterfall",
+              ],
+              [
+                "Only dynamic pages are slow",
+                "Database, backend, or external API",
+                "Server logs, timing, queries, upstream calls",
+              ],
+              [
+                "Desktop is fast, mobile is slow",
+                "Payload and CPU cost",
+                "Mobile test, responsive assets, main-thread tasks",
+              ],
+              [
+                "Layout jumps during loading",
+                "Missing dimensions, ads, fonts, injected UI",
+                "CLS contributors and element reservations",
+              ],
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Several causes can produce the same symptom, and several bottlenecks can exist on one page. Treat this table as a starting route through the evidence. Record the tested URL, device mode, time, and result so that the same conditions can be compared after a change.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "read-lighthouse",
+        title: "13. How to Read Lighthouse Without Chasing the Score",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Begin with the tested URL and conditions. Inspect the metrics, LCP element, and application-owned opportunities. LCP delays can come from server response, resource discovery, download, or rendering. Each needs a different fix.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Use TBT and the long-task list to understand lab interaction delays. Use CLS diagnostics to identify the elements that move. Review unused JavaScript carefully: code may be required later in the session even if it is unused during the initial trace. Compare results across several runs because local CPU load, server caches, extensions, and network variation can change one report.",
+            ],
+          },
+          {
+            type: "callout",
+            content:
+              "Do not attribute browser-extension scripts, development hot-reload clients, or local debugging tools to the production website. Test a production build in a clean browser profile.",
+          },
+        ],
+      },
+      {
+        id: "low-risk-vs-developer-fixes",
+        title: "14. Low-Risk Fixes Versus Developer-Level Fixes",
+        blocks: [
+          {
+            type: "table",
+            caption:
+              "Choose an owner and risk level before changing a production website",
+            headers: [
+              "Performance issue",
+              "Low-risk fix",
+              "Developer-level fix",
+            ],
+            rows: [
+              [
+                "Large content images",
+                "Resize and compress approved originals",
+                "Responsive pipeline, component sizing, LCP priority",
+              ],
+              [
+                "Unused marketing embed",
+                "Remove through its documented admin setting",
+                "Consent-aware deferred integration or replacement",
+              ],
+              [
+                "Too many font variants",
+                "Remove unused weights from theme settings",
+                "Self-hosting, preload strategy, CSS refactor",
+              ],
+              [
+                "Weak browser caching",
+                "Use documented host or CMS presets",
+                "Cache headers, CDN rules, safe invalidation",
+              ],
+              [
+                "Slow WordPress page",
+                "Update supported components on staging",
+                "Query profiling, theme/plugin remediation",
+              ],
+              [
+                "Large application bundle",
+                "Remove an unused optional feature",
+                "Code splitting, server/client boundary changes",
+              ],
+              [
+                "Slow dynamic data",
+                "Reduce an optional result set",
+                "Indexes, query redesign, API and cache architecture",
+              ],
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Even a low-risk change needs a backup, an owner, and a test. Payments, forms, analytics, cookie consent, structured data, redirects, and accessibility can be affected by performance work. If the team cannot explain how to validate and reverse a change, test it on staging or involve someone who can.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "wordpress-checklist",
+        title: "15. WordPress Speed Investigation Checklist",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "Create a current backup and use staging for plugin or theme experiments.",
+              "Record the slow URLs, TTFB, LCP element, request count, and transfer size.",
+              "Inventory the active theme, child theme, plugins, page builder, and external scripts.",
+              "Check generated image sizes, WebP or AVIF delivery, and below-the-fold lazy loading.",
+              "Review page caching, browser caching, object caching, CDN rules, and exclusions for carts or accounts.",
+              "Profile database queries and scheduled tasks when dynamic pages or admin screens are slow.",
+              "Confirm updates, PHP compatibility, security, forms, checkout, redirects, and analytics after each change.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Avoid installing several optimization plugins that perform overlapping minification, caching, and lazy loading. Conflicting tools can duplicate work or make failures harder to trace. One documented configuration that the site owner understands is more maintainable than a stack of unexplained speed presets.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "nextjs-custom-checklist",
+        title: "16. Next.js and Custom Website Speed Checklist",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "Measure a production build, not the development server with hot reload and debugging code.",
+              "Confirm important content is server-rendered and does not wait for unnecessary client fetching.",
+              "Review client-component boundaries, route bundles, dynamic imports, and application-owned unused JavaScript.",
+              "Use framework image sizing and formats correctly; do not mark every image as high priority.",
+              "Inspect font loading, CSS delivery, hydration warnings, long tasks, and repeated component renders.",
+              "Measure server functions, API calls, database queries, cache behavior, and deployment-region latency.",
+              "Test error states and real devices after optimization, not only the ideal cached path.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Next.js can provide strong rendering and asset-delivery tools, but performance still depends on implementation. WordPress can also perform well with disciplined themes, plugins, caching, and hosting. The right platform depends on editing, integration, ownership, and application requirements—not one benchmark. Our ",
+              {
+                type: "link",
+                href: "/blog/wordpress-vs-nextjs-business-website-2026",
+                text: "WordPress and Next.js comparison",
+              },
+              " explains those broader trade-offs.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "speed-and-seo",
+        title: "17. How Website Speed Supports SEO and Usability",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Speed supports search performance because it affects access and experience, but it does not replace useful content, crawlable links, clear headings, accurate metadata, or trustworthy business information. A fast page that does not answer the searcher’s question remains a weak result. A detailed page that is painfully slow can still lose readers before its value is visible.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Treat performance as one part of a professional website foundation. Visitors should be able to understand the service, read the content, use navigation, and complete forms without avoidable delay or movement. Search engines also need stable URLs and rendered content. Review the wider requirements in our ",
+              {
+                type: "link",
+                href: "/blog/professional-business-website-checklist-2026",
+                text: "business website checklist",
+              },
+              ".",
+            ],
+          },
+        ],
+      },
+      {
+        id: "redesign-or-rebuild",
+        title: "18. When Speed Problems Justify a Redesign or Rebuild",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A slow website does not automatically need a redesign. If the bottleneck is one oversized hero image, an unused chat widget, weak cache headers, or an expensive query, a focused repair may be faster, safer, and less expensive. Preserve working URLs, content, analytics, integrations, and editing processes when they are not part of the problem.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "A redesign or rebuild becomes more reasonable when performance problems are spread through an unsupported theme, tightly coupled plugins, inaccessible templates, fragile code, an obsolete runtime, or architecture that cannot meet new requirements safely. Audit content, SEO URLs, forms, tracking, and data migration before approving that scope. See the decision framework in our ",
+              {
+                type: "link",
+                href: "/blog/website-redesign-cost-redesign-vs-rebuild",
+                text: "website redesign versus rebuild guide",
+              },
+              ".",
+            ],
+          },
+        ],
+      },
+      {
+        id: "speed-audit-workflow",
+        title: "19. A 10-Step Website Speed Audit Workflow",
+        blocks: [
+          {
+            type: "ordered-list",
+            items: [
+              "Choose the slow page and the user action that matters.",
+              "Record a clean production baseline on desktop and mobile.",
+              "Identify the LCP element and its delay breakdown.",
+              "Inspect document response time and the network waterfall.",
+              "Find the largest images, fonts, stylesheets, and scripts.",
+              "Review main-thread long tasks and application-owned JavaScript.",
+              "Separate essential third-party tools from optional ones.",
+              "Inspect server, database, and API timing where responses wait.",
+              "Fix the largest proven bottleneck with a rollback plan.",
+              "Retest the same page and conditions, then document the result.",
+            ],
+          },
+          {
+            type: "image",
+            src: "/blog/why-is-my-business-website-slow/website-speed-audit-workflow.webp",
+            width: 1680,
+            height: 945,
+            alt: "Website speed audit workflow from testing and checking LCP through fixing the largest bottleneck and retesting",
+            caption:
+              "A repeatable workflow keeps performance work evidence-based and makes the result of each change measurable.",
+          },
+        ],
+      },
+      {
+        id: "final-answer",
+        title: "20. Final Answer: Why Is Your Business Website Slow?",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A business website is usually slow because one or more parts of its delivery path are doing too much: the server responds late, images are larger than necessary, CSS or fonts delay rendering, JavaScript blocks interaction, plugins or third parties add work, caching is weak, backend queries wait, or the mobile experience was never tested under realistic constraints.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "The practical response is to measure first, identify the largest bottleneck, apply one controlled fix, and retest. You can review OXY12’s relevant capabilities on the ",
+              { type: "link", href: "/services", text: "services page" },
+              " and examine delivered work in our ",
+              { type: "link", href: "/portfolio", text: "portfolio" },
+              ". If your team needs help interpreting the evidence or deciding whether the site needs focused optimization, a redesign, or a new foundation, ",
+              { type: "link", href: "/contact", text: "contact OXY12" },
+              " with the affected URLs, platform, hosting details, and any recent performance reports.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "How to Choose a Web Development Company in Sri Lanka",
+    slug: "how-to-choose-web-development-company-sri-lanka",
+    excerpt:
+      "A practical buyer’s guide to comparing Sri Lankan web development companies by scope, portfolio, technology, ownership, price, and support.",
+    description:
+      "Learn how to evaluate a web development company in Sri Lanka before comparing quotations, approving scope, paying an advance, or starting a project.",
+    category: "Websites",
+    tags: [
+      "Web Development Sri Lanka",
+      "Website Planning",
+      "Website Quotations",
+      "WordPress",
+      "Custom Development",
+    ],
+    author: "Akindu Ramsith",
+    authorRole: "Co-Founder, OXY12",
+    authorType: "Person",
+    authorId: "akindu-ramsith",
+    authorUrl: "/about#founder",
+    publishedDate: "2026-10-13",
+    updatedDate: "2026-10-13",
+    publicationOrder: 2,
+    readingTime: "17 min read",
+    featuredImage: {
+      src: "/blog/how-to-choose-web-development-company-sri-lanka/how-to-choose-web-development-company-sri-lanka.webp",
+      width: 1680,
+      height: 945,
+      alt: "Guide to choosing a web development company in Sri Lanka based on portfolio, scope, technology, ownership, process, and support",
+    },
+    seoTitle: "How to Choose a Web Development Company in Sri Lanka | OXY12",
+    metaDescription:
+      "Learn how to choose a web development company in Sri Lanka by comparing portfolio, scope, pricing, ownership, technology, support, and red flags.",
+    primaryKeyword: "web development company Sri Lanka",
+    secondaryKeywords: [
+      "website development company Sri Lanka",
+      "web design company Sri Lanka",
+      "website developer Sri Lanka",
+      "website development agency Sri Lanka",
+      "WordPress developer Sri Lanka",
+      "custom web development Sri Lanka",
+      "e-commerce website development Sri Lanka",
+      "website development quotation",
+    ],
+    canonicalUrl:
+      "https://oxy12.com/blog/how-to-choose-web-development-company-sri-lanka",
+    relatedService: {
+      title: "Preparing to compare website providers?",
+      description:
+        "OXY12 can review your business requirements and explain a suitable scope, technology approach, responsibilities, timeline, and delivery plan before development starts.",
+      href: "/contact",
+      label: "Discuss your project requirements",
+    },
+    relatedPosts: [
+      "ecommerce-website-cost-sri-lanka",
+      "web-developer-vs-web-development-company",
+      "website-development-cost-sri-lanka-2026",
+    ],
+    status: "published",
+    sections: [
+      {
+        id: "start-with-business-need",
+        title: "1. Start With Your Business Need, Not the Technology",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A good web development company in Sri Lanka should explain what it will build, why the approach fits, what is included or excluded, who owns each asset, how changes work, what happens after launch, and how hosting, domain, timeline, and payments are handled. Price alone is not enough; a cheap quotation becomes expensive when essential work is missing.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "First define the outcome. A business may need a brochure or WordPress site, e-commerce store, booking website, custom web application, internal system, redesign, or mobile application. Each has different discovery, design, integration, testing, and maintenance needs.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "A provider should understand users, content, workflows, integrations, budget constraints, and ownership expectations before recommending WordPress, Next.js, Shopify, custom development, or another platform. Recommending the same technology before asking these questions is a warning sign, even when that technology is capable.",
+            ],
+          },
+          {
+            type: "callout",
+            content:
+              "The first useful deliverable is clarity: a shared understanding of the problem, scope, responsibilities, and expected result.",
+          },
+        ],
+      },
+      {
+        id: "check-real-portfolio",
+        title: "2. Check Whether Their Portfolio Shows Real, Relevant Work",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Screenshots show visual style, but live websites reveal more. Open relevant projects on desktop and mobile. Check navigation, forms, product flows, readability, speed, consistency, and whether the links still work. For software or e-commerce work, ask what functionality the provider actually designed, developed, integrated, or maintained.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Look for relevant capability rather than an identical industry. A team that explains the problem, its contribution, platform, constraints, and decisions is more informative than a large gallery without context. Review OXY12’s ",
+              {
+                type: "link",
+                href: "/portfolio",
+                text: "live project portfolio",
+              },
+              " as an example of project-specific descriptions and links.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "quotation-inclusions",
+        title: "3. Ask What Exactly Is Included in the Quotation",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "“Website development” can describe very different deliverables. A useful quotation connects the price to a defined scope so two providers can be compared fairly. Ask whether the following items are included, limited, optional, or supplied by the client.",
+            ],
+          },
+          {
+            type: "list",
+            items: [
+              "Number of pages or templates, responsive design, CMS access, forms, and agreed revisions.",
+              "Product setup, e-commerce functions, payment integration, booking, or other business workflows.",
+              "Domain, hosting, business email, SSL, backups, security configuration, and renewals.",
+              "Content writing or upload, image preparation, analytics, Search Console, and technical SEO foundations.",
+              "Testing, deployment, admin training, handover material, maintenance, and post-launch support.",
+            ],
+          },
+          {
+            type: "image",
+            src: "/blog/how-to-choose-web-development-company-sri-lanka/website-development-quotation-checklist.webp",
+            width: 1680,
+            height: 945,
+            alt: "Website development quotation checklist covering project scope, technology, domain and hosting, delivery, support, and payment terms",
+            caption:
+              "A useful quotation makes scope, technology, business assets, delivery, after-launch work, and commercial terms visible.",
+          },
+        ],
+      },
+      {
+        id: "quotation-exclusions",
+        title: "4. Understand What Is Not Included",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Exclusions are as important as inclusions. Confirm whether paid themes or plugins, gateway-provider charges, advertising, copywriting, photography, large product-entry batches, ongoing SEO, annual hosting, domain renewal, third-party subscriptions, and major features requested after approval sit outside the quoted price.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Written exclusions prevent an assumption from becoming a dispute. They also let the buyer prepare a complete budget. A clear exclusion is not automatically negative; it is evidence that the boundary has been discussed before work starts.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "ownership-and-access",
+        title: "5. Ask Who Owns the Website, Domain, Hosting, and Accounts",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "The agreement should identify who registers and controls the domain, hosting account, WordPress administrator, analytics, Search Console, payment merchant account, source code or site files, design files, and business email. Where practical, critical business assets should use business-controlled accounts with documented recovery access.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Ownership models differ. A proprietary platform, licensed theme, managed service, or subscription may not transfer in the same way as a custom codebase. The risk is not every limitation; it is discovering an important limitation only after payment or when changing providers. Ask what will be delivered, licensed, retained, and renewable.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "wordpress-vs-custom-capability",
+        title: "6. Compare WordPress and Custom Development Capability",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A serious provider does not need to offer every platform, but should explain when its preferred stack fits and where it does not. WordPress often suits content-managed service websites, editor-friendly updates, established extensions, and smaller e-commerce projects. Custom or full-stack development can suit dashboards, unique workflows, complex integrations, stronger application control, and business-specific logic.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Ask what creates long-term maintenance, licensing, performance, security, and editing responsibilities. For deeper comparisons, read ",
+              {
+                type: "link",
+                href: "/blog/wordpress-vs-nextjs-business-website-2026",
+                text: "WordPress vs Next.js",
+              },
+              " and ",
+              {
+                type: "link",
+                href: "/blog/custom-website-vs-wordpress",
+                text: "custom website vs WordPress",
+              },
+              ".",
+            ],
+          },
+        ],
+      },
+      {
+        id: "development-process",
+        title: "7. Ask How the Development Process Works",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A professional process might include discovery, scope confirmation, content structure, UI direction, development, review, responsive QA, functional testing, deployment, and handover or support. Teams may combine or rename these stages; the important point is knowing when decisions, content, feedback, testing, and approvals happen.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Process visibility helps the buyer prepare material and prevents late surprises. Ask who communicates progress, where feedback is recorded, what counts as approval, and what evidence confirms that forms, payments, mobile layouts, redirects, and integrations were tested.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "timeline-and-dependencies",
+        title: "8. Ask About the Timeline and What Can Change It",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Timelines depend on scope, content readiness, approval speed, integrations, gateway processes, product data, custom logic, and third-party access. A schedule should identify client dependencies and what happens when content or feedback arrives late.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "For a standard WordPress business website, OXY12 commonly plans around 14 business days when scope, content, access, and feedback are ready. That is a planning baseline, not a promise for every WordPress project. E-commerce, custom-coded websites, and software need separate estimation. See our detailed ",
+              {
+                type: "link",
+                href: "/blog/how-long-does-it-take-to-build-a-business-website",
+                text: "website timeline guide",
+              },
+              ".",
+            ],
+          },
+        ],
+      },
+      {
+        id: "payment-structure",
+        title: "9. Review the Payment Structure",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Staged payments usually connect money to agreed progress. One example is a signed scope or agreement, an advance before development begins, and a remaining payment at an agreed completion or handover stage. This is not a universal industry rule; the exact structure should match the project and contract.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Look for written milestones, invoices or receipts, cancellation or refund terms where applicable, and a clear connection between payment and scope. Avoid paying the entire amount when requirements, ownership, deliverables, and acceptance are still unclear. This is commercial planning guidance, not legal advice.",
+            ],
+          },
+          {
+            type: "callout",
+            content:
+              "Before paying an advance, confirm the approved scope, payment milestone, responsible parties, and evidence required to accept the next stage.",
+          },
+        ],
+      },
+      {
+        id: "revisions-and-changes",
+        title: "10. Ask How Revisions and Changes Are Handled",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A correction fixes work that does not match the approved requirement. A normal revision adjusts an agreed design or content item within the revision allowance. A scope change modifies the agreed requirement, while a new feature adds capability that was never included. These should not be treated as the same request.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "“Unlimited changes” without definitions can create uncertainty for both sides. Ask how revisions are submitted, how many review rounds are planned, how new work is estimated, and whether timeline or price changes require written approval.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "mobile-performance-accessibility",
+        title: "11. Ask About Mobile, Performance, and Accessibility",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A polished desktop homepage is not enough. Review mobile navigation, forms, tables, images, touch controls, readable text, loading behavior, keyboard basics, labels, contrast, and visible focus. Ask which browsers and devices are tested and how defects are recorded before launch.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Performance should be measured rather than promised vaguely. Our guides explain ",
+              {
+                type: "link",
+                href: "/blog/why-is-my-business-website-slow",
+                text: "common website speed problems",
+              },
+              " and the wider ",
+              {
+                type: "link",
+                href: "/blog/professional-business-website-checklist-2026",
+                text: "professional website requirements",
+              },
+              " a provider should consider.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "seo-inclusions",
+        title: "12. Ask What SEO Work Is Included",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Technical and on-page foundations may include page titles, meta descriptions, canonicals, sitemap and robots configuration, crawlable navigation, heading structure, image alt text, appropriate structured data, redirects, and performance basics. Confirm whether the quotation covers these items and who supplies page content.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Ongoing SEO is different. Keyword strategy, regular publishing, competitive research, link acquisition, measurement, and monthly improvement require continuing work. A quotation saying “SEO included” should explain whether it means launch foundations or an ongoing ranking service; no provider can responsibly guarantee a ranking.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "security-backups-maintenance",
+        title: "13. Ask About Security, Backups, and Maintenance",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Ask who handles SSL, backups, restoration tests, software and plugin updates, administrator access, hosting maintenance, monitoring, dependency updates, and incident communication. Confirm frequency, retention, response boundaries, renewal prices, and what happens when an update breaks compatibility.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "WordPress requires disciplined core, theme, plugin, security, and backup maintenance. Custom software has different needs involving framework dependencies, infrastructure, APIs, database operations, and application monitoring. “Maintenance included” needs a duration and deliverables, not just a label.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "payment-gateway-integration",
+        title: "14. Ask How Payment Gateway Integration Works",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A developer can implement a supported payment integration, but merchant approval normally belongs to the business and payment provider. The business may need identity or company verification, bank details, a sufficiently complete website, and visible terms, privacy, delivery, or refund information before approval.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Ask who opens the merchant account, provides credentials, supplies policy content, handles test transactions, and pays provider charges. The project schedule should account for external review because the developer cannot control a gateway provider’s decision or processing time.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "For a focused breakdown of gateway integration, transaction charges, catalogue setup, delivery rules, and ongoing store costs, read the ",
+              {
+                type: "link",
+                href: "/blog/ecommerce-website-cost-sri-lanka",
+                text: "e-commerce website cost guide",
+              },
+              ".",
+            ],
+          },
+        ],
+      },
+      {
+        id: "communication-quality",
+        title: "15. Check Whether Communication Is Clear Before You Hire",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Useful buying signals include understandable answers, a documented scope, consistent responses, realistic promises, and the ability to explain why a technical decision fits the requirement. A trustworthy provider should also be comfortable saying that something is outside scope or needs investigation before quoting.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Notice whether questions are answered directly and decisions are written down. Poor communication before payment rarely improves afterward. Accuracy, consistency, and traceable decisions matter more than instant replies without substance.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "provider-red-flags",
+        title: "16. Red Flags When Choosing a Web Development Company",
+        blocks: [
+          {
+            type: "ordered-list",
+            items: [
+              "There is no clear scope or acceptance point.",
+              "The provider cannot show relevant live work or explain its contribution.",
+              "Every project receives the same technology regardless of need.",
+              "Domain, hosting, account, and source ownership remain unclear.",
+              "The quotation uses broad labels without deliverables or exclusions.",
+              "Search rankings or SEO results are guaranteed.",
+              "The delivery promise ignores content, approvals, integrations, or testing.",
+              "There is no mobile or quality-assurance process.",
+              "Maintenance, renewals, and post-launch responsibility are unexplained.",
+              "Payment terms and milestones are not written down.",
+              "Another company’s design or content is copied without authorization.",
+              "Payment pressure begins before the requirements are understood.",
+            ],
+          },
+          {
+            type: "image",
+            src: "/blog/how-to-choose-web-development-company-sri-lanka/web-development-company-red-flags.webp",
+            width: 1680,
+            height: 945,
+            alt: "Web development company warning signs including unclear scope, no live portfolio, vague ownership, unrealistic promises, and missing support terms",
+            caption:
+              "A red flag is a reason to ask for clarity and evidence—not automatically a reason to reject a provider without discussion.",
+          },
+        ],
+      },
+      {
+        id: "buyer-questions",
+        title: "17. Questions to Ask Before You Choose a Company",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "What platform do you recommend, and why does it fit this requirement?",
+              "Which pages, templates, functions, and integrations are included?",
+              "Is responsive mobile implementation and testing included?",
+              "Can our team edit content, products, or pages after launch?",
+              "Who owns and controls the domain, hosting, administrator accounts, and analytics?",
+              "Who owns or receives the source code, site files, licensed assets, and design files?",
+              "Are SSL, backups, security setup, business email, and renewals included?",
+              "What technical SEO and Search Console setup is included?",
+              "How many review rounds are planned, and what counts as a scope change?",
+              "What is the payment schedule and the acceptance point for each stage?",
+              "How are payment gateway setup, merchant approval, and provider fees handled?",
+              "What content, access, decisions, and feedback do you need from us?",
+              "What can change the estimated timeline?",
+              "What happens after launch, and what does maintenance or support cost?",
+              "Can we review relevant live work and understand what you delivered?",
+            ],
+          },
+        ],
+      },
+      {
+        id: "provider-evaluation-table",
+        title: "18. Comparison Table: How to Evaluate Providers",
+        blocks: [
+          {
+            type: "table",
+            caption:
+              "A practical provider evaluation matrix for website buyers",
+            headers: [
+              "Area",
+              "What a good provider should explain",
+              "Warning sign",
+            ],
+            rows: [
+              [
+                "Requirements",
+                "Business outcome, users, features, constraints",
+                "Technology chosen before discovery",
+              ],
+              [
+                "Portfolio",
+                "Relevant live work and actual contribution",
+                "Screenshots without working links or context",
+              ],
+              [
+                "Quotation",
+                "Deliverables, exclusions, assumptions, renewals",
+                "One vague total",
+              ],
+              [
+                "Technology",
+                "Why the platform fits editing and functionality",
+                "One stack presented as ideal for everything",
+              ],
+              [
+                "Ownership",
+                "Control, licensing, access, and handover",
+                "Critical accounts stay unexplained",
+              ],
+              [
+                "Timeline",
+                "Stages, dependencies, feedback, external delays",
+                "An exact promise without conditions",
+              ],
+              [
+                "Payments",
+                "Written stages tied to agreed progress",
+                "Full payment without scope clarity",
+              ],
+              [
+                "Revisions",
+                "Review rounds and scope-change process",
+                "Unlimited changes with no definition",
+              ],
+              [
+                "SEO",
+                "Launch foundations versus ongoing work",
+                "Guaranteed rankings",
+              ],
+              [
+                "Performance",
+                "Testing method and platform-specific approach",
+                "A score promised without measurement",
+              ],
+              [
+                "Maintenance",
+                "Tasks, duration, response, renewal price",
+                "“Included” with no detail",
+              ],
+              [
+                "Support",
+                "Contact path, handover, boundaries",
+                "No after-launch responsibility",
+              ],
+            ],
+          },
+        ],
+      },
+      {
+        id: "quotation-comparison",
+        title: "19. Example: Comparing Three Different Website Quotations",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "The following comparison is illustrative. It does not describe named providers or current market prices. Its purpose is to show why a lower or higher total cannot be judged until the deliverables match the requirement.",
+            ],
+          },
+          {
+            type: "table",
+            caption:
+              "Illustrative comparison of three differently scoped quotations",
+            headers: [
+              "Quotation",
+              "What it appears to include",
+              "Main risk or question",
+              "Best fit",
+            ],
+            rows: [
+              [
+                "A: lower price",
+                "Basic pages described broadly",
+                "Are mobile QA, content, hosting, ownership, revisions, and support included?",
+                "A small, clearly limited requirement after missing details are confirmed",
+              ],
+              [
+                "B: mid-range",
+                "Defined WordPress pages, editing, forms, testing, and handover",
+                "Which paid tools, content tasks, renewals, and maintenance remain separate?",
+                "A standard content-managed business website",
+              ],
+              [
+                "C: higher price",
+                "Custom workflows, integrations, roles, deployment, and support",
+                "Does the business truly need custom behavior and its ongoing maintenance?",
+                "A requirement that standard website tools cannot serve well",
+              ],
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "None is universally best. Quotation A may be sufficient for a small scope; B may provide the most appropriate standard website; C may be necessary for unique operations. Select the least complex approach that reliably meets the documented requirement.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "price-influence",
+        title: "20. How Much Should Price Influence the Decision?",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Price matters, especially for a small business, but compare like-for-like scope. An LKR total means little without pages, functions, content, integrations, hosting, domain, renewals, maintenance, revisions, ownership, and support. Separate initial development cost from recurring and optional costs.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Use the documented scope to decide whether a difference buys necessary value or unnecessary complexity. Our ",
+              {
+                type: "link",
+                href: "/blog/website-development-cost-sri-lanka-2026",
+                text: "Sri Lankan website cost guide",
+              },
+              " provides carefully framed planning ranges and explains why quotations vary; it is not a substitute for a project-specific estimate.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "freelancer-or-company",
+        title: "21. Should You Hire a Freelancer or a Company?",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A freelancer may suit focused work, a smaller site, direct communication, or lower overhead. Ask about availability, backup arrangements, complementary skills, support capacity, and continuity if one person becomes unavailable.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "A company may suit broader design and development coverage, multiple technologies, larger integrations, or ongoing support. Neither option is automatically better, cheaper, or safer. Compare capability, process, accountability, and fit.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "local-or-overseas",
+        title: "22. Local Sri Lankan Company vs Overseas Provider",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A Sri Lankan provider may offer convenient time-zone overlap, local payment context, familiarity with local hosting, domains, gateway processes, and business practices, plus easier meetings or support. These are practical advantages, not proof of technical quality.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "An overseas provider may offer niche expertise, specialist capacity, or international product experience. Consider working hours, currency, contracts, data access, support, and handover. Choose based on fit and evidence rather than geography alone.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "shortlisting-process",
+        title: "23. A Simple 10-Minute Shortlisting Process",
+        blocks: [
+          {
+            type: "ordered-list",
+            items: [
+              "Write down the required pages, users, features, integrations, and business outcome.",
+              "Shortlist three to five providers with relevant capability.",
+              "Open their live portfolio projects on desktop and mobile.",
+              "Compare included scope, exclusions, and recurring costs.",
+              "Ask who owns and controls important accounts and files.",
+              "Review why each provider recommends its technology.",
+              "Check timeline assumptions and client dependencies.",
+              "Confirm maintenance, handover, and support boundaries.",
+              "Compare payment stages and revision or change terms.",
+              "Choose the strongest overall fit—not automatically the lowest price.",
+            ],
+          },
+          {
+            type: "image",
+            src: "/blog/how-to-choose-web-development-company-sri-lanka/web-development-company-shortlist-process.webp",
+            width: 1680,
+            height: 945,
+            alt: "Web development company shortlisting process from defining requirements through portfolio review, scope comparison, support, and final selection",
+            caption:
+              "A compact shortlist helps buyers compare evidence, responsibilities, and fit before discussing final commercial terms.",
+          },
+        ],
+      },
+      {
+        id: "final-recommendation",
+        title: "24. Final Recommendation",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A good web development company should make the project clearer before development begins. It should explain the scope, technology, ownership, timeline, costs, client responsibilities, change process, testing, handover, and support in language the buyer can understand.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "OXY12 provides business websites, WordPress websites, e-commerce stores, custom software, POS and ERP systems, and mobile applications. You can review our ",
+              { type: "link", href: "/services", text: "services" },
+              ", learn more ",
+              { type: "link", href: "/about", text: "about the company" },
+              ", or ",
+              {
+                type: "link",
+                href: "/contact",
+                text: "discuss your requirements",
+              },
+              ". We will first identify what needs to be delivered before recommending a platform or project scope.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Web Developer vs Web Development Company: Which Should You Hire?",
+    slug: "web-developer-vs-web-development-company",
+    excerpt:
+      "A balanced buyer's guide to choosing between a freelance web developer and a web development company based on scope, risk, cost, skills, and support.",
+    description:
+      "Compare freelancers and web development companies across cost, capability, communication, continuity, ownership, maintenance, and project complexity.",
+    category: "Websites",
+    tags: [
+      "Web Development",
+      "Freelance Developer",
+      "Web Development Company",
+      "Website Planning",
+      "Sri Lanka",
+    ],
+    author: "Akindu Ramsith",
+    authorRole: "Co-Founder, OXY12",
+    authorType: "Person",
+    authorId: "akindu-ramsith",
+    authorUrl: "/about#founder",
+    publishedDate: "2026-10-12",
+    updatedDate: "2026-10-12",
+    publicationOrder: 1,
+    readingTime: "16 min read",
+    featuredImage: {
+      src: "/blog/web-developer-vs-web-development-company/web-developer-vs-web-development-company.webp",
+      width: 1680,
+      height: 945,
+      alt: "Freelance web developer vs web development company comparison based on cost, communication, skills, capacity, process, and support",
+    },
+    seoTitle: "Web Developer vs Web Development Company | OXY12",
+    metaDescription:
+      "Compare a freelance web developer vs a web development company by cost, skills, support, risk, and project size to decide which is right for you.",
+    primaryKeyword: "web developer vs web development company",
+    secondaryKeywords: [
+      "freelance web developer vs web development company",
+      "freelancer vs web development company",
+      "web developer or web development agency",
+      "freelance web developer Sri Lanka",
+      "web development company Sri Lanka",
+      "website developer for small business",
+      "cost of hiring a web developer",
+      "website agency vs freelancer",
+    ],
+    canonicalUrl:
+      "https://oxy12.com/blog/web-developer-vs-web-development-company",
+    relatedService: {
+      title: "Unsure what type of development support you need?",
+      description:
+        "OXY12 can review your scope, integrations, delivery risk, support expectations, and budget before suggesting a suitable project approach.",
+      href: "/contact",
+      label: "Discuss your website requirements",
+    },
+    relatedPosts: [
+      "ecommerce-website-cost-sri-lanka",
+      "how-to-choose-web-development-company-sri-lanka",
+      "website-development-cost-sri-lanka-2026",
+    ],
+    status: "published",
+    sections: [
+      {
+        id: "what-is-a-freelance-web-developer",
+        title: "1. What Is a Freelance Web Developer?",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A freelance web developer is often a strong choice for a smaller, clearly defined project where direct communication and lower overhead matter. A web development company often suits larger or business-critical work needing several skills, structured delivery, and long-term capacity. Neither is automatically better; scope, budget, complexity, deadlines, risk, and support should decide.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Here, freelance developer means an independent professional who may handle the whole site, specialize in one platform, or use collaborators. Capacity still depends heavily on that individual. Freelancer does not mean inexperienced: a strong senior freelancer can outperform a poorly organized company.",
+            ],
+          },
+          {
+            type: "callout",
+            content:
+              "Choose the delivery capability behind the quotation, not the freelancer or company label printed above it.",
+          },
+        ],
+      },
+      {
+        id: "what-is-a-web-development-company",
+        title: "2. What Is a Web Development Company?",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A web development company is an organized provider with a team or broader operating structure. It may combine developers, designers, project coordination, QA, SEO foundations, deployment, and infrastructure support. Work and support can be distributed, with more formal documentation and reviews.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "That structure usually creates higher overhead, but company is not proof of quality. Evaluate the people, live work, process, reasoning, accountability, and support model. Outsourcing can work when responsibility is transparent.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "quick-comparison",
+        title: "3. Quick Comparison: Freelancer vs Web Development Company",
+        blocks: [
+          {
+            type: "table",
+            caption:
+              "Practical comparison of independent developers and web development companies",
+            headers: ["Factor", "Freelance developer", "Web development company"],
+            rows: [
+              ["Cost", "Often lower because overhead is smaller", "Often higher because more roles and process may be included"],
+              ["Communication", "Usually direct with the person doing the work", "May pass through a project or account contact"],
+              ["Capacity", "Limited by one person's workload and collaborators", "Can distribute work across a team"],
+              ["Skill range", "Depends on individual depth and network", "May offer broader skills across several roles"],
+              ["Design", "Strong when the freelancer also has proven design capability", "May include a dedicated UI/UX designer"],
+              ["Integrations", "Suitable when matched to the freelancer's specialization", "Often easier to resource across frontend, backend, and infrastructure"],
+              ["Availability", "Higher single-person dependency", "Lower individual dependency when the team is managed well"],
+              ["Project management", "Usually lightweight and direct", "Often documented with milestones and review stages"],
+              ["QA and testing", "Varies by the individual's process", "May involve a separate review or QA role"],
+              ["Maintenance", "Can be excellent but depends on continuing availability", "May have formal support plans and shared coverage"],
+              ["Scalability", "Strong for work within proven capacity", "Often suited to larger, parallel, or evolving scopes"],
+              ["Continuity", "Depends heavily on one professional", "Depends on company stability, documentation, and handover"],
+            ],
+          },
+        ],
+      },
+      {
+        id: "cost-comparison",
+        title: "4. Cost: Which Option Is Usually Cheaper?",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A freelancer can often quote less because overhead and administration are smaller. A company may charge more when the scope includes several specialists, design, project management, QA, deployment, documentation, and support. Compare included work rather than assuming two totals describe the same result.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Illustrative example: a five-page site with supplied content and one form may suit an experienced freelancer. A catalogue, gateway, custom rules, staff workflows, APIs, reporting, and continuing support may justify a team. These are scope examples, not market-price claims. For LKR planning ranges, read our guide to ",
+              { type: "link", href: "/blog/website-development-cost-sri-lanka-2026", text: "website development cost in Sri Lanka" },
+              ".",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "A cheap quotation becomes expensive if missing requirements cause rebuilding, security or performance failures, ownership problems, or unfinished work. Separate project work, third-party charges, renewals, maintenance, and optional features.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "skills-specialist-vs-team",
+        title: "5. Skills: One Specialist vs a Multi-Skilled Team",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "One person may cover UI/UX, frontend, backend, SEO foundations, performance, deployment, security, and testing. Some freelancers have broad senior capability; others specialize and collaborate. Ask who handles each responsibility.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "A company can assign specialists to design, engineering, infrastructure, and QA, but team size alone proves nothing. Review the contributors and evidence. Technology should also fit the requirement; our comparisons of ",
+              { type: "link", href: "/blog/wordpress-vs-nextjs-business-website-2026", text: "WordPress vs Next.js" },
+              " and ",
+              { type: "link", href: "/blog/custom-website-vs-wordpress", text: "custom websites vs WordPress" },
+              " explain why technology should follow the project need.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "communication",
+        title: "6. Communication: Direct Access vs Structured Communication",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A freelancer often gives direct access to the person writing the code, enabling faster decisions. When that person is also coding, testing, supporting, and managing clients, updates may become informal during busy periods.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "A company may provide a project manager, written requirements, and scheduled reviews, although extra layers can slow decisions. In either model, agree on contacts, channels, updates, approvals, and response expectations.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "single-person-dependency",
+        title: "7. Availability and the Single-Person Dependency",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "If an independent developer becomes ill, takes leave, changes career, or becomes unavailable, delivery may pause. This single-person dependency makes individual availability a business risk. Ask about backup access, documentation, source control, handover, and emergency support.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "A company can redistribute work, but a badly managed team may have the same problem. Continuity comes from documentation, shared access, clear responsibility, and safe handover—not the business label.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "small-business-website",
+        title: "8. Which Is Better for a Small Business Website?",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A strong freelancer may be ideal when the required pages and functions are clear, integrations are limited, the owner is comfortable managing feedback directly, and the deadline has some flexibility. A company may be preferable when branding quality, coordinated design and development, several stakeholders, integrations, strict launch dates, or post-launch coverage matter more.",
+            ],
+          },
+          {
+            type: "image",
+            src: "/blog/web-developer-vs-web-development-company/freelancer-vs-web-company-decision-guide.webp",
+            width: 1680,
+            height: 945,
+            alt: "Decision guide showing when to hire a freelance web developer and when to hire a web development company",
+            caption:
+              "Match the provider's real capacity to the scope, business risk, and support requirement.",
+          },
+        ],
+      },
+      {
+        id: "ecommerce-website",
+        title: "9. Which Is Better for an E-Commerce Website?",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A skilled freelancer can build a dependable e-commerce store. The decision changes as catalogue size, checkout, delivery, payments, inventory, analytics, security, backups, and maintenance become more complex. Relevant store experience matters more than provider size.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Large catalogues, custom pricing, unusual shipping, APIs, or business-critical sales may benefit from broader coverage. In Sri Lanka, a developer can integrate a supported gateway, but merchant approval remains with the business and payment provider.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "To compare the budget behind these requirements, see our research-informed guide to ",
+              {
+                type: "link",
+                href: "/blog/ecommerce-website-cost-sri-lanka",
+                text: "e-commerce website cost in Sri Lanka in 2026",
+              },
+              ".",
+            ],
+          },
+        ],
+      },
+      {
+        id: "custom-web-development",
+        title: "10. Which Is Better for Custom Web Development?",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Custom dashboards, portals, APIs, workflows, databases, permissions, and automation need architectural depth. A senior freelancer can be excellent when the scope matches proven expertise and capacity. Ask how testing, deployment, and future changes are documented.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Larger systems often benefit from frontend, backend, QA, security, infrastructure, documentation, and several developers. Review the provider's actual ",
+              { type: "link", href: "/portfolio", text: "live project portfolio" },
+              " and contribution rather than relying on screenshots or job titles.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "design-quality",
+        title: "11. Design Quality: Freelancer vs Company",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Web design and web development are different skills. A technically strong developer may not be a professional designer, while a company may have dedicated UI/UX capability. Some freelancers are skilled in both. Inspect live mobile layouts, typography, spacing, hierarchy, forms, conversion paths, consistency, and accessibility instead of judging polished screenshots alone.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "seo-performance-accessibility",
+        title: "12. SEO, Performance, and Accessibility",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A website build does not automatically include every SEO service. Confirm crawlable navigation, metadata, headings, image optimization, responsive behavior, sitemap, robots, canonicals, suitable structured data, accessibility basics, performance work, and Search Console.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "These launch foundations differ from ongoing research, publishing, authority building, and monthly optimization. Avoid ranking guarantees. Review our guides to ",
+              { type: "link", href: "/blog/why-is-my-business-website-slow", text: "common website performance problems" },
+              " and ",
+              { type: "link", href: "/blog/professional-business-website-checklist-2026", text: "professional website requirements" },
+              ".",
+            ],
+          },
+        ],
+      },
+      {
+        id: "ownership",
+        title: "13. Ownership: Domain, Hosting, Website, and Accounts",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Document who controls the domain, DNS, hosting, admin accounts, analytics, Search Console, email, source repository, merchant account, and licences. Define what is delivered at handover and when the relationship ends.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Managed hosting, agency licences, and proprietary systems can be valid. The buyer still needs documented access, renewals, licence limits, migration options, and recovery contacts. Unclear ownership is risky in either model.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "maintenance-support",
+        title: "14. Maintenance and Long-Term Support",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Ask who handles software updates, backups, compatibility, server incidents, and small content changes. Confirm support duration, response boundaries, recurring price, and what happens after any warranty period.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Freelancer support can be personal but depends on availability. A company may offer shared coverage, although quality varies. Request written tasks, exclusions, renewal costs, contact routes, and escalation steps.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "security-backups",
+        title: "15. Security and Backup Responsibility",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Neither model guarantees security. Evaluate configuration, SSL, updates, extension quality, administrator access, account recovery, backup frequency, restoration testing, incident response, and hosting responsibility.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "A backup matters only if it can be restored. Document recovery expectations and the security responsibilities shared by the host, provider, and client.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "project-management-documentation",
+        title: "16. Project Management and Documentation",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A freelancer may use simpler communication and fewer documents. A company may use requirements, milestones, staging, issue tracking, approvals, acceptance stages, and handover documents. Structure becomes more valuable as features, stakeholders, and dependencies increase.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Documentation should clarify deliverables, client inputs, feedback dates, completion, and how changes affect price or time. Compare the process with our guide to ",
+              { type: "link", href: "/blog/how-to-choose-web-development-company-sri-lanka", text: "choosing a web development company in Sri Lanka" },
+              ".",
+            ],
+          },
+        ],
+      },
+      {
+        id: "freelancer-advantages",
+        title: "17. Main Advantages of Hiring a Freelancer",
+        blocks: [
+          {
+            type: "ordered-list",
+            items: [
+              "Often lower overhead and a more economical fit for a focused scope.",
+              "Direct communication with the specialist doing the work.",
+              "Flexibility around smaller tasks, decisions, and working arrangements.",
+              "Faster decisions when fewer organizational layers are involved.",
+              "A strong fit for clearly defined websites or specialist assignments.",
+              "Access to deep individual expertise in a particular platform or problem.",
+              "Potentially less bureaucracy for a small project.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "freelancer-risks",
+        title: "18. Main Risks of Hiring a Freelancer",
+        blocks: [
+          {
+            type: "ordered-list",
+            items: [
+              "Single-person dependency if the developer becomes unavailable.",
+              "Limited capacity when several projects or urgent tasks overlap.",
+              "Gaps in complementary design, content, infrastructure, or QA skills.",
+              "Availability may change during leave, illness, or workload peaks.",
+              "Documentation and project tracking may be informal.",
+              "Long-term support continuity depends on the individual's plans.",
+              "Deadlines can be vulnerable when unexpected work appears.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Experienced freelancers manage these risks through capacity planning, collaborators, source control, documentation, backups, and support agreements. Verify each point rather than rejecting freelancers generally.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "company-advantages",
+        title: "19. Main Advantages of Hiring a Web Development Company",
+        blocks: [
+          {
+            type: "ordered-list",
+            items: [
+              "Wider skill coverage across design, development, testing, and deployment.",
+              "More delivery capacity for parallel or larger workstreams.",
+              "Better continuity when responsibilities can move between documented team members.",
+              "A structured process for requirements, reviews, approvals, and handover.",
+              "Potential for separate QA and testing responsibility.",
+              "Formal maintenance, support, and escalation options.",
+              "Ability to expand a project with additional specialists.",
+              "Specialized roles for complex interfaces, integrations, infrastructure, or security.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "company-risks",
+        title: "20. Main Risks of Hiring a Web Development Company",
+        blocks: [
+          {
+            type: "ordered-list",
+            items: [
+              "Higher pricing where team structure and overhead exceed the project's needs.",
+              "More communication layers between the client and technical team.",
+              "Approvals can take longer inside a larger process.",
+              "A very small project may pay for coordination it does not need.",
+              "Quality varies significantly between companies.",
+              "Some providers outsource without explaining responsibility or quality control.",
+              "Sales promises may not match the capability of the delivery team.",
+            ],
+          },
+          {
+            type: "image",
+            src: "/blog/web-developer-vs-web-development-company/freelancer-vs-web-company-risk-checklist.webp",
+            width: 1680,
+            height: 945,
+            alt: "Website provider risk checklist covering portfolio, scope, ownership, testing, security, support, payment terms, and business continuity",
+            caption:
+              "Evaluate the process behind every quotation, regardless of provider size.",
+          },
+        ],
+      },
+      {
+        id: "decision-table",
+        title: "21. Decision Table: Which Should You Choose?",
+        blocks: [
+          {
+            type: "table",
+            caption:
+              "Provider fit by common website project situation",
+            headers: ["Situation", "Freelancer", "Company"],
+            rows: [
+              ["Simple brochure website", "Strong fit", "Also suitable"],
+              ["Tight budget", "Often suitable", "Depends on scope and overhead"],
+              ["One specialized task", "Strong fit", "May be unnecessary"],
+              ["Complex custom platform", "Depends heavily on proven depth and capacity", "Often stronger fit"],
+              ["Large e-commerce store", "Can work with relevant expertise and support", "Often preferable"],
+              ["Several integrations", "Depends on specialization", "Usually easier to resource"],
+              ["Multiple stakeholders", "Can work with disciplined coordination", "Often easier"],
+              ["Long-term support", "Depends on availability and agreement", "Often stronger with a capable support team"],
+              ["Several specialists needed", "Requires trusted collaborators", "Strong fit"],
+              ["Fast small changes", "Often strong", "Depends on process"],
+              ["Business-critical system", "Risk depends on continuity plan", "Often safer with a capable, documented team"],
+            ],
+          },
+        ],
+      },
+      {
+        id: "questions-for-freelancer",
+        title: "22. Questions to Ask a Freelancer Before Hiring",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "Can you show relevant live projects and explain what you personally delivered?",
+              "Which design, development, deployment, and support tasks will you handle?",
+              "Will collaborators contribute, and who is accountable for their work?",
+              "What happens to the project or support if you are unavailable?",
+              "What is included, excluded, and limited in the quotation?",
+              "How are revisions, corrections, and new features handled?",
+              "Who controls the domain, hosting, administrator accounts, and source files?",
+              "How are backups created, stored, tested, and handed over?",
+              "What maintenance or post-launch support is included?",
+              "How will scope changes affect cost and timeline?",
+            ],
+          },
+        ],
+      },
+      {
+        id: "questions-for-company",
+        title: "23. Questions to Ask a Web Development Company Before Hiring",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "Who will actually design, build, test, and manage this project?",
+              "Which work is internal, and how is any outsourced work supervised?",
+              "Who is our day-to-day contact and technical escalation contact?",
+              "Can we inspect comparable live projects and working functionality?",
+              "What deliverables, client responsibilities, renewals, and exclusions are documented?",
+              "What mobile, browser, functional, performance, and security testing is performed?",
+              "How are client delays, third-party delays, and provider delays handled?",
+              "Who controls accounts, licences, repositories, hosting, and handover assets?",
+              "Which maintenance plans and response boundaries are available?",
+              "What documentation, training, and support are provided after handover?",
+            ],
+          },
+        ],
+      },
+      {
+        id: "decision-framework",
+        title: "24. A Simple Decision Framework",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Rate complexity, business criticality, integrations, design, stakeholder count, support, deadline pressure, and budget flexibility from one to five. It is not scientific; it moves the discussion beyond price and exposes delivery risk.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "A low-risk project may suit a skilled freelancer. A complex system with dependencies, a strict launch, specialist roles, and costly downtime may justify a team. Verify live work, availability, ownership, and support.",
+            ],
+          },
+          {
+            type: "image",
+            src: "/blog/web-developer-vs-web-development-company/website-project-complexity-hiring-guide.webp",
+            width: 1680,
+            height: 945,
+            alt: "Website project complexity guide comparing freelancer and web development company suitability for simple, growing, and complex projects",
+            caption:
+              "Complexity and business risk should guide the provider decision more than company size alone.",
+          },
+        ],
+      },
+      {
+        id: "small-service-business-scenario",
+        title: "25. Example Scenario 1: Small Service Business",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A small consultancy needs Home, About, Services, and Contact pages, a basic enquiry form, mobile design, and analytics. Content is ready, one owner approves decisions, and there are no unusual integrations. An experienced freelancer with relevant live work could be a very strong and efficient option. A company could deliver it too, but extra team structure may not add enough value for this simple scope.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "ecommerce-scenario",
+        title: "26. Example Scenario 2: Growing E-Commerce Business",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A growing retailer needs more than 300 products, a payment gateway, custom delivery rules, filters, promotions, analytics, reliable backups, maintenance, and future integrations. A capable company may provide better continuity across store configuration, design, data, testing, and support. An experienced e-commerce freelancer can still be suitable when portfolio evidence, capacity, collaborators, documentation, and post-launch availability are strong.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "custom-platform-scenario",
+        title: "27. Example Scenario 3: Custom Business Platform",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A business platform needs user accounts, dashboards, role-based permissions, workflow approvals, a database, reports, APIs, and future modules. Architecture, security, deployment, testing, documentation, and long-term continuity matter far more than the cheapest quote. A senior specialist may lead this successfully, but the buyer should confirm realistic capacity and how several disciplines or future developers will be supported.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "red-flags-final-recommendation",
+        title: "28. Freelancer vs Company Red Flags and Final Recommendation",
+        blocks: [
+          {
+            type: "subheading",
+            title: "Freelancer red flags",
+          },
+          {
+            type: "list",
+            items: [
+              "No relevant live work or a clear explanation of personal contribution.",
+              "Unclear capacity, availability, scope, ownership, backup, or handover plan.",
+              "Complete payment requested before requirements are understood.",
+              "Unrealistic promises or inconsistent communication.",
+            ],
+          },
+          {
+            type: "subheading",
+            title: "Company red flags",
+          },
+          {
+            type: "list",
+            items: [
+              "A strong sales pitch without named delivery people or live projects.",
+              "Outsourcing, ownership, project contact, or quotation scope is unclear.",
+              "Guaranteed SEO results or unrealistic delivery promises.",
+              "Pressure to pay before scope and responsibility are documented.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Outsourcing itself is not a warning sign when responsibility, quality control, and communication are transparent. The right provider is the one whose capability, process, availability, and support model fit the risk and complexity of the project.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "If you are planning a website and are unsure what development support the project needs, review OXY12's ",
+              { type: "link", href: "/services", text: "web and software services" },
+              " or ",
+              { type: "link", href: "/contact", text: "discuss the requirements" },
+              ". We will first clarify scope, dependencies, ownership, and support expectations rather than assuming that one delivery model fits every project.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "How Much Does an E-Commerce Website Cost in Sri Lanka in 2026?",
+    slug: "ecommerce-website-cost-sri-lanka",
+    excerpt:
+      "A practical 2026 guide to e-commerce website budgets, quotation differences, payment gateways, recurring costs, and the scope behind each price.",
+    description:
+      "Plan an e-commerce website budget in Sri Lanka with researched 2026 ranges, scope examples, recurring costs, and a practical quotation checklist.",
+    category: "Websites",
+    tags: [
+      "E-Commerce Development",
+      "WooCommerce",
+      "Website Cost",
+      "Sri Lanka",
+      "Project Planning",
+    ],
+    author: "Akindu Ramsith",
+    authorRole: "Co-Founder, OXY12",
+    authorType: "Person",
+    authorId: "akindu-ramsith",
+    authorUrl: "/about#founder",
+    publishedDate: "2026-10-11",
+    updatedDate: "2026-10-11",
+    publicationOrder: 1,
+    readingTime: "17 min read",
+    featuredImage: {
+      src: "/blog/ecommerce-website-cost-sri-lanka/ecommerce-website-cost-sri-lanka-2026.webp",
+      width: 1680,
+      height: 945,
+      alt: "2026 e-commerce website cost guide for Sri Lanka comparing starter WooCommerce stores, professional stores, advanced e-commerce, and custom platforms",
+    },
+    seoTitle: "E-Commerce Website Cost in Sri Lanka 2026 | OXY12",
+    metaDescription:
+      "See e-commerce website costs in Sri Lanka for 2026, including WooCommerce, payment gateways, hosting, maintenance, recurring costs, and custom features.",
+    primaryKeyword: "ecommerce website cost Sri Lanka",
+    secondaryKeywords: [
+      "e-commerce website cost in Sri Lanka",
+      "e commerce website price Sri Lanka",
+      "ecommerce website development cost Sri Lanka",
+      "WooCommerce website cost Sri Lanka",
+      "online store website cost Sri Lanka",
+      "payment gateway integration Sri Lanka",
+      "custom ecommerce website Sri Lanka",
+    ],
+    canonicalUrl:
+      "https://oxy12.com/blog/ecommerce-website-cost-sri-lanka",
+    relatedService: {
+      title: "Planning an online store?",
+      description:
+        "OXY12 can review your catalogue, payment methods, delivery rules, integrations, content, and support needs before recommending a suitable e-commerce approach and preparing a quotation.",
+      href: "/contact",
+      label: "Discuss your e-commerce requirements",
+    },
+    relatedPosts: [
+      "website-development-cost-sri-lanka-2026",
+      "custom-website-vs-wordpress",
+      "how-to-choose-web-development-company-sri-lanka",
+    ],
+    status: "published",
+    sections: [
+      {
+        id: "quick-answer",
+        title: "1. E-Commerce Website Cost in Sri Lanka: The Quick Answer",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "In Sri Lanka in 2026, a narrowly scoped WooCommerce store may be advertised from about LKR 60,000, while a practical done-for-you starter budget is often LKR 75,000–150,000. A professional SME store commonly needs LKR 150,000–500,000. Advanced projects can move from LKR 500,000 into seven figures, while custom platforms are quoted after discovery and may begin around LKR 1,000,000. These are research-informed planning ranges, not a national average or a fixed OXY12 price.",
+            ],
+          },
+          {
+            type: "table",
+            caption:
+              "Research-informed e-commerce website planning ranges for Sri Lanka in 2026",
+            headers: [
+              "Project type",
+              "Practical budget range",
+              "Typical fit",
+              "Main cost drivers",
+            ],
+            rows: [
+              [
+                "Starter WooCommerce store",
+                "LKR 75,000–150,000",
+                "Small catalogue with standard checkout",
+                "Theme setup, products, one gateway, simple delivery",
+              ],
+              [
+                "Professional SME store",
+                "LKR 150,000–500,000",
+                "Growing retailer needing stronger design and setup",
+                "Catalogue, filters, promotions, content, training, QA",
+              ],
+              [
+                "Advanced e-commerce website",
+                "LKR 500,000–1,500,000+",
+                "Established business with complex operations",
+                "Integrations, custom workflows, performance, reporting",
+              ],
+              [
+                "Custom commerce platform",
+                "From about LKR 1,000,000; scope-defined",
+                "Unusual business logic or enterprise workflows",
+                "Custom backend, APIs, automation, infrastructure",
+              ],
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Public Sri Lankan package pages show entry offers around LKR 60,000–140,000, but product limits, design, content, training, hosting, support, and integrations differ. Other current guides place done-for-you small stores in the low-to-mid six figures and custom work at seven figures. Compare the scope, not only the headline price.",
+            ],
+          },
+          {
+            type: "callout",
+            content:
+              "The cost of an e-commerce website is determined by what the store must do, not merely by calling it an e-commerce website.",
+          },
+        ],
+      },
+      {
+        id: "why-prices-vary",
+        title: "2. Why E-Commerce Website Prices Vary So Much",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Store A may contain 20 products, five categories, one payment gateway, flat-rate delivery, guest checkout, and a customized theme. Store B may contain 5,000 products, variations, advanced filters, customer accounts, promotions, multiple warehouses, ERP synchronization, courier APIs, custom delivery rules, and management reports. Both are online stores, but the design, data, engineering, testing, and operational risk are not comparable.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "A template-led freelancer package, studio-led custom design, and company delivery covering testing, training, and maintenance are different services. The highest quote is not automatically best, nor is the lowest automatically poor. Normalize the scope before comparing totals. Our broader guide to ",
+              {
+                type: "link",
+                href: "/blog/website-development-cost-sri-lanka-2026",
+                text: "website development cost in Sri Lanka",
+              },
+              " explains the same principle for non-commerce projects.",
+            ],
+          },
+          {
+            type: "image",
+            src: "/blog/ecommerce-website-cost-sri-lanka/ecommerce-website-cost-factors-sri-lanka.webp",
+            width: 1680,
+            height: 945,
+            alt: "Factors that affect e-commerce website development cost in Sri Lanka including products, payment gateways, shipping, design, integrations, and support",
+            caption:
+              "A quotation becomes meaningful when each cost driver is connected to a clear deliverable.",
+          },
+        ],
+      },
+      {
+        id: "platform-and-design",
+        title: "3. Platform and Design Choices",
+        blocks: [
+          {
+            type: "subheading",
+            id: "platform-technology",
+            title: "Platform and technology",
+          },
+          {
+            type: "paragraph",
+            content: [
+              "WooCommerce is often practical for SMEs needing a conventional catalogue, checkout, promotions, accounts, and local payment integration. Its core is open source with no core platform subscription, but hosting, development, extensions, gateway charges, and maintenance remain. Hosted platforms exchange some server responsibility for subscriptions and app fees. Custom development fits workflows that standard platforms cannot support responsibly.",
+            ],
+          },
+          {
+            type: "subheading",
+            id: "design-effort",
+            title: "Template, customized, or custom design",
+          },
+          {
+            type: "paragraph",
+            content: [
+              "A pre-built theme with brand adjustments takes less effort than custom product cards, category pages, mobile layouts, account screens, and checkout behavior. Equal page counts can still hide very different work. Templates suit many small launches; custom interfaces help when brand presentation, product discovery, accessibility, or conversion paths need closer control.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "For a deeper technology comparison, see ",
+              {
+                type: "link",
+                href: "/blog/wordpress-vs-nextjs-business-website-2026",
+                text: "WordPress vs Next.js",
+              },
+              " and ",
+              {
+                type: "link",
+                href: "/blog/custom-website-vs-wordpress",
+                text: "custom website vs WordPress",
+              },
+              ". This guide keeps the focus on commerce cost.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "catalogue-and-pricing",
+        title: "4. Product Catalogue and Pricing Complexity",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Each product may need a title, SKU, price, stock, category, images, description, attributes, weight, and delivery details. The quote should state whether the developer builds the catalogue, uploads a fixed number, imports a clean spreadsheet, or expects client entry. An unlimited-product platform does not include unlimited manual data entry.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Size, colour, weight, pack size, extras, discounts, wholesale rates, and customer-specific prices create more stock and price combinations. Standard WooCommerce tools cover some cases; bespoke calculations, bundles, subscriptions, or role-based pricing may need paid software, custom code, and more testing.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "payment-gateways",
+        title: "5. Payment Gateway Integration and Merchant Approval",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Sri Lankan stores may consider providers such as PayHere, OnePay, DirectPay, WebXPay, or a bank gateway, subject to each provider's current eligibility and commercial terms. The website work can include installing or developing the integration, configuring credentials, handling success and failure responses, updating orders, and testing sandbox and live transactions.",
+            ],
+          },
+          {
+            type: "callout",
+            content:
+              "Gateway integration and merchant approval are separate. The payment provider or bank controls onboarding, documents, compliance, settlement terms, limits, and final approval; a developer cannot guarantee acceptance.",
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Transaction charges are separate from the build. Providers may charge per transaction, monthly, for setup, or in combination. Terms and negotiated rates vary, so obtain the current merchant agreement. The development quote should name the included gateway and any charge for additional gateways.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "delivery-and-accounts",
+        title: "6. Delivery Rules and Customer Accounts",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A flat delivery fee or free delivery above a threshold is relatively simple. District or city rates, weight bands, postcode rules, store pickup, restricted zones, separate rates for frozen goods, and real-time courier quotations require more configuration and testing. A courier API adds dependency on its documentation, authentication, service availability, label or tracking workflow, and error handling.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Guest checkout may be enough for a small store. Accounts add registration, history, saved addresses, password recovery, and privacy duties. Wishlists, loyalty, subscriptions, wholesale groups, approvals, and customer-specific catalogues add more scope. Fund features that solve a real buying or operational problem.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "promotions-inventory-integrations",
+        title: "7. Promotions, Inventory, and Third-Party Integrations",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Standard sale prices, fixed or percentage coupons, and simple free-shipping promotions are commonly supported. Quantity discounts, buy-X-get-Y offers, bundles, loyalty rules, wholesale tiers, and campaign combinations may require extensions or custom logic. The quote should identify the exact promotion rules rather than promise a generic discount system.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Basic WooCommerce stock tracking is not an ERP. Multiple locations, warehouse transfers, POS synchronization, and real-time availability can need custom integration. CRM, accounting, couriers, email, WhatsApp, SMS, analytics, Meta Pixel, and Google Merchant Center may also connect. Cost depends on the API, documentation, authentication, data flow, failure handling, and test access.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "infrastructure",
+        title: "8. Domain, Hosting, SSL, and Business Email",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Development and infrastructure should be separate quote lines. Domains normally renew annually. Hosting depends on traffic, checkout activity, storage, CPU and memory limits, database load, backups, CDN, monitoring, and support. Shared hosting can suit a small store; growth may justify managed hosting, a VPS, or cloud infrastructure. Choose by workload, not storage alone.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "SSL is essential, and many hosts include a free certificate such as Let's Encrypt. Business email may be bundled or billed separately through Google Workspace, Microsoft 365, Zoho Mail, or another provider. Confirm ownership, mailbox count, storage, and renewals. Our guide to ",
+              {
+                type: "link",
+                href: "/blog/why-is-my-business-website-slow",
+                text: "business website performance",
+              },
+              " explains why hosting is only one part of speed.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "content-and-seo",
+        title: "9. Content, Product Photography, and SEO",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A quotation may assume the client supplies final product photos, prices, descriptions, policies, category text, banners, and brand files. Photography, image editing, copywriting, translations, and graphic design are separate work unless listed. Clarify the required format, who checks accuracy, how many products are populated, and what happens when content arrives late.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Development-level SEO can include clean URLs, editable metadata, headings, crawlability, a sitemap, optimized images, relevant product schema, mobile usability, and performance foundations. Keyword strategy, content, digital PR, links, and reporting are ongoing services. A sound store supports visibility but does not guarantee rankings.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "maintenance-and-licenses",
+        title: "10. Maintenance, Support, and Premium Licenses",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Maintenance may cover WordPress and WooCommerce updates, compatibility, backups, uptime, malware response, fixes, hosting, and support. There is no universal monthly rate because a basic update plan and business-critical agreement carry different duties. Confirm response boundaries, exclusions, update frequency, and backup retention.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Filtering, subscriptions, multilingual content, advanced shipping, security, backups, automation, and product customization may use paid software. Providers may include licenses or require client purchase. Record the owner, renewal price, date, and expiry effect. Avoid nulled or pirated software because it creates legal, security, and update risks.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "one-time-vs-recurring",
+        title: "11. One-Time Cost vs Recurring Cost",
+        blocks: [
+          {
+            type: "table",
+            caption:
+              "Typical timing of e-commerce expenses; exact arrangements vary by provider",
+            headers: ["Expense", "Usually one-time", "Usually recurring"],
+            rows: [
+              ["Design and development", "Yes", "No, unless changed later"],
+              ["Initial catalogue setup", "Yes", "New product work may recur"],
+              ["Domain", "No", "Annual renewal"],
+              ["Hosting", "No", "Monthly or annual"],
+              ["Premium plugins or apps", "Sometimes", "Often annual or monthly"],
+              ["Maintenance and support", "No", "Optional monthly or annual plan"],
+              ["Gateway processing", "No", "Per transaction and/or subscription"],
+              ["Business email", "Sometimes", "Often per user, monthly or annual"],
+              ["SEO or marketing campaign", "No", "Optional recurring service"],
+              ["API or software subscriptions", "Sometimes", "Often usage-based or recurring"],
+            ],
+          },
+          {
+            type: "image",
+            src: "/blog/ecommerce-website-cost-sri-lanka/ecommerce-one-time-vs-recurring-costs.webp",
+            width: 1680,
+            height: 945,
+            alt: "One-time and recurring e-commerce website costs including development, hosting, domain renewals, maintenance, plugins, and payment fees",
+            caption:
+              "The launch budget creates the store; the operating budget keeps its infrastructure and services running.",
+          },
+        ],
+      },
+      {
+        id: "woocommerce-vs-custom",
+        title: "12. WooCommerce vs Custom E-Commerce Cost",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "WooCommerce reduces initial engineering for standard catalogues, carts, checkout, coupons, accounts, and established integrations. Its extension ecosystem and hosting control are useful, but custom design, large catalogues, complex integrations, premium tools, and demanding operations can still create a substantial project.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Custom commerce fits requirements such as bespoke B2B pricing, marketplace logic, unusual subscriptions, multi-system synchronization, advanced dashboards, or specialized automation. It needs more discovery, architecture, development, testing, infrastructure, and ongoing engineering. There is no useful fixed ceiling; quote documented requirements.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "small-store-cost",
+        title: "13. How Much Does a Small E-Commerce Website Cost?",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "For roughly 10–50 products, standard categories, a customized WooCommerce theme, one gateway, basic delivery, responsive layouts, and client-supplied content, LKR 75,000–150,000 is a defensible starter range. Lower advertised packages should be checked for product uploads, design changes, gateway testing, hosting, training, revisions, and support.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "It may exclude photography, copywriting, bulk entry, premium tools, complex variations, email, gateway fees, and maintenance. A modest budget suits a standard workflow; clarity matters more than unnecessary features.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "professional-store-cost",
+        title: "14. How Much Does a Professional SME Store Cost?",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A professional SME store may add custom design, more variations, filters, mobile product discovery, promotions, analytics, district delivery, technical SEO, training, backups, and QA. LKR 150,000–500,000 is a practical range, rising with content work, integrations, and catalogue setup.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "ERP or POS synchronization, custom delivery, complex catalogues, performance work, reporting, and support may move a store into LKR 500,000–1,500,000 or more. Ranges overlap because scope and responsibility matter more than package labels.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "custom-platform-cost",
+        title: "15. How Much Does a Custom E-Commerce Platform Cost?",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A purpose-built platform may begin around LKR 1,000,000, but this is a planning threshold, not a package. Roles, pricing rules, APIs, admin tools, migration, security, infrastructure, automation, reporting, apps, and integrations determine the effort. Marketplaces and multi-warehouse systems need discovery before estimation.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Ask the provider to separate must-have launch features from later phases. This produces a usable first release without pretending every future requirement belongs in the first quotation.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "low-budget-store",
+        title: "16. Can You Build a Store for LKR 25,000, 50,000, or 100,000?",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "A small store can sometimes launch within LKR 50,000–100,000 using an existing theme, few products, standard functions, client-supplied content, and limited revisions. LKR 25,000 more likely represents DIY costs, a constrained setup, promotion, or one part of the project. The problem is not the price; it is undefined scope.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Lower budgets may limit custom design, product entry, integrations, delivery, testing, training, and support. Document those boundaries so a starter package is not mistaken for a custom business system.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "quotation-comparison",
+        title: "17. Compare Scope Before Comparing Quotations",
+        blocks: [
+          {
+            type: "table",
+            caption:
+              "Illustrative e-commerce quotation comparison; these are scope examples, not provider packages",
+            headers: ["Item", "Quote A", "Quote B", "Quote C"],
+            rows: [
+              ["Price position", "Lower", "Mid-range", "Higher"],
+              ["Design", "Existing template", "Customized theme", "Custom UI/UX"],
+              ["Products included", "10 manual uploads", "50 uploads", "Import and catalogue setup"],
+              ["Payment", "One standard gateway", "One gateway plus live testing", "Multiple or custom flows"],
+              ["Delivery", "Flat rate", "District rules", "Custom logic or courier API"],
+              ["SEO foundation", "Basic settings", "Technical setup included", "Advanced implementation and QA"],
+              ["Training", "Not included", "Admin training", "Role-based training and documentation"],
+              ["Support", "Separate", "Short defect-support period", "Ongoing option with defined SLA"],
+              ["Integrations", "None", "Analytics and marketing tags", "ERP, POS, CRM, or custom APIs"],
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Quote C is not automatically the best choice. If the business needs Quote A's scope, paying for complex integrations creates no value. Use a written requirements list and compare platform, design, products, payment, delivery, content, testing, ownership, training, renewals, and support line by line. Our guide to ",
+              {
+                type: "link",
+                href: "/blog/how-to-choose-web-development-company-sri-lanka",
+                text: "choosing a web development company",
+              },
+              " provides a broader provider-evaluation framework.",
+            ],
+          },
+          {
+            type: "image",
+            src: "/blog/ecommerce-website-cost-sri-lanka/ecommerce-website-quotation-checklist-sri-lanka.webp",
+            width: 1680,
+            height: 945,
+            alt: "E-commerce website quotation checklist for Sri Lankan businesses covering products, payment gateway, delivery, hosting, licenses, maintenance, and ownership",
+            caption:
+              "Comparable quotations describe the same responsibilities, limits, and operating costs.",
+          },
+        ],
+      },
+      {
+        id: "forgotten-costs",
+        title: "18. Costs Buyers Often Forget to Budget For",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "Annual domain and hosting renewals.",
+              "Premium theme, plugin, app, or software renewals.",
+              "Gateway subscriptions and transaction charges.",
+              "Business email accounts and storage.",
+              "Maintenance, backups, monitoring, and security response.",
+              "New product entry, photography, copywriting, and banners.",
+              "Courier integration, labels, tracking, returns, and COD handling.",
+              "SMS, email marketing, analytics, and other API subscriptions.",
+              "Future features, redesign work, and data migration.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "These are not necessarily hidden fees. Many are separate operating costs that should be named before launch. Ask for a year-one total and an indicative annual renewal list in addition to the one-time build figure.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "payment-structure-and-timeline",
+        title: "19. Payment Structure and Delivery Time",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "Projects commonly use a deposit, milestone payments, and a final payment around launch or handover, although the structure varies. Written terms should cover scope, revisions, payment stages, third-party expenses, client delays, acceptance, ownership, and handover. Avoid assuming that paying for development automatically transfers every third-party license or provider account.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Delivery time depends on design approval, content readiness, product data, payment-provider onboarding, integrations, custom functionality, testing, and feedback speed. A standard store may take weeks; a custom platform can require months and staged releases. See our detailed ",
+              {
+                type: "link",
+                href: "/blog/how-long-does-it-take-to-build-a-business-website",
+                text: "website development timeline guide",
+              },
+              " for the stages behind an estimate.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "cheap-store-and-provider-type",
+        title: "20. Is a Cheaper Store or Freelancer a Bad Choice?",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "No. A cheaper project can be exactly right when the catalogue and workflow are small. The risk appears when a vague price causes the buyer to assume that product entry, custom design, gateway approval, delivery rules, licenses, backups, or support are included. Value comes from fit, clarity, maintainability, ownership, and support rather than choosing the highest or lowest total.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Both a capable freelancer and a web development company can deliver a successful store. Complexity, required skills, continuity, integration risk, budget, and post-launch support should guide the choice. Our ",
+              {
+                type: "link",
+                href: "/blog/web-developer-vs-web-development-company",
+                text: "web developer vs web development company guide",
+              },
+              " covers that decision without treating either model as automatically superior.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "buyer-questions",
+        title: "21. Questions to Ask Before Accepting a Quotation",
+        blocks: [
+          {
+            type: "ordered-list",
+            items: [
+              "Which platform will the store use, and why does it fit the requirements?",
+              "Is the design based on a template, a customized theme, or custom UI/UX?",
+              "How many products, categories, attributes, and variations are included in setup?",
+              "Which payment gateways are included, and who handles merchant approval?",
+              "Which delivery zones, rates, pickup options, or courier integrations are included?",
+              "Which coupons, promotions, bundles, or pricing rules are included?",
+              "Are domain, hosting, SSL, email, backups, and CDN included or separate?",
+              "Which premium licenses are required, who owns them, and what renews next year?",
+              "What content, photography, product data, and policy text must the client supply?",
+              "Which technical SEO, analytics, and marketing-tag foundations are included?",
+              "Which browsers, devices, checkout cases, and live payment scenarios will be tested?",
+              "What training, documentation, administrator access, and source-code access are provided?",
+              "Who owns the domain, hosting, gateway, analytics, and other business accounts?",
+              "How many revision rounds are included, and how are scope changes priced?",
+              "What defect support, maintenance, response boundaries, and backups apply after launch?",
+            ],
+          },
+        ],
+      },
+      {
+        id: "quotation-red-flags",
+        title: "22. Red Flags in an E-Commerce Quotation",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "No written scope, product limit, deliverables, or exclusions.",
+              "Unlimited features or revisions promised without conditions.",
+              "Unclear ownership of the domain, hosting, gateway, or administrator accounts.",
+              "A guarantee of merchant approval by the developer.",
+              "No mobile, checkout, backup, security, or live-payment testing plan.",
+              "Premium software is included but license ownership and renewal are unexplained.",
+              "Nulled or pirated themes and plugins are proposed.",
+              "No handover, training, defect-support, or maintenance boundary.",
+              "Full-payment pressure before requirements and third-party costs are understood.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "A low price alone is not a red flag. Missing responsibilities are. Ask the provider to revise an unclear quotation into named deliverables before rejecting or accepting it.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "set-your-budget",
+        title: "23. How to Set Your E-Commerce Budget",
+        blocks: [
+          {
+            type: "ordered-list",
+            items: [
+              "List must-have launch features separately from future ideas.",
+              "Count products, categories, attributes, variations, and content gaps.",
+              "Choose required payment methods and begin merchant checks early.",
+              "Define delivery zones, rates, pickup, tracking, COD, and returns.",
+              "List ERP, POS, CRM, accounting, courier, and marketing integrations.",
+              "Decide whether a template, customized theme, or custom design is justified.",
+              "Separate the one-time launch budget from annual and transaction costs.",
+              "Request comparable, itemized quotations against the same requirements.",
+              "Confirm ownership, licenses, training, handover, backups, and support.",
+              "Plan later phases for features that are useful but not essential at launch.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "final-recommendation",
+        title: "24. Final Recommendation",
+        blocks: [
+          {
+            type: "paragraph",
+            content: [
+              "There is no meaningful cost answer until the store's responsibilities are defined. A manageable catalogue, standard checkout, one gateway, and simple delivery can keep WooCommerce accessible. Larger catalogues, custom pricing, delivery logic, integrations, automation, performance, and business criticality increase development and operating costs.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "Compare scope before total price. Confirm what is included at launch, what the business must supply, what renews, who owns each account, and what support exists afterward. Prices and third-party fees can change, so verify current provider charges before purchase.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "If you are planning an online store, review OXY12's ",
+              { type: "link", href: "/services", text: "e-commerce development service" },
+              " or ",
+              { type: "link", href: "/contact", text: "share your requirements" },
+              ". We can review products, payments, delivery, integrations, content, and support needs before recommending an approach and preparing a quotation.",
             ],
           },
         ],
