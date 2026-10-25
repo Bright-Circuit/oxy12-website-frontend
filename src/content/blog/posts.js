@@ -1,4 +1,5 @@
 import { article11 } from "./article-11.js";
+import { article12 } from "./article-12.js";
 
 export const blogCategories = [
   "All",
@@ -5543,8 +5544,8 @@ export const blogPosts = [
       label: "Discuss your e-commerce requirements",
     },
     relatedPosts: [
+      "woocommerce-vs-shopify-sri-lanka",
       "woocommerce-vs-custom-ecommerce",
-      "website-development-cost-sri-lanka-2026",
       "custom-website-vs-wordpress",
     ],
     status: "published",
@@ -5655,6 +5656,18 @@ export const blogPosts = [
             type: "paragraph",
             content: [
               "WooCommerce is often practical for SMEs needing a conventional catalogue, checkout, promotions, accounts, and local payment integration. Its core is open source with no core platform subscription, but hosting, development, extensions, gateway charges, and maintenance remain. Hosted platforms exchange some server responsibility for subscriptions and app fees. Custom development fits workflows that standard platforms cannot support responsibly.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "If the decision is specifically between self-hosted WooCommerce and a hosted commerce service, compare payments, ownership, recurring costs, and operations in our ",
+              {
+                type: "link",
+                href: "/blog/woocommerce-vs-shopify-sri-lanka",
+                text: "WooCommerce vs Shopify guide for Sri Lankan businesses",
+              },
+              ".",
             ],
           },
           {
@@ -6182,6 +6195,7 @@ export const blogPosts = [
     ],
   },
   article11,
+  article12,
 ];
 
 export function getPublishedPosts() {
