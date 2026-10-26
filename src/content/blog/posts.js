@@ -1,5 +1,6 @@
 import { article11 } from "./article-11.js";
 import { article12 } from "./article-12.js";
+import { article13 } from "./article-13.js";
 
 export const blogCategories = [
   "All",
@@ -5544,9 +5545,9 @@ export const blogPosts = [
       label: "Discuss your e-commerce requirements",
     },
     relatedPosts: [
+      "best-payment-gateway-sri-lanka",
       "woocommerce-vs-shopify-sri-lanka",
       "woocommerce-vs-custom-ecommerce",
-      "custom-website-vs-wordpress",
     ],
     status: "published",
     sections: [
@@ -5738,6 +5739,18 @@ export const blogPosts = [
             type: "paragraph",
             content: [
               "Transaction charges are separate from the build. Providers may charge per transaction, monthly, for setup, or in combination. Terms and negotiated rates vary, so obtain the current merchant agreement. The development quote should name the included gateway and any charge for additional gateways.",
+            ],
+          },
+          {
+            type: "paragraph",
+            content: [
+              "To compare current provider plans, limits, settlement, recurring payments, currencies, and integration routes, use our ",
+              {
+                type: "link",
+                href: "/blog/best-payment-gateway-sri-lanka",
+                text: "Sri Lankan payment gateway comparison",
+              },
+              ".",
             ],
           },
         ],
@@ -6196,6 +6209,7 @@ export const blogPosts = [
   },
   article11,
   article12,
+  article13,
 ];
 
 export function getPublishedPosts() {

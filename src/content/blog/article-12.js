@@ -51,9 +51,9 @@ export const article12 = {
     label: "Discuss your online store",
   },
   relatedPosts: [
+    "best-payment-gateway-sri-lanka",
     "woocommerce-vs-custom-ecommerce",
     "ecommerce-website-cost-sri-lanka",
-    "custom-website-vs-wordpress",
   ],
   status: "published",
   sections: [
@@ -142,6 +142,14 @@ export const article12 = {
           ],
         },
         {
+          type: "paragraph",
+          content: [
+            "For a provider-level review of PayHere, OnePay, DirectPay, and WEBXPAY, including current plan fees, limits, settlement, currencies, and recurring-payment support, read our ",
+            { type: "link", href: "/blog/best-payment-gateway-sri-lanka", text: "Sri Lankan payment gateway comparison" },
+            ".",
+          ],
+        },
+        {
           type: "image",
           src: "/blog/woocommerce-vs-shopify-sri-lanka/woocommerce-shopify-payment-options-sri-lanka.webp",
           width: 1680,
@@ -153,7 +161,7 @@ export const article12 = {
         {
           type: "paragraph",
           content: [
-            "No. Shopify's official supported-country list, checked on 19 October 2026, does not list Sri Lanka. Shopify states that a business in an unlisted country needs a third-party payment provider. This does not make Shopify unusable in Sri Lanka: it means the merchant should confirm an eligible provider in Shopify's current country-specific list and inside the store admin before committing to the platform.",
+            "No. Shopify's current official supported-country list does not list Sri Lanka. Shopify states that a business in an unlisted country needs a third-party payment provider. This does not make Shopify unusable in Sri Lanka: it means the merchant should confirm an eligible provider in Shopify's current country-specific list and inside the store admin before committing to the platform.",
           ],
         },
         {

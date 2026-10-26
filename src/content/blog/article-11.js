@@ -51,9 +51,9 @@ export const article11 = {
     label: "Discuss your e-commerce requirements",
   },
   relatedPosts: [
+    "best-payment-gateway-sri-lanka",
     "woocommerce-vs-shopify-sri-lanka",
     "ecommerce-website-cost-sri-lanka",
-    "custom-website-vs-wordpress",
   ],
   status: "published",
   sections: [
@@ -216,6 +216,14 @@ export const article11 = {
           type: "paragraph",
           content: [
             "Sri Lankan stores may evaluate PayHere, OnePay, DirectPay, WebXPay, or supported bank gateways according to current merchant terms and technical documentation. PayHere and OnePay currently document WooCommerce integrations. Availability does not remove the need to check supported currencies, payment methods, callbacks, refunds, settlement, recurring payments, plugin maintenance, and merchant approval. Approval remains the gateway provider's decision.",
+          ],
+        },
+        {
+          type: "paragraph",
+          content: [
+            "Our ",
+            { type: "link", href: "/blog/best-payment-gateway-sri-lanka", text: "current Sri Lankan payment gateway comparison" },
+            " examines provider plans, transaction limits, settlement, recurring capability, currencies, and WooCommerce integration in detail.",
           ],
         },
         {
