@@ -6,6 +6,7 @@ import { Reveal } from "@/components/site/reveal.jsx";
 import { SectionLabel } from "@/components/site/section-label.jsx";
 import { JsonLd } from "@/components/site/json-ld.jsx";
 import {
+  chamudiCoFounderEntity,
   createBreadcrumbEntity,
   createSchemaGraph,
   createWebPageEntity,
@@ -19,14 +20,14 @@ export const metadata = {
     absolute: "About OXY12 | Sri Lankan Web & Software Studio",
   },
   description:
-    "Learn about OXY12, a Sri Lankan web and software studio founded in 2025, including its founder, capabilities, industries, technologies, and project approach.",
+    "Learn about OXY12, a Sri Lankan web and software studio founded in 2025, its co-founders, services, technologies, industry experience, and project approach.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     title: "About OXY12 | Sri Lankan Web & Software Studio",
     description:
-      "Learn about OXY12, a Sri Lankan web and software studio founded in 2025, including its founder, capabilities, industries, technologies, and project approach.",
+      "Learn about OXY12, a Sri Lankan web and software studio founded in 2025, its co-founders, services, technologies, industry experience, and project approach.",
     url: "https://oxy12.com/about",
     siteName: "OXY12",
     type: "website",
@@ -36,7 +37,7 @@ export const metadata = {
     card: "summary",
     title: "About OXY12 | Sri Lankan Web & Software Studio",
     description:
-      "Learn about OXY12, a Sri Lankan web and software studio founded in 2025, including its founder, capabilities, industries, technologies, and project approach.",
+      "Learn about OXY12, a Sri Lankan web and software studio founded in 2025, its co-founders, services, technologies, industry experience, and project approach.",
   },
 };
 
@@ -97,12 +98,13 @@ const aboutSchema = createSchemaGraph(
     url: "https://oxy12.com/about",
     name: "About OXY12 | Sri Lankan Web & Software Studio",
     description:
-      "Learn about OXY12, a Sri Lankan web and software studio founded in 2025, including its founder, capabilities, industries, technologies, and project approach.",
+      "Learn about OXY12, a Sri Lankan web and software studio founded in 2025, its co-founders, services, technologies, industry experience, and project approach.",
     mainEntity: {
       "@id": "https://oxy12.com/#organization",
     },
   }),
   founderEntity,
+  chamudiCoFounderEntity,
   createBreadcrumbEntity({
     id: "https://oxy12.com/about#breadcrumb",
     pageName: "About",
@@ -241,57 +243,114 @@ export default function AboutPage() {
       <section className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <SectionLabel index="04" label="Founder" />
+            <SectionLabel index="04" label="Co-Founders" />
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="max-w-3xl font-display text-4xl font-extrabold leading-tight tracking-tighter md:text-6xl">
-              Leadership with direct involvement in the work.
+              Co-founders with direct involvement in the work.
             </h2>
           </Reveal>
 
-          <Reveal delay={0.15}>
-            <article className="mt-16 grid overflow-hidden rounded-3xl glass lg:grid-cols-2">
-              <div className="relative min-h-[420px] overflow-hidden bg-navy-deep lg:min-h-[560px]">
-                <Image
-                  src="https://learn.oxy12.com/wp-content/uploads/2026/09/akindu_ramsith_founder.webp"
-                  alt="Mr. Akindu Ramsith, Founder and Software Engineer at OXY12"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1280px) 640px, (min-width: 1024px) 50vw, calc(100vw - 48px)"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/65 via-transparent to-transparent" />
-              </div>
+          <div className="mx-auto mt-16 grid max-w-6xl gap-8">
+            <Reveal delay={0.15}>
+              <article id="founder" className="grid scroll-mt-32 overflow-hidden rounded-3xl glass lg:grid-cols-2">
+                <div className="relative min-h-[460px] overflow-hidden bg-navy-deep lg:min-h-[560px]">
+                  <Image
+                    src="https://learn.oxy12.com/wp-content/uploads/2026/09/akindu_ramsith_founder.webp"
+                    alt="Mr. Akindu Ramsith, Co-Founder and Software Engineer at OXY12"
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 50vw, calc(100vw - 48px)"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/65 via-transparent to-transparent" />
+                </div>
 
-              <div className="flex flex-col justify-center p-8 md:p-12 lg:p-16">
-                <p className="font-mono text-xs uppercase tracking-[0.25em] text-ember">Founder and Software Engineer</p>
-                <h3 className="mt-5 font-display text-4xl font-extrabold tracking-tight md:text-5xl">Mr. Akindu Ramsith</h3>
-                <p className="mt-7 text-base leading-relaxed text-muted-foreground md:text-lg">
-                  Mr. Akindu Ramsith founded OXY12 in Sri Lanka in 2025 to provide businesses with websites and software
-                  that are practical to use, clearly scoped, and maintainable after launch.
-                </p>
-                <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-                  As Founder and Software Engineer, he works across requirements, application structure, interface decisions,
-                  integrations, testing, deployment, and technical support. This direct involvement helps keep business needs,
-                  user experience, and engineering decisions connected throughout a project.
-                </p>
+                <div className="flex flex-col justify-center p-8 md:p-10 lg:p-12">
+                  <p className="font-mono text-xs uppercase tracking-[0.25em] text-ember">
+                    Co-Founder and Software Engineer
+                  </p>
+                  <h3 className="mt-5 font-display text-4xl font-extrabold tracking-tight md:text-5xl">
+                    Mr. Akindu Ramsith
+                  </h3>
+                  <p className="mt-7 text-base leading-relaxed text-muted-foreground md:text-lg">
+                    Mr. Akindu Ramsith co-founded OXY12 in Sri Lanka in 2025 to help businesses develop practical,
+                    clearly scoped, and maintainable websites and software products.
+                  </p>
+                  <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+                    As Co-Founder and Software Engineer, he works across requirements, application architecture, interface
+                    decisions, integrations, testing, deployment, and technical support. His direct involvement keeps business
+                    requirements, user experience, and engineering decisions connected throughout delivery.
+                  </p>
 
-                <dl className="mt-10 grid gap-6 border-t border-white/10 pt-8 sm:grid-cols-3">
-                  <div>
-                    <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Founded</dt>
-                    <dd className="mt-2 font-display text-xl font-bold">2025</dd>
-                  </div>
-                  <div>
-                    <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Based in</dt>
-                    <dd className="mt-2 font-display text-xl font-bold">Sri Lanka</dd>
-                  </div>
-                  <div>
-                    <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Primary focus</dt>
-                    <dd className="mt-2 font-display text-xl font-bold">Software Engineering</dd>
-                  </div>
-                </dl>
-              </div>
-            </article>
-          </Reveal>
+                  <dl className="mt-10 grid gap-6 border-t border-white/10 pt-8 sm:grid-cols-3">
+                    <div>
+                      <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Established</dt>
+                      <dd className="mt-2 font-display text-xl font-bold">2025</dd>
+                    </div>
+                    <div>
+                      <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Based in</dt>
+                      <dd className="mt-2 font-display text-xl font-bold">Sri Lanka</dd>
+                    </div>
+                    <div>
+                      <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Primary focus</dt>
+                      <dd className="mt-2 font-display text-xl font-bold">Software Engineering</dd>
+                    </div>
+                  </dl>
+                </div>
+              </article>
+            </Reveal>
+
+            <Reveal delay={0.22}>
+              <article
+                id="co-founder-chamudi-fernando"
+                className="grid scroll-mt-32 overflow-hidden rounded-3xl glass lg:grid-cols-2"
+              >
+                <div className="relative min-h-[460px] overflow-hidden bg-navy-deep lg:order-2 lg:min-h-[560px]">
+                  <Image
+                    src="https://learn.oxy12.com/wp-content/uploads/2026/11/chamudi-co-founder.webp"
+                    alt="Ms. Chamudi Fernando, Co-Founder and Software Engineer at OXY12"
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 50vw, calc(100vw - 48px)"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/65 via-transparent to-transparent" />
+                </div>
+
+                <div className="flex flex-col justify-center p-8 md:p-10 lg:order-1 lg:p-12">
+                  <p className="font-mono text-xs uppercase tracking-[0.25em] text-ember">
+                    Co-Founder and Software Engineer
+                  </p>
+                  <h3 className="mt-5 font-display text-4xl font-extrabold tracking-tight md:text-5xl">
+                    Ms. Chamudi Fernando
+                  </h3>
+                  <p className="mt-7 text-base leading-relaxed text-muted-foreground md:text-lg">
+                    Ms. Chamudi Fernando is a Co-Founder and Software Engineer at OXY12, contributing to the planning and
+                    delivery of practical websites, e-commerce experiences, and software products for businesses.
+                  </p>
+                  <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+                    Her work connects documented requirements with software implementation, interface development, testing,
+                    and delivery. This hands-on role supports clear communication between client goals, user-facing experiences,
+                    and the technical work required to launch and maintain a reliable product.
+                  </p>
+
+                  <dl className="mt-10 grid gap-6 border-t border-white/10 pt-8 sm:grid-cols-3">
+                    <div>
+                      <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Role</dt>
+                      <dd className="mt-2 font-display text-xl font-bold">Co-Founder</dd>
+                    </div>
+                    <div>
+                      <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Based in</dt>
+                      <dd className="mt-2 font-display text-xl font-bold">Sri Lanka</dd>
+                    </div>
+                    <div>
+                      <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Primary focus</dt>
+                      <dd className="mt-2 font-display text-xl font-bold">Software Engineering</dd>
+                    </div>
+                  </dl>
+                </div>
+              </article>
+            </Reveal>
+          </div>
         </div>
       </section>
 

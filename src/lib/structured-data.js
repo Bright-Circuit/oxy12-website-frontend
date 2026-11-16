@@ -2,6 +2,7 @@ export const siteUrl = "https://oxy12.com";
 export const organizationId = `${siteUrl}/#organization`;
 export const websiteId = `${siteUrl}/#website`;
 export const founderId = `${siteUrl}/about#founder`;
+export const chamudiCoFounderId = `${siteUrl}/about#co-founder-chamudi-fernando`;
 
 export const organizationEntity = {
   "@type": "Organization",
@@ -15,9 +16,14 @@ export const organizationEntity = {
     "@type": "Country",
     name: "Sri Lanka",
   },
-  founder: {
-    "@id": founderId,
-  },
+  founder: [
+    {
+      "@id": founderId,
+    },
+    {
+      "@id": chamudiCoFounderId,
+    },
+  ],
   email: "info@oxy12.com",
   telephone: "+94711950429",
   sameAs: [
@@ -42,12 +48,24 @@ export const founderEntity = {
   "@type": "Person",
   "@id": founderId,
   name: "Mr. Akindu Ramsith",
-  jobTitle: "Founder and Software Engineer",
+  jobTitle: "Co-Founder and Software Engineer",
   image: "https://learn.oxy12.com/wp-content/uploads/2026/09/akindu_ramsith_founder.webp",
   worksFor: {
     "@id": organizationId,
   },
-  url: `${siteUrl}/about`,
+  url: `${siteUrl}/about#founder`,
+};
+
+export const chamudiCoFounderEntity = {
+  "@type": "Person",
+  "@id": chamudiCoFounderId,
+  name: "Ms. Chamudi Fernando",
+  jobTitle: "Co-Founder and Software Engineer",
+  image: "https://learn.oxy12.com/wp-content/uploads/2026/11/chamudi-co-founder.webp",
+  worksFor: {
+    "@id": organizationId,
+  },
+  url: `${siteUrl}/about#co-founder-chamudi-fernando`,
 };
 
 export function createWebPageEntity({ type = "WebPage", id, url, name, description, mainEntity }) {
