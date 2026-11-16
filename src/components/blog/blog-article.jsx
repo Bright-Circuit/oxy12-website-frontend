@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, CalendarDays, Clock3 } from "lucide-react";
 import { BlogCard } from "./blog-card.jsx";
+import { ArticleTableOfContents } from "./article-table-of-contents.jsx";
 
 function formatDate(date) {
   return new Intl.DateTimeFormat("en-US", {
@@ -217,26 +218,9 @@ export function BlogArticle({ post, relatedPosts }) {
 
       <div className="mx-auto grid max-w-7xl gap-12 px-6 pb-24 lg:grid-cols-[240px_minmax(0,780px)] lg:justify-center lg:gap-16">
         <aside className="lg:sticky lg:top-28 lg:h-fit">
-          <nav
-            aria-label="Article contents"
-            className="rounded-2xl border border-white/10 bg-navy-light/35 p-5"
-          >
-            <p className="font-mono text-[0.68rem] uppercase tracking-[0.2em] text-ember">
-              In this guide
-            </p>
-            <ol className="mt-4 space-y-3 text-sm leading-6 text-muted-foreground">
-              {post.sections.map((section) => (
-                <li key={section.id}>
-                  <a
-                    href={`#${section.id}`}
-                    className="transition-colors hover:text-foreground"
-                  >
-                    {section.title}
-                  </a>
-                </li>
-              ))}
-            </ol>
-          </nav>
+          <ArticleTableOfContents
+            sections={post.sections.map(({ id, title }) => ({ id, title }))}
+          />
         </aside>
 
         <div className="min-w-0">
